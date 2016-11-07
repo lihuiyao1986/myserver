@@ -4,6 +4,10 @@ import com.alibaba.dubbo.rpc.protocol.rest.support.ContentType;
 import com.server.exception.APIException;
 import com.server.user.api.model.User;
 import com.server.user.api.rest.IGetUserAPI;
+import com.server.user.dao.mapper.UserMapper;
+import com.server.user.dao.model.UserInfo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -14,19 +18,28 @@ import javax.ws.rs.core.MediaType;
 @Path("/user")
 @Consumes({MediaType.APPLICATION_JSON, MediaType.TEXT_XML})
 @Produces({ContentType.APPLICATION_JSON_UTF_8, ContentType.TEXT_XML_UTF_8})
+@Transactional
 public class GetUserAPIImpl implements IGetUserAPI {
 
+    @Autowired
+    private UserMapper userDao;
 
     @GET
     @Path("/get/{userName}")
     @Override
+    @Transactional(readOnly = true)
     public User getUserByID(@PathParam("userName")String userName,@QueryParam("userId")long userId) throws APIException{
-        User user = new User();
-        user.setAge(12);
-        user.setName("李焱生");
-        user.setNickname("smile~");
-        throw new APIException("1808","系统出错啦");
-        //return user;
+        UserInfo userInfo = userDao.getUser(userId);
+        User user = null;
+        if (userInfo !=null){
+            user = new User();
+            user.setAge(userInfo.getAge());
+            user.setName(userInfo.getName());
+            user.setNickname(userInfo.getNickName());
+            return user;
+        }else {
+            throw new APIException("1009","用户不存在");
+        }
     }
 
     @POST

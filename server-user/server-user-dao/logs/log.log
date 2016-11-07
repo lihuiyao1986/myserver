@@ -1,0 +1,623 @@
+2016-11-07 13:20:36 [ main:0 ] - [ DEBUG ] SpringJUnit4ClassRunner constructor called with [class com.server.user.dao.AppTest].
+2016-11-07 13:20:36 [ main:84 ] - [ DEBUG ] Delegating to GenericXmlContextLoader to process context configuration [ContextConfigurationAttributes@71623278 declaringClass = 'com.server.user.dao.AppTest', locations = '{classpath:META-INF/spring/user-database.xml}', classes = '{}', inheritLocations = true, initializers = '{}', inheritInitializers = true, name = [null], contextLoaderClass = 'org.springframework.test.context.ContextLoader'].
+2016-11-07 13:20:36 [ main:96 ] - [ DEBUG ] Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.server.user.dao.AppTest]
+2016-11-07 13:20:36 [ main:99 ] - [ DEBUG ] @TestExecutionListeners is not present for class [com.server.user.dao.AppTest]: using defaults.
+2016-11-07 13:20:36 [ main:108 ] - [ INFO ] Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-11-07 13:20:36 [ main:137 ] - [ DEBUG ] Retrieved @ProfileValueSourceConfiguration [null] for test class [com.server.user.dao.AppTest]
+2016-11-07 13:20:36 [ main:138 ] - [ DEBUG ] Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.server.user.dao.AppTest]
+2016-11-07 13:20:37 [ main:151 ] - [ DEBUG ] Retrieved @ProfileValueSourceConfiguration [null] for test class [com.server.user.dao.AppTest]
+2016-11-07 13:20:37 [ main:151 ] - [ DEBUG ] Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.server.user.dao.AppTest]
+2016-11-07 13:20:37 [ main:156 ] - [ DEBUG ] Retrieved @ProfileValueSourceConfiguration [null] for test class [com.server.user.dao.AppTest]
+2016-11-07 13:20:37 [ main:156 ] - [ DEBUG ] Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.server.user.dao.AppTest]
+2016-11-07 13:20:37 [ main:158 ] - [ DEBUG ] Retrieved @ProfileValueSourceConfiguration [null] for test class [com.server.user.dao.AppTest]
+2016-11-07 13:20:37 [ main:159 ] - [ DEBUG ] Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.server.user.dao.AppTest]
+2016-11-07 13:20:37 [ main:164 ] - [ DEBUG ] Retrieved @ProfileValueSourceConfiguration [null] for test class [com.server.user.dao.AppTest]
+2016-11-07 13:20:37 [ main:165 ] - [ DEBUG ] Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.server.user.dao.AppTest]
+2016-11-07 13:20:37 [ main:168 ] - [ DEBUG ] Performing dependency injection for test context [[TestContext@551bdc27 testClass = AppTest, testInstance = com.server.user.dao.AppTest@58fdd99, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6b1274d2 testClass = AppTest, locations = '{classpath:META-INF/spring/user-database.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]].
+2016-11-07 13:20:37 [ main:169 ] - [ DEBUG ] Delegating to GenericXmlContextLoader to load context from [MergedContextConfiguration@6b1274d2 testClass = AppTest, locations = '{classpath:META-INF/spring/user-database.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]].
+2016-11-07 13:20:37 [ main:170 ] - [ DEBUG ] Loading ApplicationContext for merged context configuration [[MergedContextConfiguration@6b1274d2 testClass = AppTest, locations = '{classpath:META-INF/spring/user-database.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+2016-11-07 13:20:37 [ main:340 ] - [ DEBUG ] Adding [systemProperties] PropertySource with lowest search precedence
+2016-11-07 13:20:37 [ main:345 ] - [ DEBUG ] Adding [systemEnvironment] PropertySource with lowest search precedence
+2016-11-07 13:20:37 [ main:346 ] - [ DEBUG ] Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+2016-11-07 13:20:37 [ main:380 ] - [ INFO ] Loading XML bean definitions from class path resource [META-INF/spring/user-database.xml]
+2016-11-07 13:20:37 [ main:436 ] - [ DEBUG ] Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+2016-11-07 13:20:37 [ main:534 ] - [ DEBUG ] Loading schema mappings from [META-INF/spring.schemas]
+2016-11-07 13:20:37 [ main:541 ] - [ DEBUG ] Loaded schema mappings: {http://mybatis.org/schema/mybatis-spring-1.2.xsd=org/mybatis/spring/config/mybatis-spring-1.2.xsd, http://www.springframework.org/schema/jee/spring-jee-3.2.xsd=org/springframework/ejb/config/spring-jee-3.2.xsd, http://www.springframework.org/schema/util/spring-util.xsd=org/springframework/beans/factory/xml/spring-util-3.2.xsd, http://www.springframework.org/schema/task/spring-task.xsd=org/springframework/scheduling/config/spring-task-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-3.1.xsd=org/springframework/beans/factory/xml/spring-beans-3.1.xsd, http://www.springframework.org/schema/cache/spring-cache.xsd=org/springframework/cache/config/spring-cache-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop-3.0.xsd=org/springframework/aop/config/spring-aop-3.0.xsd, http://www.springframework.org/schema/task/spring-task-3.1.xsd=org/springframework/scheduling/config/spring-task-3.1.xsd, http://www.springframework.org/schema/aop/spring-aop-2.0.xsd=org/springframework/aop/config/spring-aop-2.0.xsd, http://www.springframework.org/schema/tool/spring-tool-2.5.xsd=org/springframework/beans/factory/xml/spring-tool-2.5.xsd, http://www.springframework.org/schema/beans/spring-beans.xsd=org/springframework/beans/factory/xml/spring-beans-3.2.xsd, http://www.springframework.org/schema/jee/spring-jee-2.5.xsd=org/springframework/ejb/config/spring-jee-2.5.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd=org/springframework/jdbc/config/spring-jdbc-3.1.xsd, http://www.springframework.org/schema/tool/spring-tool-3.1.xsd=org/springframework/beans/factory/xml/spring-tool-3.1.xsd, http://www.springframework.org/schema/jee/spring-jee-3.1.xsd=org/springframework/ejb/config/spring-jee-3.1.xsd, http://www.springframework.org/schema/aop/spring-aop.xsd=org/springframework/aop/config/spring-aop-3.2.xsd, http://www.springframework.org/schema/context/spring-context-3.2.xsd=org/springframework/context/config/spring-context-3.2.xsd, http://www.springframework.org/schema/tx/spring-tx-3.2.xsd=org/springframework/transaction/config/spring-tx-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-2.0.xsd=org/springframework/beans/factory/xml/spring-beans-2.0.xsd, http://www.springframework.org/schema/util/spring-util-3.2.xsd=org/springframework/beans/factory/xml/spring-util-3.2.xsd, http://www.springframework.org/schema/lang/spring-lang-3.2.xsd=org/springframework/scripting/config/spring-lang-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-3.0.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://www.springframework.org/schema/cache/spring-cache-3.2.xsd=org/springframework/cache/config/spring-cache-3.2.xsd, http://www.springframework.org/schema/task/spring-task-3.0.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://mybatis.org/schema/mybatis-spring.xsd=org/mybatis/spring/config/mybatis-spring-1.2.xsd, http://www.springframework.org/schema/context/spring-context-2.5.xsd=org/springframework/context/config/spring-context-2.5.xsd, http://www.springframework.org/schema/tx/spring-tx-2.5.xsd=org/springframework/transaction/config/spring-tx-2.5.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd=org/springframework/jdbc/config/spring-jdbc-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool-3.0.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang.xsd=org/springframework/scripting/config/spring-lang-3.2.xsd, http://www.springframework.org/schema/tx/spring-tx.xsd=org/springframework/transaction/config/spring-tx-3.2.xsd, http://www.springframework.org/schema/tool/spring-tool-2.0.xsd=org/springframework/beans/factory/xml/spring-tool-2.0.xsd, http://www.springframework.org/schema/util/spring-util-2.5.xsd=org/springframework/beans/factory/xml/spring-util-2.5.xsd, http://www.springframework.org/schema/lang/spring-lang-2.5.xsd=org/springframework/scripting/config/spring-lang-2.5.xsd, http://www.springframework.org/schema/aop/spring-aop-3.2.xsd=org/springframework/aop/config/spring-aop-3.2.xsd, http://www.springframework.org/schema/jee/spring-jee-3.0.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee-2.0.xsd=org/springframework/ejb/config/spring-jee-2.0.xsd, http://www.springframework.org/schema/context/spring-context-3.1.xsd=org/springframework/context/config/spring-context-3.1.xsd, http://www.springframework.org/schema/tx/spring-tx-3.1.xsd=org/springframework/transaction/config/spring-tx-3.1.xsd, http://www.springframework.org/schema/util/spring-util-3.1.xsd=org/springframework/beans/factory/xml/spring-util-3.1.xsd, http://www.springframework.org/schema/lang/spring-lang-3.1.xsd=org/springframework/scripting/config/spring-lang-3.1.xsd, http://www.springframework.org/schema/cache/spring-cache-3.1.xsd=org/springframework/cache/config/spring-cache-3.1.xsd, http://www.springframework.org/schema/context/spring-context.xsd=org/springframework/context/config/spring-context-3.2.xsd, http://www.springframework.org/schema/jee/spring-jee.xsd=org/springframework/ejb/config/spring-jee-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop-2.5.xsd=org/springframework/aop/config/spring-aop-2.5.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc.xsd=org/springframework/jdbc/config/spring-jdbc-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-3.2.xsd=org/springframework/beans/factory/xml/spring-beans-3.2.xsd, http://www.springframework.org/schema/tx/spring-tx-2.0.xsd=org/springframework/transaction/config/spring-tx-2.0.xsd, http://www.springframework.org/schema/aop/spring-aop-3.1.xsd=org/springframework/aop/config/spring-aop-3.1.xsd, http://www.springframework.org/schema/task/spring-task-3.2.xsd=org/springframework/scheduling/config/spring-task-3.2.xsd, http://www.springframework.org/schema/context/spring-context-3.0.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx-3.0.xsd=org/springframework/transaction/config/spring-tx-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool.xsd=org/springframework/beans/factory/xml/spring-tool-3.2.xsd, http://www.springframework.org/schema/util/spring-util-3.0.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-3.0.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://www.alibaba.com/schema/stat.xsd=META-INF/stat.xsd, http://www.springframework.org/schema/util/spring-util-2.0.xsd=org/springframework/beans/factory/xml/spring-util-2.0.xsd, http://www.springframework.org/schema/lang/spring-lang-2.0.xsd=org/springframework/scripting/config/spring-lang-2.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd=org/springframework/jdbc/config/spring-jdbc-3.2.xsd, http://www.springframework.org/schema/tool/spring-tool-3.2.xsd=org/springframework/beans/factory/xml/spring-tool-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-2.5.xsd=org/springframework/beans/factory/xml/spring-beans-2.5.xsd}
+2016-11-07 13:20:37 [ main:558 ] - [ DEBUG ] Found XML schema [http://www.springframework.org/schema/beans/spring-beans-2.5.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-2.5.xsd
+2016-11-07 13:20:37 [ main:658 ] - [ DEBUG ] Found XML schema [http://www.springframework.org/schema/context/spring-context.xsd] in classpath: org/springframework/context/config/spring-context-3.2.xsd
+2016-11-07 13:20:37 [ main:672 ] - [ DEBUG ] Found XML schema [http://www.springframework.org/schema/tool/spring-tool-3.2.xsd] in classpath: org/springframework/beans/factory/xml/spring-tool-3.2.xsd
+2016-11-07 13:20:37 [ main:699 ] - [ DEBUG ] Found XML schema [http://www.springframework.org/schema/tx/spring-tx.xsd] in classpath: org/springframework/transaction/config/spring-tx-3.2.xsd
+2016-11-07 13:20:37 [ main:739 ] - [ DEBUG ] Loading bean definitions
+2016-11-07 13:20:37 [ main:846 ] - [ DEBUG ] Loaded NamespaceHandler mappings: {http://www.springframework.org/schema/p=org.springframework.beans.factory.xml.SimplePropertyNamespaceHandler, http://www.springframework.org/schema/util=org.springframework.beans.factory.xml.UtilNamespaceHandler, http://www.alibaba.com/schema/stat=com.alibaba.druid.support.spring.stat.config.DruidStatNamespaceHandler, http://www.springframework.org/schema/jee=org.springframework.ejb.config.JeeNamespaceHandler, http://www.springframework.org/schema/aop=org.springframework.aop.config.AopNamespaceHandler, http://www.springframework.org/schema/jdbc=org.springframework.jdbc.config.JdbcNamespaceHandler, http://www.springframework.org/schema/cache=org.springframework.cache.config.CacheNamespaceHandler, http://mybatis.org/schema/mybatis-spring=org.mybatis.spring.config.NamespaceHandler, http://www.springframework.org/schema/c=org.springframework.beans.factory.xml.SimpleConstructorNamespaceHandler, http://www.springframework.org/schema/tx=org.springframework.transaction.config.TxNamespaceHandler, http://www.springframework.org/schema/task=org.springframework.scheduling.config.TaskNamespaceHandler, http://www.springframework.org/schema/lang=org.springframework.scripting.config.LangNamespaceHandler, http://www.springframework.org/schema/context=org.springframework.context.config.ContextNamespaceHandler}
+2016-11-07 13:20:37 [ main:924 ] - [ DEBUG ] Looking for matching resources in directory tree [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/test-classes/com/server/user/dao]
+2016-11-07 13:20:37 [ main:925 ] - [ DEBUG ] Searching directory [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/test-classes/com/server/user/dao] for files matching pattern [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/test-classes/com/server/user/dao/**/*.class]
+2016-11-07 13:20:37 [ main:934 ] - [ DEBUG ] Looking for matching resources in directory tree [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao]
+2016-11-07 13:20:37 [ main:935 ] - [ DEBUG ] Searching directory [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao] for files matching pattern [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/**/*.class]
+2016-11-07 13:20:37 [ main:937 ] - [ DEBUG ] Searching directory [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/base] for files matching pattern [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/**/*.class]
+2016-11-07 13:20:37 [ main:939 ] - [ DEBUG ] Searching directory [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/mapper] for files matching pattern [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/**/*.class]
+2016-11-07 13:20:37 [ main:940 ] - [ DEBUG ] Searching directory [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/model] for files matching pattern [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/**/*.class]
+2016-11-07 13:20:37 [ main:942 ] - [ DEBUG ] Resolved location pattern [classpath*:com/server/user/dao/**/*.class] to resources [file [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/test-classes/com/server/user/dao/AppTest.class], file [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/base/BaseDaoModel.class], file [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/base/BaseMapper.class], file [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/base/CrudMapper.class], file [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/base/MyBatisMapper.class], file [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/mapper/UserMapper.class], file [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/model/UserInfo.class]]
+2016-11-07 13:20:37 [ main:1042 ] - [ DEBUG ] Ignored because not a concrete top-level class: file [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/base/MyBatisMapper.class]
+2016-11-07 13:20:37 [ main:1046 ] - [ DEBUG ] Ignored because not a concrete top-level class: file [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/mapper/UserMapper.class]
+2016-11-07 13:20:37 [ main:1114 ] - [ DEBUG ] Neither XML 'id' nor 'name' specified - using generated bean name [com.github.pagehelper.PageHelper#6be968ce]
+2016-11-07 13:20:37 [ main:1117 ] - [ DEBUG ] Neither XML 'id' nor 'name' specified - using generated bean name [org.mybatis.spring.mapper.MapperScannerConfigurer#0]
+2016-11-07 13:20:37 [ main:1146 ] - [ DEBUG ] Loaded 14 bean definitions from location pattern [classpath:META-INF/spring/user-database.xml]
+2016-11-07 13:20:38 [ main:1161 ] - [ INFO ] Refreshing org.springframework.context.support.GenericApplicationContext@36f0f1be: startup date [Mon Nov 07 13:20:37 CST 2016]; root of context hierarchy
+2016-11-07 13:20:38 [ main:1172 ] - [ DEBUG ] Bean factory for org.springframework.context.support.GenericApplicationContext@36f0f1be: org.springframework.beans.factory.support.DefaultListableBeanFactory@5f8e8a9d: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor]; root of factory hierarchy
+2016-11-07 13:20:38 [ main:1265 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2016-11-07 13:20:38 [ main:1268 ] - [ DEBUG ] Creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2016-11-07 13:20:38 [ main:1315 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor' to allow for resolving potential circular references
+2016-11-07 13:20:38 [ main:1320 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2016-11-07 13:20:38 [ main:1321 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.mybatis.spring.mapper.MapperScannerConfigurer#0'
+2016-11-07 13:20:38 [ main:1322 ] - [ DEBUG ] Creating instance of bean 'org.mybatis.spring.mapper.MapperScannerConfigurer#0'
+2016-11-07 13:20:38 [ main:1326 ] - [ DEBUG ] Eagerly caching bean 'org.mybatis.spring.mapper.MapperScannerConfigurer#0' to allow for resolving potential circular references
+2016-11-07 13:20:38 [ main:1395 ] - [ DEBUG ] Invoking afterPropertiesSet() on bean with name 'org.mybatis.spring.mapper.MapperScannerConfigurer#0'
+2016-11-07 13:20:38 [ main:1396 ] - [ DEBUG ] Finished creating instance of bean 'org.mybatis.spring.mapper.MapperScannerConfigurer#0'
+2016-11-07 13:20:38 [ main:1523 ] - [ DEBUG ] Adding [systemProperties] PropertySource with lowest search precedence
+2016-11-07 13:20:38 [ main:1526 ] - [ DEBUG ] Adding [systemEnvironment] PropertySource with lowest search precedence
+2016-11-07 13:20:38 [ main:1527 ] - [ DEBUG ] Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+2016-11-07 13:20:38 [ main:1537 ] - [ DEBUG ] Looking for matching resources in directory tree [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/mapper]
+2016-11-07 13:20:38 [ main:1538 ] - [ DEBUG ] Searching directory [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/mapper] for files matching pattern [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/mapper/**/*.class]
+2016-11-07 13:20:38 [ main:1539 ] - [ DEBUG ] Resolved location pattern [classpath*:com/server/user/dao/mapper/**/*.class] to resources [file [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/mapper/UserMapper.class]]
+2016-11-07 13:20:38 [ main:1541 ] - [ DEBUG ] Identified candidate component class: file [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/mapper/UserMapper.class]
+2016-11-07 13:20:38 [ main:1547 ] - [ DEBUG ] Creating MapperFactoryBean with name 'userMapper' and 'com.server.user.dao.mapper.UserMapper' mapperInterface
+2016-11-07 13:20:38 [ main:1550 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0'
+2016-11-07 13:20:38 [ main:1551 ] - [ DEBUG ] Creating instance of bean 'org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0'
+2016-11-07 13:20:38 [ main:1553 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0' to allow for resolving potential circular references
+2016-11-07 13:20:38 [ main:1565 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0'
+2016-11-07 13:20:38 [ main:1565 ] - [ DEBUG ] Adding [environmentProperties] PropertySource with lowest search precedence
+2016-11-07 13:20:38 [ main:1566 ] - [ INFO ] Loading properties file from class path resource [config/database.properties]
+2016-11-07 13:20:38 [ main:1568 ] - [ DEBUG ] Adding [localProperties] PropertySource with lowest search precedence
+2016-11-07 13:20:38 [ main:1572 ] - [ DEBUG ] Searching for key 'db.driverClassName' in [environmentProperties]
+2016-11-07 13:20:38 [ main:1573 ] - [ DEBUG ] Searching for key 'db.driverClassName' in [systemProperties]
+2016-11-07 13:20:38 [ main:1573 ] - [ DEBUG ] Searching for key 'db.driverClassName' in [systemEnvironment]
+2016-11-07 13:20:38 [ main:1575 ] - [ DEBUG ] Could not find key 'db.driverClassName' in any property source. Returning [null]
+2016-11-07 13:20:38 [ main:1575 ] - [ DEBUG ] Searching for key 'db.driverClassName' in [localProperties]
+2016-11-07 13:20:38 [ main:1578 ] - [ DEBUG ] Found key 'db.driverClassName' in [localProperties] with type [String] and value 'com.mysql.jdbc.Driver'
+2016-11-07 13:20:38 [ main:1582 ] - [ DEBUG ] Searching for key 'db.url' in [environmentProperties]
+2016-11-07 13:20:38 [ main:1583 ] - [ DEBUG ] Searching for key 'db.url' in [systemProperties]
+2016-11-07 13:20:38 [ main:1583 ] - [ DEBUG ] Searching for key 'db.url' in [systemEnvironment]
+2016-11-07 13:20:38 [ main:1583 ] - [ DEBUG ] Could not find key 'db.url' in any property source. Returning [null]
+2016-11-07 13:20:38 [ main:1584 ] - [ DEBUG ] Searching for key 'db.url' in [localProperties]
+2016-11-07 13:20:38 [ main:1584 ] - [ DEBUG ] Found key 'db.url' in [localProperties] with type [String] and value 'jdbc:mysql://127.0.0.1:3306/app_user?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=true'
+2016-11-07 13:20:38 [ main:1585 ] - [ DEBUG ] Searching for key 'db.username' in [environmentProperties]
+2016-11-07 13:20:38 [ main:1585 ] - [ DEBUG ] Searching for key 'db.username' in [systemProperties]
+2016-11-07 13:20:38 [ main:1586 ] - [ DEBUG ] Searching for key 'db.username' in [systemEnvironment]
+2016-11-07 13:20:38 [ main:1586 ] - [ DEBUG ] Could not find key 'db.username' in any property source. Returning [null]
+2016-11-07 13:20:38 [ main:1588 ] - [ DEBUG ] Searching for key 'db.username' in [localProperties]
+2016-11-07 13:20:38 [ main:1589 ] - [ DEBUG ] Found key 'db.username' in [localProperties] with type [String] and value 'root'
+2016-11-07 13:20:38 [ main:1589 ] - [ DEBUG ] Searching for key 'db.password' in [environmentProperties]
+2016-11-07 13:20:38 [ main:1590 ] - [ DEBUG ] Searching for key 'db.password' in [systemProperties]
+2016-11-07 13:20:38 [ main:1591 ] - [ DEBUG ] Searching for key 'db.password' in [systemEnvironment]
+2016-11-07 13:20:38 [ main:1592 ] - [ DEBUG ] Could not find key 'db.password' in any property source. Returning [null]
+2016-11-07 13:20:38 [ main:1592 ] - [ DEBUG ] Searching for key 'db.password' in [localProperties]
+2016-11-07 13:20:38 [ main:1593 ] - [ DEBUG ] Found key 'db.password' in [localProperties] with type [String] and value '123456'
+2016-11-07 13:20:38 [ main:1594 ] - [ DEBUG ] Searching for key 'db.maxActive' in [environmentProperties]
+2016-11-07 13:20:38 [ main:1595 ] - [ DEBUG ] Searching for key 'db.maxActive' in [systemProperties]
+2016-11-07 13:20:38 [ main:1595 ] - [ DEBUG ] Searching for key 'db.maxActive' in [systemEnvironment]
+2016-11-07 13:20:38 [ main:1596 ] - [ DEBUG ] Could not find key 'db.maxActive' in any property source. Returning [null]
+2016-11-07 13:20:38 [ main:1596 ] - [ DEBUG ] Searching for key 'db.maxActive' in [localProperties]
+2016-11-07 13:20:38 [ main:1597 ] - [ DEBUG ] Found key 'db.maxActive' in [localProperties] with type [String] and value '50'
+2016-11-07 13:20:38 [ main:1598 ] - [ DEBUG ] Searching for key 'db.initialSize' in [environmentProperties]
+2016-11-07 13:20:38 [ main:1599 ] - [ DEBUG ] Searching for key 'db.initialSize' in [systemProperties]
+2016-11-07 13:20:38 [ main:1599 ] - [ DEBUG ] Searching for key 'db.initialSize' in [systemEnvironment]
+2016-11-07 13:20:38 [ main:1600 ] - [ DEBUG ] Could not find key 'db.initialSize' in any property source. Returning [null]
+2016-11-07 13:20:38 [ main:1601 ] - [ DEBUG ] Searching for key 'db.initialSize' in [localProperties]
+2016-11-07 13:20:38 [ main:1601 ] - [ DEBUG ] Found key 'db.initialSize' in [localProperties] with type [String] and value '1'
+2016-11-07 13:20:38 [ main:1602 ] - [ DEBUG ] Searching for key 'db.maxWait' in [environmentProperties]
+2016-11-07 13:20:38 [ main:1603 ] - [ DEBUG ] Searching for key 'db.maxWait' in [systemProperties]
+2016-11-07 13:20:38 [ main:1603 ] - [ DEBUG ] Searching for key 'db.maxWait' in [systemEnvironment]
+2016-11-07 13:20:38 [ main:1603 ] - [ DEBUG ] Could not find key 'db.maxWait' in any property source. Returning [null]
+2016-11-07 13:20:38 [ main:1604 ] - [ DEBUG ] Searching for key 'db.maxWait' in [localProperties]
+2016-11-07 13:20:38 [ main:1605 ] - [ DEBUG ] Found key 'db.maxWait' in [localProperties] with type [String] and value '60000'
+2016-11-07 13:20:38 [ main:1606 ] - [ DEBUG ] Searching for key 'db.minIdle' in [environmentProperties]
+2016-11-07 13:20:38 [ main:1606 ] - [ DEBUG ] Searching for key 'db.minIdle' in [systemProperties]
+2016-11-07 13:20:38 [ main:1607 ] - [ DEBUG ] Searching for key 'db.minIdle' in [systemEnvironment]
+2016-11-07 13:20:38 [ main:1607 ] - [ DEBUG ] Could not find key 'db.minIdle' in any property source. Returning [null]
+2016-11-07 13:20:38 [ main:1608 ] - [ DEBUG ] Searching for key 'db.minIdle' in [localProperties]
+2016-11-07 13:20:38 [ main:1609 ] - [ DEBUG ] Found key 'db.minIdle' in [localProperties] with type [String] and value '1'
+2016-11-07 13:20:38 [ main:1610 ] - [ DEBUG ] Searching for key 'db.timeBetweenEvictionRunsMillis' in [environmentProperties]
+2016-11-07 13:20:38 [ main:1610 ] - [ DEBUG ] Searching for key 'db.timeBetweenEvictionRunsMillis' in [systemProperties]
+2016-11-07 13:20:38 [ main:1611 ] - [ DEBUG ] Searching for key 'db.timeBetweenEvictionRunsMillis' in [systemEnvironment]
+2016-11-07 13:20:38 [ main:1611 ] - [ DEBUG ] Could not find key 'db.timeBetweenEvictionRunsMillis' in any property source. Returning [null]
+2016-11-07 13:20:38 [ main:1612 ] - [ DEBUG ] Searching for key 'db.timeBetweenEvictionRunsMillis' in [localProperties]
+2016-11-07 13:20:38 [ main:1613 ] - [ DEBUG ] Found key 'db.timeBetweenEvictionRunsMillis' in [localProperties] with type [String] and value '3000'
+2016-11-07 13:20:38 [ main:1614 ] - [ DEBUG ] Searching for key 'db.minEvictableIdleTimeMillis' in [environmentProperties]
+2016-11-07 13:20:38 [ main:1615 ] - [ DEBUG ] Searching for key 'db.minEvictableIdleTimeMillis' in [systemProperties]
+2016-11-07 13:20:38 [ main:1616 ] - [ DEBUG ] Searching for key 'db.minEvictableIdleTimeMillis' in [systemEnvironment]
+2016-11-07 13:20:38 [ main:1617 ] - [ DEBUG ] Could not find key 'db.minEvictableIdleTimeMillis' in any property source. Returning [null]
+2016-11-07 13:20:38 [ main:1618 ] - [ DEBUG ] Searching for key 'db.minEvictableIdleTimeMillis' in [localProperties]
+2016-11-07 13:20:38 [ main:1618 ] - [ DEBUG ] Found key 'db.minEvictableIdleTimeMillis' in [localProperties] with type [String] and value '300000'
+2016-11-07 13:20:38 [ main:1619 ] - [ DEBUG ] Searching for key 'db.validationQuery' in [environmentProperties]
+2016-11-07 13:20:38 [ main:1619 ] - [ DEBUG ] Searching for key 'db.validationQuery' in [systemProperties]
+2016-11-07 13:20:38 [ main:1621 ] - [ DEBUG ] Searching for key 'db.validationQuery' in [systemEnvironment]
+2016-11-07 13:20:38 [ main:1622 ] - [ DEBUG ] Could not find key 'db.validationQuery' in any property source. Returning [null]
+2016-11-07 13:20:38 [ main:1622 ] - [ DEBUG ] Searching for key 'db.validationQuery' in [localProperties]
+2016-11-07 13:20:38 [ main:1623 ] - [ DEBUG ] Found key 'db.validationQuery' in [localProperties] with type [String] and value 'SELECT 1'
+2016-11-07 13:20:38 [ main:1624 ] - [ DEBUG ] Searching for key 'db.testWhileIdle' in [environmentProperties]
+2016-11-07 13:20:38 [ main:1624 ] - [ DEBUG ] Searching for key 'db.testWhileIdle' in [systemProperties]
+2016-11-07 13:20:38 [ main:1625 ] - [ DEBUG ] Searching for key 'db.testWhileIdle' in [systemEnvironment]
+2016-11-07 13:20:38 [ main:1626 ] - [ DEBUG ] Could not find key 'db.testWhileIdle' in any property source. Returning [null]
+2016-11-07 13:20:38 [ main:1627 ] - [ DEBUG ] Searching for key 'db.testWhileIdle' in [localProperties]
+2016-11-07 13:20:38 [ main:1634 ] - [ DEBUG ] Found key 'db.testWhileIdle' in [localProperties] with type [String] and value 'true'
+2016-11-07 13:20:38 [ main:1634 ] - [ DEBUG ] Searching for key 'db.testOnBorrow' in [environmentProperties]
+2016-11-07 13:20:38 [ main:1636 ] - [ DEBUG ] Searching for key 'db.testOnBorrow' in [systemProperties]
+2016-11-07 13:20:38 [ main:1636 ] - [ DEBUG ] Searching for key 'db.testOnBorrow' in [systemEnvironment]
+2016-11-07 13:20:38 [ main:1638 ] - [ DEBUG ] Could not find key 'db.testOnBorrow' in any property source. Returning [null]
+2016-11-07 13:20:38 [ main:1638 ] - [ DEBUG ] Searching for key 'db.testOnBorrow' in [localProperties]
+2016-11-07 13:20:38 [ main:1639 ] - [ DEBUG ] Found key 'db.testOnBorrow' in [localProperties] with type [String] and value 'false'
+2016-11-07 13:20:38 [ main:1640 ] - [ DEBUG ] Searching for key 'db.testOnReturn' in [environmentProperties]
+2016-11-07 13:20:38 [ main:1640 ] - [ DEBUG ] Searching for key 'db.testOnReturn' in [systemProperties]
+2016-11-07 13:20:38 [ main:1640 ] - [ DEBUG ] Searching for key 'db.testOnReturn' in [systemEnvironment]
+2016-11-07 13:20:38 [ main:1641 ] - [ DEBUG ] Could not find key 'db.testOnReturn' in any property source. Returning [null]
+2016-11-07 13:20:38 [ main:1641 ] - [ DEBUG ] Searching for key 'db.testOnReturn' in [localProperties]
+2016-11-07 13:20:38 [ main:1642 ] - [ DEBUG ] Found key 'db.testOnReturn' in [localProperties] with type [String] and value 'false'
+2016-11-07 13:20:38 [ main:1644 ] - [ DEBUG ] Searching for key 'db.removeAbandoned' in [environmentProperties]
+2016-11-07 13:20:38 [ main:1645 ] - [ DEBUG ] Searching for key 'db.removeAbandoned' in [systemProperties]
+2016-11-07 13:20:38 [ main:1646 ] - [ DEBUG ] Searching for key 'db.removeAbandoned' in [systemEnvironment]
+2016-11-07 13:20:38 [ main:1647 ] - [ DEBUG ] Could not find key 'db.removeAbandoned' in any property source. Returning [null]
+2016-11-07 13:20:38 [ main:1648 ] - [ DEBUG ] Searching for key 'db.removeAbandoned' in [localProperties]
+2016-11-07 13:20:38 [ main:1648 ] - [ DEBUG ] Found key 'db.removeAbandoned' in [localProperties] with type [String] and value 'true'
+2016-11-07 13:20:38 [ main:1652 ] - [ DEBUG ] Searching for key 'db.removeAbandonedTimeout' in [environmentProperties]
+2016-11-07 13:20:38 [ main:1653 ] - [ DEBUG ] Searching for key 'db.removeAbandonedTimeout' in [systemProperties]
+2016-11-07 13:20:38 [ main:1653 ] - [ DEBUG ] Searching for key 'db.removeAbandonedTimeout' in [systemEnvironment]
+2016-11-07 13:20:38 [ main:1654 ] - [ DEBUG ] Could not find key 'db.removeAbandonedTimeout' in any property source. Returning [null]
+2016-11-07 13:20:38 [ main:1654 ] - [ DEBUG ] Searching for key 'db.removeAbandonedTimeout' in [localProperties]
+2016-11-07 13:20:38 [ main:1655 ] - [ DEBUG ] Found key 'db.removeAbandonedTimeout' in [localProperties] with type [String] and value '180'
+2016-11-07 13:20:38 [ main:1660 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2016-11-07 13:20:38 [ main:1662 ] - [ DEBUG ] Creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2016-11-07 13:20:38 [ main:1670 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor' to allow for resolving potential circular references
+2016-11-07 13:20:38 [ main:1675 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2016-11-07 13:20:38 [ main:1677 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2016-11-07 13:20:38 [ main:1678 ] - [ DEBUG ] Creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2016-11-07 13:20:38 [ main:1679 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor' to allow for resolving potential circular references
+2016-11-07 13:20:38 [ main:1679 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2016-11-07 13:20:38 [ main:1681 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2016-11-07 13:20:38 [ main:1681 ] - [ DEBUG ] Creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2016-11-07 13:20:38 [ main:1691 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor' to allow for resolving potential circular references
+2016-11-07 13:20:38 [ main:1692 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2016-11-07 13:20:38 [ main:1693 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+2016-11-07 13:20:38 [ main:1693 ] - [ DEBUG ] Creating instance of bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+2016-11-07 13:20:38 [ main:1694 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor' to allow for resolving potential circular references
+2016-11-07 13:20:38 [ main:1695 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+2016-11-07 13:20:38 [ main:1697 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+2016-11-07 13:20:38 [ main:1698 ] - [ DEBUG ] Creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+2016-11-07 13:20:38 [ main:1699 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor' to allow for resolving potential circular references
+2016-11-07 13:20:38 [ main:1700 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+2016-11-07 13:20:38 [ main:1700 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2016-11-07 13:20:38 [ main:1726 ] - [ DEBUG ] Creating instance of bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2016-11-07 13:20:38 [ main:1770 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.aop.config.internalAutoProxyCreator' to allow for resolving potential circular references
+2016-11-07 13:20:38 [ main:1791 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2016-11-07 13:20:38 [ main:1798 ] - [ DEBUG ] Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@5717c37]
+2016-11-07 13:20:38 [ main:1802 ] - [ DEBUG ] Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@2ce6c6ec]
+2016-11-07 13:20:38 [ main:1806 ] - [ INFO ] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@5f8e8a9d: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,userMapper]; root of factory hierarchy
+2016-11-07 13:20:38 [ main:1808 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2016-11-07 13:20:38 [ main:1808 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2016-11-07 13:20:38 [ main:1809 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2016-11-07 13:20:38 [ main:1809 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2016-11-07 13:20:38 [ main:1809 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+2016-11-07 13:20:38 [ main:1810 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0'
+2016-11-07 13:20:38 [ main:1811 ] - [ DEBUG ] Creating shared instance of singleton bean 'dataSource'
+2016-11-07 13:20:38 [ main:1811 ] - [ DEBUG ] Creating instance of bean 'dataSource'
+2016-11-07 13:20:38 [ main:1862 ] - [ DEBUG ] Eagerly caching bean 'dataSource' to allow for resolving potential circular references
+2016-11-07 13:20:38 [ main:2013 ] - [ DEBUG ] Invoking init method  'init' on bean with name 'dataSource'
+2016-11-07 13:20:39 [ main:2749 ] - [ INFO ] {dataSource-1} inited
+2016-11-07 13:20:39 [ main:2750 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2016-11-07 13:20:39 [ main:2750 ] - [ DEBUG ] Creating instance of bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2016-11-07 13:20:39 [ main:2756 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.transaction.config.internalTransactionAdvisor' to allow for resolving potential circular references
+2016-11-07 13:20:39 [ main:2763 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+2016-11-07 13:20:39 [ main:2764 ] - [ DEBUG ] Creating instance of bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+2016-11-07 13:20:39 [ main:2765 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0' to allow for resolving potential circular references
+2016-11-07 13:20:39 [ main:2769 ] - [ DEBUG ] Skipping currently created advisor 'org.springframework.transaction.config.internalTransactionAdvisor'
+2016-11-07 13:20:39 [ main:2772 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+2016-11-07 13:20:39 [ main:2773 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2016-11-07 13:20:39 [ main:2784 ] - [ DEBUG ] Finished creating instance of bean 'dataSource'
+2016-11-07 13:20:39 [ main:2784 ] - [ DEBUG ] Creating shared instance of singleton bean 'sqlSessionFactory'
+2016-11-07 13:20:39 [ main:2785 ] - [ DEBUG ] Creating instance of bean 'sqlSessionFactory'
+2016-11-07 13:20:39 [ main:2813 ] - [ DEBUG ] Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2016-11-07 13:20:39 [ main:2821 ] - [ DEBUG ] Eagerly caching bean 'sqlSessionFactory' to allow for resolving potential circular references
+2016-11-07 13:20:39 [ main:2827 ] - [ DEBUG ] Looking for matching resources in directory tree [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/config/mapper]
+2016-11-07 13:20:39 [ main:2830 ] - [ DEBUG ] Searching directory [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/config/mapper] for files matching pattern [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/config/mapper/*.xml]
+2016-11-07 13:20:39 [ main:2832 ] - [ DEBUG ] Resolved location pattern [classpath:config/mapper/*.xml] to resources [file [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/config/mapper/UserMapper.xml]]
+2016-11-07 13:20:39 [ main:2833 ] - [ DEBUG ] Returning cached instance of singleton bean 'dataSource'
+2016-11-07 13:20:39 [ main:2837 ] - [ DEBUG ] Creating instance of bean 'com.github.pagehelper.PageHelper#6be968ce'
+2016-11-07 13:20:39 [ main:2884 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2016-11-07 13:20:39 [ main:2890 ] - [ DEBUG ] Finished creating instance of bean 'com.github.pagehelper.PageHelper#6be968ce'
+2016-11-07 13:20:39 [ main:2894 ] - [ DEBUG ] Invoking afterPropertiesSet() on bean with name 'sqlSessionFactory'
+2016-11-07 13:20:39 [ main:3016 ] - [ DEBUG ] Class not found: org.jboss.vfs.VFS
+2016-11-07 13:20:39 [ main:3016 ] - [ DEBUG ] JBoss 6 VFS API is not available in this environment.
+2016-11-07 13:20:39 [ main:3018 ] - [ DEBUG ] Class not found: org.jboss.vfs.VirtualFile
+2016-11-07 13:20:39 [ main:3019 ] - [ DEBUG ] VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2016-11-07 13:20:39 [ main:3021 ] - [ DEBUG ] Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2016-11-07 13:20:39 [ main:3022 ] - [ DEBUG ] Find JAR URL: file:/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/model
+2016-11-07 13:20:39 [ main:3023 ] - [ DEBUG ] Not a JAR: file:/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/model
+2016-11-07 13:20:39 [ main:3130 ] - [ DEBUG ] Reader entry: UserInfo.class
+2016-11-07 13:20:39 [ main:3130 ] - [ DEBUG ] Listing file:/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/model
+2016-11-07 13:20:39 [ main:3131 ] - [ DEBUG ] Find JAR URL: file:/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/model/UserInfo.class
+2016-11-07 13:20:39 [ main:3131 ] - [ DEBUG ] Not a JAR: file:/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/model/UserInfo.class
+2016-11-07 13:20:39 [ main:3133 ] - [ DEBUG ] Reader entry: ����   2 H
+2016-11-07 13:20:39 [ main:3134 ] - [ DEBUG ] Checking to see if class com.server.user.dao.model.UserInfo matches criteria [is assignable to Object]
+2016-11-07 13:20:39 [ main:3136 ] - [ DEBUG ] Scanned package: 'com.server.user.dao.model' for aliases
+2016-11-07 13:20:39 [ main:3137 ] - [ DEBUG ] Registered plugin: 'com.github.pagehelper.PageHelper@2a65bb85'
+2016-11-07 13:20:40 [ main:3193 ] - [ DEBUG ] Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2016-11-07 13:20:40 [ main:3196 ] - [ DEBUG ] Parsed configuration file: 'class path resource [config/mybatis-config.xml]'
+2016-11-07 13:20:40 [ main:3335 ] - [ DEBUG ] Parsed mapper file: 'file [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/config/mapper/UserMapper.xml]'
+2016-11-07 13:20:40 [ main:3336 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2016-11-07 13:20:40 [ main:3339 ] - [ DEBUG ] Finished creating instance of bean 'sqlSessionFactory'
+2016-11-07 13:20:40 [ main:3339 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.mybatis.spring.mapper.MapperScannerConfigurer#0'
+2016-11-07 13:20:40 [ main:3340 ] - [ DEBUG ] Creating shared instance of singleton bean 'transactionManager'
+2016-11-07 13:20:40 [ main:3340 ] - [ DEBUG ] Creating instance of bean 'transactionManager'
+2016-11-07 13:20:40 [ main:3348 ] - [ DEBUG ] Eagerly caching bean 'transactionManager' to allow for resolving potential circular references
+2016-11-07 13:20:40 [ main:3353 ] - [ DEBUG ] Returning cached instance of singleton bean 'dataSource'
+2016-11-07 13:20:40 [ main:3353 ] - [ DEBUG ] Invoking afterPropertiesSet() on bean with name 'transactionManager'
+2016-11-07 13:20:40 [ main:3353 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2016-11-07 13:20:40 [ main:3355 ] - [ DEBUG ] Finished creating instance of bean 'transactionManager'
+2016-11-07 13:20:40 [ main:3355 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2016-11-07 13:20:40 [ main:3356 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+2016-11-07 13:20:40 [ main:3356 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+2016-11-07 13:20:40 [ main:3356 ] - [ DEBUG ] Creating instance of bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+2016-11-07 13:20:40 [ main:3359 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0' to allow for resolving potential circular references
+2016-11-07 13:20:40 [ main:3367 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+2016-11-07 13:20:40 [ main:3367 ] - [ DEBUG ] Invoking afterPropertiesSet() on bean with name 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+2016-11-07 13:20:40 [ main:3367 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+2016-11-07 13:20:40 [ main:3368 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2016-11-07 13:20:40 [ main:3368 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+2016-11-07 13:20:40 [ main:3368 ] - [ DEBUG ] Creating shared instance of singleton bean 'userMapper'
+2016-11-07 13:20:40 [ main:3369 ] - [ DEBUG ] Creating instance of bean 'userMapper'
+2016-11-07 13:20:40 [ main:3369 ] - [ DEBUG ] Eagerly caching bean 'userMapper' to allow for resolving potential circular references
+2016-11-07 13:20:40 [ main:3376 ] - [ DEBUG ] Returning cached instance of singleton bean 'sqlSessionFactory'
+2016-11-07 13:20:40 [ main:3377 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2016-11-07 13:20:40 [ main:3391 ] - [ DEBUG ] Invoking afterPropertiesSet() on bean with name 'userMapper'
+2016-11-07 13:20:40 [ main:3391 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2016-11-07 13:20:40 [ main:3392 ] - [ DEBUG ] Finished creating instance of bean 'userMapper'
+2016-11-07 13:20:40 [ main:3395 ] - [ DEBUG ] Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@2f40a43]
+2016-11-07 13:20:40 [ main:3397 ] - [ DEBUG ] Returning cached instance of singleton bean 'lifecycleProcessor'
+2016-11-07 13:20:40 [ main:3399 ] - [ DEBUG ] Returning cached instance of singleton bean 'sqlSessionFactory'
+2016-11-07 13:20:40 [ main:3402 ] - [ DEBUG ] Searching for key 'spring.liveBeansView.mbeanDomain' in [systemProperties]
+2016-11-07 13:20:40 [ main:3403 ] - [ DEBUG ] Searching for key 'spring.liveBeansView.mbeanDomain' in [systemEnvironment]
+2016-11-07 13:20:40 [ main:3403 ] - [ DEBUG ] Could not find key 'spring.liveBeansView.mbeanDomain' in any property source. Returning [null]
+2016-11-07 13:20:40 [ main:3404 ] - [ DEBUG ] Storing ApplicationContext in cache under key [[MergedContextConfiguration@6b1274d2 testClass = AppTest, locations = '{classpath:META-INF/spring/user-database.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+2016-11-07 13:20:40 [ main:3408 ] - [ DEBUG ] Processing injected method of bean 'com.server.user.dao.AppTest': AutowiredFieldElement for private com.server.user.dao.mapper.UserMapper com.server.user.dao.AppTest.userMapper
+2016-11-07 13:20:40 [ main:3410 ] - [ DEBUG ] Returning cached instance of singleton bean 'userMapper'
+2016-11-07 13:20:40 [ main:3414 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2016-11-07 13:20:40 [ main:3416 ] - [ DEBUG ] Autowiring by type from bean name 'com.server.user.dao.AppTest' to bean named 'userMapper'
+2016-11-07 13:20:40 [ main:3417 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2016-11-07 13:20:40 [ main:3435 ] - [ DEBUG ] Creating a new SqlSession
+2016-11-07 13:20:40 [ main:3451 ] - [ DEBUG ] SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@27a0a5a2] was not registered for synchronization because synchronization is not active
+2016-11-07 13:20:40 [ main:3461 ] - [ DEBUG ] Fetching JDBC Connection from DataSource
+2016-11-07 13:20:40 [ main:3510 ] - [ DEBUG ] JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@65ef722a] will not be managed by Spring
+2016-11-07 13:20:40 [ main:3517 ] - [ DEBUG ] ==>  Preparing: INSERT INTO T_USER ( T_NAME,T_NICK_NAME,T_AGE ) VALUES ( ?, ?, ? ) 
+2016-11-07 13:20:40 [ main:3591 ] - [ DEBUG ] ==> Parameters: 李焱生(String), smile(String), 13(Integer)
+2016-11-07 13:20:40 [ main:3595 ] - [ DEBUG ] <==    Updates: 1
+2016-11-07 13:20:40 [ main:3608 ] - [ DEBUG ] Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@27a0a5a2]
+2016-11-07 13:20:40 [ main:3609 ] - [ DEBUG ] Returning JDBC Connection to DataSource
+2016-11-07 13:20:40 [ main:3610 ] - [ DEBUG ] After test method: context [[TestContext@551bdc27 testClass = AppTest, testInstance = com.server.user.dao.AppTest@58fdd99, testMethod = testInsert@AppTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6b1274d2 testClass = AppTest, locations = '{classpath:META-INF/spring/user-database.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]], class dirties context [false], class mode [null], method dirties context [false].
+2016-11-07 13:20:40 [ main:3612 ] - [ DEBUG ] After test class: context [[TestContext@551bdc27 testClass = AppTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@6b1274d2 testClass = AppTest, locations = '{classpath:META-INF/spring/user-database.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]], dirtiesContext [false].
+2016-11-07 13:20:40 [ Thread-1:3617 ] - [ INFO ] Closing org.springframework.context.support.GenericApplicationContext@36f0f1be: startup date [Mon Nov 07 13:20:37 CST 2016]; root of context hierarchy
+2016-11-07 13:20:40 [ Thread-1:3618 ] - [ DEBUG ] Returning cached instance of singleton bean 'sqlSessionFactory'
+2016-11-07 13:20:40 [ Thread-1:3618 ] - [ DEBUG ] Returning cached instance of singleton bean 'lifecycleProcessor'
+2016-11-07 13:20:40 [ Thread-1:3619 ] - [ INFO ] Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@5f8e8a9d: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,userMapper]; root of factory hierarchy
+2016-11-07 13:20:40 [ Thread-1:3620 ] - [ DEBUG ] Retrieved dependent beans for bean 'userMapper': [com.server.user.dao.AppTest]
+2016-11-07 13:20:40 [ Thread-1:3627 ] - [ DEBUG ] Retrieved dependent beans for bean 'com.github.pagehelper.PageHelper#6be968ce': [sqlSessionFactory]
+2016-11-07 13:20:40 [ Thread-1:3628 ] - [ DEBUG ] Invoking destroy method 'close' on bean with name 'dataSource'
+2016-11-07 13:20:40 [ Thread-1:3636 ] - [ INFO ] {dataSource-1} closed
+2016-11-07 13:21:31 [ main:0 ] - [ DEBUG ] SpringJUnit4ClassRunner constructor called with [class com.server.user.dao.AppTest].
+2016-11-07 13:21:31 [ main:100 ] - [ DEBUG ] Delegating to GenericXmlContextLoader to process context configuration [ContextConfigurationAttributes@68ceda24 declaringClass = 'com.server.user.dao.AppTest', locations = '{classpath:META-INF/spring/user-database.xml}', classes = '{}', inheritLocations = true, initializers = '{}', inheritInitializers = true, name = [null], contextLoaderClass = 'org.springframework.test.context.ContextLoader'].
+2016-11-07 13:21:31 [ main:107 ] - [ DEBUG ] Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.server.user.dao.AppTest]
+2016-11-07 13:21:31 [ main:112 ] - [ DEBUG ] @TestExecutionListeners is not present for class [com.server.user.dao.AppTest]: using defaults.
+2016-11-07 13:21:31 [ main:118 ] - [ INFO ] Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2016-11-07 13:21:31 [ main:145 ] - [ DEBUG ] Retrieved @ProfileValueSourceConfiguration [null] for test class [com.server.user.dao.AppTest]
+2016-11-07 13:21:31 [ main:145 ] - [ DEBUG ] Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.server.user.dao.AppTest]
+2016-11-07 13:21:31 [ main:159 ] - [ DEBUG ] Retrieved @ProfileValueSourceConfiguration [null] for test class [com.server.user.dao.AppTest]
+2016-11-07 13:21:31 [ main:160 ] - [ DEBUG ] Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.server.user.dao.AppTest]
+2016-11-07 13:21:31 [ main:165 ] - [ DEBUG ] Retrieved @ProfileValueSourceConfiguration [null] for test class [com.server.user.dao.AppTest]
+2016-11-07 13:21:31 [ main:168 ] - [ DEBUG ] Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.server.user.dao.AppTest]
+2016-11-07 13:21:31 [ main:170 ] - [ DEBUG ] Retrieved @ProfileValueSourceConfiguration [null] for test class [com.server.user.dao.AppTest]
+2016-11-07 13:21:31 [ main:171 ] - [ DEBUG ] Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.server.user.dao.AppTest]
+2016-11-07 13:21:31 [ main:183 ] - [ DEBUG ] Retrieved @ProfileValueSourceConfiguration [null] for test class [com.server.user.dao.AppTest]
+2016-11-07 13:21:31 [ main:184 ] - [ DEBUG ] Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.server.user.dao.AppTest]
+2016-11-07 13:21:31 [ main:188 ] - [ DEBUG ] Performing dependency injection for test context [[TestContext@516be40f testClass = AppTest, testInstance = com.server.user.dao.AppTest@3c0a50da, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@646be2c3 testClass = AppTest, locations = '{classpath:META-INF/spring/user-database.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]].
+2016-11-07 13:21:31 [ main:189 ] - [ DEBUG ] Delegating to GenericXmlContextLoader to load context from [MergedContextConfiguration@646be2c3 testClass = AppTest, locations = '{classpath:META-INF/spring/user-database.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]].
+2016-11-07 13:21:31 [ main:190 ] - [ DEBUG ] Loading ApplicationContext for merged context configuration [[MergedContextConfiguration@646be2c3 testClass = AppTest, locations = '{classpath:META-INF/spring/user-database.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+2016-11-07 13:21:32 [ main:376 ] - [ DEBUG ] Adding [systemProperties] PropertySource with lowest search precedence
+2016-11-07 13:21:32 [ main:390 ] - [ DEBUG ] Adding [systemEnvironment] PropertySource with lowest search precedence
+2016-11-07 13:21:32 [ main:391 ] - [ DEBUG ] Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+2016-11-07 13:21:32 [ main:429 ] - [ INFO ] Loading XML bean definitions from class path resource [META-INF/spring/user-database.xml]
+2016-11-07 13:21:32 [ main:473 ] - [ DEBUG ] Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+2016-11-07 13:21:32 [ main:577 ] - [ DEBUG ] Loading schema mappings from [META-INF/spring.schemas]
+2016-11-07 13:21:32 [ main:589 ] - [ DEBUG ] Loaded schema mappings: {http://mybatis.org/schema/mybatis-spring-1.2.xsd=org/mybatis/spring/config/mybatis-spring-1.2.xsd, http://www.springframework.org/schema/jee/spring-jee-3.2.xsd=org/springframework/ejb/config/spring-jee-3.2.xsd, http://www.springframework.org/schema/util/spring-util.xsd=org/springframework/beans/factory/xml/spring-util-3.2.xsd, http://www.springframework.org/schema/task/spring-task.xsd=org/springframework/scheduling/config/spring-task-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-3.1.xsd=org/springframework/beans/factory/xml/spring-beans-3.1.xsd, http://www.springframework.org/schema/cache/spring-cache.xsd=org/springframework/cache/config/spring-cache-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop-3.0.xsd=org/springframework/aop/config/spring-aop-3.0.xsd, http://www.springframework.org/schema/task/spring-task-3.1.xsd=org/springframework/scheduling/config/spring-task-3.1.xsd, http://www.springframework.org/schema/aop/spring-aop-2.0.xsd=org/springframework/aop/config/spring-aop-2.0.xsd, http://www.springframework.org/schema/tool/spring-tool-2.5.xsd=org/springframework/beans/factory/xml/spring-tool-2.5.xsd, http://www.springframework.org/schema/beans/spring-beans.xsd=org/springframework/beans/factory/xml/spring-beans-3.2.xsd, http://www.springframework.org/schema/jee/spring-jee-2.5.xsd=org/springframework/ejb/config/spring-jee-2.5.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd=org/springframework/jdbc/config/spring-jdbc-3.1.xsd, http://www.springframework.org/schema/tool/spring-tool-3.1.xsd=org/springframework/beans/factory/xml/spring-tool-3.1.xsd, http://www.springframework.org/schema/jee/spring-jee-3.1.xsd=org/springframework/ejb/config/spring-jee-3.1.xsd, http://www.springframework.org/schema/aop/spring-aop.xsd=org/springframework/aop/config/spring-aop-3.2.xsd, http://www.springframework.org/schema/context/spring-context-3.2.xsd=org/springframework/context/config/spring-context-3.2.xsd, http://www.springframework.org/schema/tx/spring-tx-3.2.xsd=org/springframework/transaction/config/spring-tx-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-2.0.xsd=org/springframework/beans/factory/xml/spring-beans-2.0.xsd, http://www.springframework.org/schema/util/spring-util-3.2.xsd=org/springframework/beans/factory/xml/spring-util-3.2.xsd, http://www.springframework.org/schema/lang/spring-lang-3.2.xsd=org/springframework/scripting/config/spring-lang-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-3.0.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://www.springframework.org/schema/cache/spring-cache-3.2.xsd=org/springframework/cache/config/spring-cache-3.2.xsd, http://www.springframework.org/schema/task/spring-task-3.0.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://mybatis.org/schema/mybatis-spring.xsd=org/mybatis/spring/config/mybatis-spring-1.2.xsd, http://www.springframework.org/schema/context/spring-context-2.5.xsd=org/springframework/context/config/spring-context-2.5.xsd, http://www.springframework.org/schema/tx/spring-tx-2.5.xsd=org/springframework/transaction/config/spring-tx-2.5.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd=org/springframework/jdbc/config/spring-jdbc-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool-3.0.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang.xsd=org/springframework/scripting/config/spring-lang-3.2.xsd, http://www.springframework.org/schema/tx/spring-tx.xsd=org/springframework/transaction/config/spring-tx-3.2.xsd, http://www.springframework.org/schema/tool/spring-tool-2.0.xsd=org/springframework/beans/factory/xml/spring-tool-2.0.xsd, http://www.springframework.org/schema/util/spring-util-2.5.xsd=org/springframework/beans/factory/xml/spring-util-2.5.xsd, http://www.springframework.org/schema/lang/spring-lang-2.5.xsd=org/springframework/scripting/config/spring-lang-2.5.xsd, http://www.springframework.org/schema/aop/spring-aop-3.2.xsd=org/springframework/aop/config/spring-aop-3.2.xsd, http://www.springframework.org/schema/jee/spring-jee-3.0.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee-2.0.xsd=org/springframework/ejb/config/spring-jee-2.0.xsd, http://www.springframework.org/schema/context/spring-context-3.1.xsd=org/springframework/context/config/spring-context-3.1.xsd, http://www.springframework.org/schema/tx/spring-tx-3.1.xsd=org/springframework/transaction/config/spring-tx-3.1.xsd, http://www.springframework.org/schema/util/spring-util-3.1.xsd=org/springframework/beans/factory/xml/spring-util-3.1.xsd, http://www.springframework.org/schema/lang/spring-lang-3.1.xsd=org/springframework/scripting/config/spring-lang-3.1.xsd, http://www.springframework.org/schema/cache/spring-cache-3.1.xsd=org/springframework/cache/config/spring-cache-3.1.xsd, http://www.springframework.org/schema/context/spring-context.xsd=org/springframework/context/config/spring-context-3.2.xsd, http://www.springframework.org/schema/jee/spring-jee.xsd=org/springframework/ejb/config/spring-jee-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop-2.5.xsd=org/springframework/aop/config/spring-aop-2.5.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc.xsd=org/springframework/jdbc/config/spring-jdbc-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-3.2.xsd=org/springframework/beans/factory/xml/spring-beans-3.2.xsd, http://www.springframework.org/schema/tx/spring-tx-2.0.xsd=org/springframework/transaction/config/spring-tx-2.0.xsd, http://www.springframework.org/schema/aop/spring-aop-3.1.xsd=org/springframework/aop/config/spring-aop-3.1.xsd, http://www.springframework.org/schema/task/spring-task-3.2.xsd=org/springframework/scheduling/config/spring-task-3.2.xsd, http://www.springframework.org/schema/context/spring-context-3.0.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx-3.0.xsd=org/springframework/transaction/config/spring-tx-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool.xsd=org/springframework/beans/factory/xml/spring-tool-3.2.xsd, http://www.springframework.org/schema/util/spring-util-3.0.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-3.0.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://www.alibaba.com/schema/stat.xsd=META-INF/stat.xsd, http://www.springframework.org/schema/util/spring-util-2.0.xsd=org/springframework/beans/factory/xml/spring-util-2.0.xsd, http://www.springframework.org/schema/lang/spring-lang-2.0.xsd=org/springframework/scripting/config/spring-lang-2.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd=org/springframework/jdbc/config/spring-jdbc-3.2.xsd, http://www.springframework.org/schema/tool/spring-tool-3.2.xsd=org/springframework/beans/factory/xml/spring-tool-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-2.5.xsd=org/springframework/beans/factory/xml/spring-beans-2.5.xsd}
+2016-11-07 13:21:32 [ main:613 ] - [ DEBUG ] Found XML schema [http://www.springframework.org/schema/beans/spring-beans-2.5.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-2.5.xsd
+2016-11-07 13:21:32 [ main:719 ] - [ DEBUG ] Found XML schema [http://www.springframework.org/schema/context/spring-context.xsd] in classpath: org/springframework/context/config/spring-context-3.2.xsd
+2016-11-07 13:21:32 [ main:747 ] - [ DEBUG ] Found XML schema [http://www.springframework.org/schema/tool/spring-tool-3.2.xsd] in classpath: org/springframework/beans/factory/xml/spring-tool-3.2.xsd
+2016-11-07 13:21:32 [ main:802 ] - [ DEBUG ] Found XML schema [http://www.springframework.org/schema/tx/spring-tx.xsd] in classpath: org/springframework/transaction/config/spring-tx-3.2.xsd
+2016-11-07 13:21:32 [ main:818 ] - [ DEBUG ] Loading bean definitions
+2016-11-07 13:21:32 [ main:877 ] - [ DEBUG ] Loaded NamespaceHandler mappings: {http://www.springframework.org/schema/p=org.springframework.beans.factory.xml.SimplePropertyNamespaceHandler, http://www.springframework.org/schema/util=org.springframework.beans.factory.xml.UtilNamespaceHandler, http://www.alibaba.com/schema/stat=com.alibaba.druid.support.spring.stat.config.DruidStatNamespaceHandler, http://www.springframework.org/schema/jee=org.springframework.ejb.config.JeeNamespaceHandler, http://www.springframework.org/schema/aop=org.springframework.aop.config.AopNamespaceHandler, http://www.springframework.org/schema/jdbc=org.springframework.jdbc.config.JdbcNamespaceHandler, http://www.springframework.org/schema/cache=org.springframework.cache.config.CacheNamespaceHandler, http://mybatis.org/schema/mybatis-spring=org.mybatis.spring.config.NamespaceHandler, http://www.springframework.org/schema/c=org.springframework.beans.factory.xml.SimpleConstructorNamespaceHandler, http://www.springframework.org/schema/tx=org.springframework.transaction.config.TxNamespaceHandler, http://www.springframework.org/schema/task=org.springframework.scheduling.config.TaskNamespaceHandler, http://www.springframework.org/schema/lang=org.springframework.scripting.config.LangNamespaceHandler, http://www.springframework.org/schema/context=org.springframework.context.config.ContextNamespaceHandler}
+2016-11-07 13:21:32 [ main:992 ] - [ DEBUG ] Looking for matching resources in directory tree [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/test-classes/com/server/user/dao]
+2016-11-07 13:21:32 [ main:993 ] - [ DEBUG ] Searching directory [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/test-classes/com/server/user/dao] for files matching pattern [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/test-classes/com/server/user/dao/**/*.class]
+2016-11-07 13:21:32 [ main:1007 ] - [ DEBUG ] Looking for matching resources in directory tree [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao]
+2016-11-07 13:21:32 [ main:1008 ] - [ DEBUG ] Searching directory [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao] for files matching pattern [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/**/*.class]
+2016-11-07 13:21:32 [ main:1009 ] - [ DEBUG ] Searching directory [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/base] for files matching pattern [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/**/*.class]
+2016-11-07 13:21:32 [ main:1011 ] - [ DEBUG ] Searching directory [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/mapper] for files matching pattern [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/**/*.class]
+2016-11-07 13:21:32 [ main:1016 ] - [ DEBUG ] Searching directory [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/model] for files matching pattern [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/**/*.class]
+2016-11-07 13:21:32 [ main:1018 ] - [ DEBUG ] Resolved location pattern [classpath*:com/server/user/dao/**/*.class] to resources [file [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/test-classes/com/server/user/dao/AppTest.class], file [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/base/BaseDaoModel.class], file [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/base/BaseMapper.class], file [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/base/CrudMapper.class], file [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/base/MyBatisMapper.class], file [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/mapper/UserMapper.class], file [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/model/UserInfo.class]]
+2016-11-07 13:21:32 [ main:1104 ] - [ DEBUG ] Ignored because not a concrete top-level class: file [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/base/MyBatisMapper.class]
+2016-11-07 13:21:32 [ main:1106 ] - [ DEBUG ] Ignored because not a concrete top-level class: file [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/mapper/UserMapper.class]
+2016-11-07 13:21:32 [ main:1142 ] - [ DEBUG ] Neither XML 'id' nor 'name' specified - using generated bean name [com.github.pagehelper.PageHelper#24569dba]
+2016-11-07 13:21:32 [ main:1145 ] - [ DEBUG ] Neither XML 'id' nor 'name' specified - using generated bean name [org.mybatis.spring.mapper.MapperScannerConfigurer#0]
+2016-11-07 13:21:32 [ main:1170 ] - [ DEBUG ] Loaded 14 bean definitions from location pattern [classpath:META-INF/spring/user-database.xml]
+2016-11-07 13:21:32 [ main:1175 ] - [ INFO ] Refreshing org.springframework.context.support.GenericApplicationContext@6328d34a: startup date [Mon Nov 07 13:21:32 CST 2016]; root of context hierarchy
+2016-11-07 13:21:32 [ main:1177 ] - [ DEBUG ] Bean factory for org.springframework.context.support.GenericApplicationContext@6328d34a: org.springframework.beans.factory.support.DefaultListableBeanFactory@7bd7d6d6: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor]; root of factory hierarchy
+2016-11-07 13:21:32 [ main:1214 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2016-11-07 13:21:32 [ main:1214 ] - [ DEBUG ] Creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2016-11-07 13:21:33 [ main:1317 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor' to allow for resolving potential circular references
+2016-11-07 13:21:33 [ main:1326 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2016-11-07 13:21:33 [ main:1326 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.mybatis.spring.mapper.MapperScannerConfigurer#0'
+2016-11-07 13:21:33 [ main:1327 ] - [ DEBUG ] Creating instance of bean 'org.mybatis.spring.mapper.MapperScannerConfigurer#0'
+2016-11-07 13:21:33 [ main:1333 ] - [ DEBUG ] Eagerly caching bean 'org.mybatis.spring.mapper.MapperScannerConfigurer#0' to allow for resolving potential circular references
+2016-11-07 13:21:33 [ main:1419 ] - [ DEBUG ] Invoking afterPropertiesSet() on bean with name 'org.mybatis.spring.mapper.MapperScannerConfigurer#0'
+2016-11-07 13:21:33 [ main:1419 ] - [ DEBUG ] Finished creating instance of bean 'org.mybatis.spring.mapper.MapperScannerConfigurer#0'
+2016-11-07 13:21:33 [ main:1488 ] - [ DEBUG ] Adding [systemProperties] PropertySource with lowest search precedence
+2016-11-07 13:21:33 [ main:1489 ] - [ DEBUG ] Adding [systemEnvironment] PropertySource with lowest search precedence
+2016-11-07 13:21:33 [ main:1490 ] - [ DEBUG ] Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+2016-11-07 13:21:33 [ main:1496 ] - [ DEBUG ] Looking for matching resources in directory tree [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/mapper]
+2016-11-07 13:21:33 [ main:1497 ] - [ DEBUG ] Searching directory [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/mapper] for files matching pattern [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/mapper/**/*.class]
+2016-11-07 13:21:33 [ main:1498 ] - [ DEBUG ] Resolved location pattern [classpath*:com/server/user/dao/mapper/**/*.class] to resources [file [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/mapper/UserMapper.class]]
+2016-11-07 13:21:33 [ main:1499 ] - [ DEBUG ] Identified candidate component class: file [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/mapper/UserMapper.class]
+2016-11-07 13:21:33 [ main:1534 ] - [ DEBUG ] Creating MapperFactoryBean with name 'userMapper' and 'com.server.user.dao.mapper.UserMapper' mapperInterface
+2016-11-07 13:21:33 [ main:1540 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0'
+2016-11-07 13:21:33 [ main:1546 ] - [ DEBUG ] Creating instance of bean 'org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0'
+2016-11-07 13:21:33 [ main:1552 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0' to allow for resolving potential circular references
+2016-11-07 13:21:33 [ main:1568 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0'
+2016-11-07 13:21:33 [ main:1569 ] - [ DEBUG ] Adding [environmentProperties] PropertySource with lowest search precedence
+2016-11-07 13:21:33 [ main:1570 ] - [ INFO ] Loading properties file from class path resource [config/database.properties]
+2016-11-07 13:21:33 [ main:1571 ] - [ DEBUG ] Adding [localProperties] PropertySource with lowest search precedence
+2016-11-07 13:21:33 [ main:1575 ] - [ DEBUG ] Searching for key 'db.driverClassName' in [environmentProperties]
+2016-11-07 13:21:33 [ main:1576 ] - [ DEBUG ] Searching for key 'db.driverClassName' in [systemProperties]
+2016-11-07 13:21:33 [ main:1577 ] - [ DEBUG ] Searching for key 'db.driverClassName' in [systemEnvironment]
+2016-11-07 13:21:33 [ main:1580 ] - [ DEBUG ] Could not find key 'db.driverClassName' in any property source. Returning [null]
+2016-11-07 13:21:33 [ main:1581 ] - [ DEBUG ] Searching for key 'db.driverClassName' in [localProperties]
+2016-11-07 13:21:33 [ main:1582 ] - [ DEBUG ] Found key 'db.driverClassName' in [localProperties] with type [String] and value 'com.mysql.jdbc.Driver'
+2016-11-07 13:21:33 [ main:1586 ] - [ DEBUG ] Searching for key 'db.url' in [environmentProperties]
+2016-11-07 13:21:33 [ main:1587 ] - [ DEBUG ] Searching for key 'db.url' in [systemProperties]
+2016-11-07 13:21:33 [ main:1587 ] - [ DEBUG ] Searching for key 'db.url' in [systemEnvironment]
+2016-11-07 13:21:33 [ main:1588 ] - [ DEBUG ] Could not find key 'db.url' in any property source. Returning [null]
+2016-11-07 13:21:33 [ main:1588 ] - [ DEBUG ] Searching for key 'db.url' in [localProperties]
+2016-11-07 13:21:33 [ main:1589 ] - [ DEBUG ] Found key 'db.url' in [localProperties] with type [String] and value 'jdbc:mysql://127.0.0.1:3306/app_user?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=true'
+2016-11-07 13:21:33 [ main:1589 ] - [ DEBUG ] Searching for key 'db.username' in [environmentProperties]
+2016-11-07 13:21:33 [ main:1591 ] - [ DEBUG ] Searching for key 'db.username' in [systemProperties]
+2016-11-07 13:21:33 [ main:1591 ] - [ DEBUG ] Searching for key 'db.username' in [systemEnvironment]
+2016-11-07 13:21:33 [ main:1592 ] - [ DEBUG ] Could not find key 'db.username' in any property source. Returning [null]
+2016-11-07 13:21:33 [ main:1592 ] - [ DEBUG ] Searching for key 'db.username' in [localProperties]
+2016-11-07 13:21:33 [ main:1592 ] - [ DEBUG ] Found key 'db.username' in [localProperties] with type [String] and value 'root'
+2016-11-07 13:21:33 [ main:1593 ] - [ DEBUG ] Searching for key 'db.password' in [environmentProperties]
+2016-11-07 13:21:33 [ main:1599 ] - [ DEBUG ] Searching for key 'db.password' in [systemProperties]
+2016-11-07 13:21:33 [ main:1601 ] - [ DEBUG ] Searching for key 'db.password' in [systemEnvironment]
+2016-11-07 13:21:33 [ main:1601 ] - [ DEBUG ] Could not find key 'db.password' in any property source. Returning [null]
+2016-11-07 13:21:33 [ main:1603 ] - [ DEBUG ] Searching for key 'db.password' in [localProperties]
+2016-11-07 13:21:33 [ main:1604 ] - [ DEBUG ] Found key 'db.password' in [localProperties] with type [String] and value '123456'
+2016-11-07 13:21:33 [ main:1607 ] - [ DEBUG ] Searching for key 'db.maxActive' in [environmentProperties]
+2016-11-07 13:21:33 [ main:1607 ] - [ DEBUG ] Searching for key 'db.maxActive' in [systemProperties]
+2016-11-07 13:21:33 [ main:1608 ] - [ DEBUG ] Searching for key 'db.maxActive' in [systemEnvironment]
+2016-11-07 13:21:33 [ main:1608 ] - [ DEBUG ] Could not find key 'db.maxActive' in any property source. Returning [null]
+2016-11-07 13:21:33 [ main:1610 ] - [ DEBUG ] Searching for key 'db.maxActive' in [localProperties]
+2016-11-07 13:21:33 [ main:1615 ] - [ DEBUG ] Found key 'db.maxActive' in [localProperties] with type [String] and value '50'
+2016-11-07 13:21:33 [ main:1619 ] - [ DEBUG ] Searching for key 'db.initialSize' in [environmentProperties]
+2016-11-07 13:21:33 [ main:1620 ] - [ DEBUG ] Searching for key 'db.initialSize' in [systemProperties]
+2016-11-07 13:21:33 [ main:1621 ] - [ DEBUG ] Searching for key 'db.initialSize' in [systemEnvironment]
+2016-11-07 13:21:33 [ main:1622 ] - [ DEBUG ] Could not find key 'db.initialSize' in any property source. Returning [null]
+2016-11-07 13:21:33 [ main:1622 ] - [ DEBUG ] Searching for key 'db.initialSize' in [localProperties]
+2016-11-07 13:21:33 [ main:1623 ] - [ DEBUG ] Found key 'db.initialSize' in [localProperties] with type [String] and value '1'
+2016-11-07 13:21:33 [ main:1624 ] - [ DEBUG ] Searching for key 'db.maxWait' in [environmentProperties]
+2016-11-07 13:21:33 [ main:1631 ] - [ DEBUG ] Searching for key 'db.maxWait' in [systemProperties]
+2016-11-07 13:21:33 [ main:1631 ] - [ DEBUG ] Searching for key 'db.maxWait' in [systemEnvironment]
+2016-11-07 13:21:33 [ main:1632 ] - [ DEBUG ] Could not find key 'db.maxWait' in any property source. Returning [null]
+2016-11-07 13:21:33 [ main:1632 ] - [ DEBUG ] Searching for key 'db.maxWait' in [localProperties]
+2016-11-07 13:21:33 [ main:1633 ] - [ DEBUG ] Found key 'db.maxWait' in [localProperties] with type [String] and value '60000'
+2016-11-07 13:21:33 [ main:1635 ] - [ DEBUG ] Searching for key 'db.minIdle' in [environmentProperties]
+2016-11-07 13:21:33 [ main:1635 ] - [ DEBUG ] Searching for key 'db.minIdle' in [systemProperties]
+2016-11-07 13:21:33 [ main:1637 ] - [ DEBUG ] Searching for key 'db.minIdle' in [systemEnvironment]
+2016-11-07 13:21:33 [ main:1637 ] - [ DEBUG ] Could not find key 'db.minIdle' in any property source. Returning [null]
+2016-11-07 13:21:33 [ main:1638 ] - [ DEBUG ] Searching for key 'db.minIdle' in [localProperties]
+2016-11-07 13:21:33 [ main:1639 ] - [ DEBUG ] Found key 'db.minIdle' in [localProperties] with type [String] and value '1'
+2016-11-07 13:21:33 [ main:1640 ] - [ DEBUG ] Searching for key 'db.timeBetweenEvictionRunsMillis' in [environmentProperties]
+2016-11-07 13:21:33 [ main:1641 ] - [ DEBUG ] Searching for key 'db.timeBetweenEvictionRunsMillis' in [systemProperties]
+2016-11-07 13:21:33 [ main:1641 ] - [ DEBUG ] Searching for key 'db.timeBetweenEvictionRunsMillis' in [systemEnvironment]
+2016-11-07 13:21:33 [ main:1641 ] - [ DEBUG ] Could not find key 'db.timeBetweenEvictionRunsMillis' in any property source. Returning [null]
+2016-11-07 13:21:33 [ main:1642 ] - [ DEBUG ] Searching for key 'db.timeBetweenEvictionRunsMillis' in [localProperties]
+2016-11-07 13:21:33 [ main:1643 ] - [ DEBUG ] Found key 'db.timeBetweenEvictionRunsMillis' in [localProperties] with type [String] and value '3000'
+2016-11-07 13:21:33 [ main:1644 ] - [ DEBUG ] Searching for key 'db.minEvictableIdleTimeMillis' in [environmentProperties]
+2016-11-07 13:21:33 [ main:1645 ] - [ DEBUG ] Searching for key 'db.minEvictableIdleTimeMillis' in [systemProperties]
+2016-11-07 13:21:33 [ main:1645 ] - [ DEBUG ] Searching for key 'db.minEvictableIdleTimeMillis' in [systemEnvironment]
+2016-11-07 13:21:33 [ main:1645 ] - [ DEBUG ] Could not find key 'db.minEvictableIdleTimeMillis' in any property source. Returning [null]
+2016-11-07 13:21:33 [ main:1646 ] - [ DEBUG ] Searching for key 'db.minEvictableIdleTimeMillis' in [localProperties]
+2016-11-07 13:21:33 [ main:1646 ] - [ DEBUG ] Found key 'db.minEvictableIdleTimeMillis' in [localProperties] with type [String] and value '300000'
+2016-11-07 13:21:33 [ main:1647 ] - [ DEBUG ] Searching for key 'db.validationQuery' in [environmentProperties]
+2016-11-07 13:21:33 [ main:1648 ] - [ DEBUG ] Searching for key 'db.validationQuery' in [systemProperties]
+2016-11-07 13:21:33 [ main:1649 ] - [ DEBUG ] Searching for key 'db.validationQuery' in [systemEnvironment]
+2016-11-07 13:21:33 [ main:1650 ] - [ DEBUG ] Could not find key 'db.validationQuery' in any property source. Returning [null]
+2016-11-07 13:21:33 [ main:1650 ] - [ DEBUG ] Searching for key 'db.validationQuery' in [localProperties]
+2016-11-07 13:21:33 [ main:1651 ] - [ DEBUG ] Found key 'db.validationQuery' in [localProperties] with type [String] and value 'SELECT 1'
+2016-11-07 13:21:33 [ main:1652 ] - [ DEBUG ] Searching for key 'db.testWhileIdle' in [environmentProperties]
+2016-11-07 13:21:33 [ main:1652 ] - [ DEBUG ] Searching for key 'db.testWhileIdle' in [systemProperties]
+2016-11-07 13:21:33 [ main:1653 ] - [ DEBUG ] Searching for key 'db.testWhileIdle' in [systemEnvironment]
+2016-11-07 13:21:33 [ main:1653 ] - [ DEBUG ] Could not find key 'db.testWhileIdle' in any property source. Returning [null]
+2016-11-07 13:21:33 [ main:1653 ] - [ DEBUG ] Searching for key 'db.testWhileIdle' in [localProperties]
+2016-11-07 13:21:33 [ main:1654 ] - [ DEBUG ] Found key 'db.testWhileIdle' in [localProperties] with type [String] and value 'true'
+2016-11-07 13:21:33 [ main:1654 ] - [ DEBUG ] Searching for key 'db.testOnBorrow' in [environmentProperties]
+2016-11-07 13:21:33 [ main:1655 ] - [ DEBUG ] Searching for key 'db.testOnBorrow' in [systemProperties]
+2016-11-07 13:21:33 [ main:1655 ] - [ DEBUG ] Searching for key 'db.testOnBorrow' in [systemEnvironment]
+2016-11-07 13:21:33 [ main:1656 ] - [ DEBUG ] Could not find key 'db.testOnBorrow' in any property source. Returning [null]
+2016-11-07 13:21:33 [ main:1656 ] - [ DEBUG ] Searching for key 'db.testOnBorrow' in [localProperties]
+2016-11-07 13:21:33 [ main:1657 ] - [ DEBUG ] Found key 'db.testOnBorrow' in [localProperties] with type [String] and value 'false'
+2016-11-07 13:21:33 [ main:1657 ] - [ DEBUG ] Searching for key 'db.testOnReturn' in [environmentProperties]
+2016-11-07 13:21:33 [ main:1658 ] - [ DEBUG ] Searching for key 'db.testOnReturn' in [systemProperties]
+2016-11-07 13:21:33 [ main:1658 ] - [ DEBUG ] Searching for key 'db.testOnReturn' in [systemEnvironment]
+2016-11-07 13:21:33 [ main:1659 ] - [ DEBUG ] Could not find key 'db.testOnReturn' in any property source. Returning [null]
+2016-11-07 13:21:33 [ main:1659 ] - [ DEBUG ] Searching for key 'db.testOnReturn' in [localProperties]
+2016-11-07 13:21:33 [ main:1660 ] - [ DEBUG ] Found key 'db.testOnReturn' in [localProperties] with type [String] and value 'false'
+2016-11-07 13:21:33 [ main:1660 ] - [ DEBUG ] Searching for key 'db.removeAbandoned' in [environmentProperties]
+2016-11-07 13:21:33 [ main:1662 ] - [ DEBUG ] Searching for key 'db.removeAbandoned' in [systemProperties]
+2016-11-07 13:21:33 [ main:1663 ] - [ DEBUG ] Searching for key 'db.removeAbandoned' in [systemEnvironment]
+2016-11-07 13:21:33 [ main:1663 ] - [ DEBUG ] Could not find key 'db.removeAbandoned' in any property source. Returning [null]
+2016-11-07 13:21:33 [ main:1664 ] - [ DEBUG ] Searching for key 'db.removeAbandoned' in [localProperties]
+2016-11-07 13:21:33 [ main:1665 ] - [ DEBUG ] Found key 'db.removeAbandoned' in [localProperties] with type [String] and value 'true'
+2016-11-07 13:21:33 [ main:1665 ] - [ DEBUG ] Searching for key 'db.removeAbandonedTimeout' in [environmentProperties]
+2016-11-07 13:21:33 [ main:1666 ] - [ DEBUG ] Searching for key 'db.removeAbandonedTimeout' in [systemProperties]
+2016-11-07 13:21:33 [ main:1666 ] - [ DEBUG ] Searching for key 'db.removeAbandonedTimeout' in [systemEnvironment]
+2016-11-07 13:21:33 [ main:1666 ] - [ DEBUG ] Could not find key 'db.removeAbandonedTimeout' in any property source. Returning [null]
+2016-11-07 13:21:33 [ main:1667 ] - [ DEBUG ] Searching for key 'db.removeAbandonedTimeout' in [localProperties]
+2016-11-07 13:21:33 [ main:1667 ] - [ DEBUG ] Found key 'db.removeAbandonedTimeout' in [localProperties] with type [String] and value '180'
+2016-11-07 13:21:33 [ main:1671 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2016-11-07 13:21:33 [ main:1672 ] - [ DEBUG ] Creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2016-11-07 13:21:33 [ main:1673 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor' to allow for resolving potential circular references
+2016-11-07 13:21:33 [ main:1673 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2016-11-07 13:21:33 [ main:1674 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2016-11-07 13:21:33 [ main:1674 ] - [ DEBUG ] Creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2016-11-07 13:21:33 [ main:1675 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor' to allow for resolving potential circular references
+2016-11-07 13:21:33 [ main:1676 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2016-11-07 13:21:33 [ main:1676 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2016-11-07 13:21:33 [ main:1677 ] - [ DEBUG ] Creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2016-11-07 13:21:33 [ main:1687 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor' to allow for resolving potential circular references
+2016-11-07 13:21:33 [ main:1687 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2016-11-07 13:21:33 [ main:1688 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+2016-11-07 13:21:33 [ main:1688 ] - [ DEBUG ] Creating instance of bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+2016-11-07 13:21:33 [ main:1689 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor' to allow for resolving potential circular references
+2016-11-07 13:21:33 [ main:1689 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+2016-11-07 13:21:33 [ main:1690 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+2016-11-07 13:21:33 [ main:1690 ] - [ DEBUG ] Creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+2016-11-07 13:21:33 [ main:1690 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor' to allow for resolving potential circular references
+2016-11-07 13:21:33 [ main:1691 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+2016-11-07 13:21:33 [ main:1691 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2016-11-07 13:21:33 [ main:1692 ] - [ DEBUG ] Creating instance of bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2016-11-07 13:21:33 [ main:1707 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.aop.config.internalAutoProxyCreator' to allow for resolving potential circular references
+2016-11-07 13:21:33 [ main:1734 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2016-11-07 13:21:33 [ main:1739 ] - [ DEBUG ] Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@30bce90b]
+2016-11-07 13:21:33 [ main:1743 ] - [ DEBUG ] Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@45d2ade3]
+2016-11-07 13:21:33 [ main:1748 ] - [ INFO ] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7bd7d6d6: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,userMapper]; root of factory hierarchy
+2016-11-07 13:21:33 [ main:1749 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2016-11-07 13:21:33 [ main:1750 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2016-11-07 13:21:33 [ main:1750 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2016-11-07 13:21:33 [ main:1764 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2016-11-07 13:21:33 [ main:1765 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.context.annotation.internalPersistenceAnnotationProcessor'
+2016-11-07 13:21:33 [ main:1766 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0'
+2016-11-07 13:21:33 [ main:1767 ] - [ DEBUG ] Creating shared instance of singleton bean 'dataSource'
+2016-11-07 13:21:33 [ main:1767 ] - [ DEBUG ] Creating instance of bean 'dataSource'
+2016-11-07 13:21:33 [ main:1898 ] - [ DEBUG ] Eagerly caching bean 'dataSource' to allow for resolving potential circular references
+2016-11-07 13:21:33 [ main:2045 ] - [ DEBUG ] Invoking init method  'init' on bean with name 'dataSource'
+2016-11-07 13:21:34 [ main:2868 ] - [ INFO ] {dataSource-1} inited
+2016-11-07 13:21:34 [ main:2870 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2016-11-07 13:21:34 [ main:2871 ] - [ DEBUG ] Creating instance of bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2016-11-07 13:21:34 [ main:2876 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.transaction.config.internalTransactionAdvisor' to allow for resolving potential circular references
+2016-11-07 13:21:34 [ main:2885 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+2016-11-07 13:21:34 [ main:2885 ] - [ DEBUG ] Creating instance of bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+2016-11-07 13:21:34 [ main:2887 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0' to allow for resolving potential circular references
+2016-11-07 13:21:34 [ main:2890 ] - [ DEBUG ] Skipping currently created advisor 'org.springframework.transaction.config.internalTransactionAdvisor'
+2016-11-07 13:21:34 [ main:2893 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+2016-11-07 13:21:34 [ main:2896 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2016-11-07 13:21:34 [ main:2910 ] - [ DEBUG ] Finished creating instance of bean 'dataSource'
+2016-11-07 13:21:34 [ main:2911 ] - [ DEBUG ] Creating shared instance of singleton bean 'sqlSessionFactory'
+2016-11-07 13:21:34 [ main:2913 ] - [ DEBUG ] Creating instance of bean 'sqlSessionFactory'
+2016-11-07 13:21:34 [ main:2957 ] - [ DEBUG ] Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2016-11-07 13:21:34 [ main:2964 ] - [ DEBUG ] Eagerly caching bean 'sqlSessionFactory' to allow for resolving potential circular references
+2016-11-07 13:21:34 [ main:2974 ] - [ DEBUG ] Looking for matching resources in directory tree [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/config/mapper]
+2016-11-07 13:21:34 [ main:2975 ] - [ DEBUG ] Searching directory [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/config/mapper] for files matching pattern [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/config/mapper/*.xml]
+2016-11-07 13:21:34 [ main:2976 ] - [ DEBUG ] Resolved location pattern [classpath:config/mapper/*.xml] to resources [file [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/config/mapper/UserMapper.xml]]
+2016-11-07 13:21:34 [ main:2977 ] - [ DEBUG ] Returning cached instance of singleton bean 'dataSource'
+2016-11-07 13:21:34 [ main:2981 ] - [ DEBUG ] Creating instance of bean 'com.github.pagehelper.PageHelper#24569dba'
+2016-11-07 13:21:34 [ main:3025 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2016-11-07 13:21:34 [ main:3034 ] - [ DEBUG ] Finished creating instance of bean 'com.github.pagehelper.PageHelper#24569dba'
+2016-11-07 13:21:34 [ main:3036 ] - [ DEBUG ] Invoking afterPropertiesSet() on bean with name 'sqlSessionFactory'
+2016-11-07 13:21:34 [ main:3236 ] - [ DEBUG ] Class not found: org.jboss.vfs.VFS
+2016-11-07 13:21:34 [ main:3236 ] - [ DEBUG ] JBoss 6 VFS API is not available in this environment.
+2016-11-07 13:21:34 [ main:3251 ] - [ DEBUG ] Class not found: org.jboss.vfs.VirtualFile
+2016-11-07 13:21:34 [ main:3254 ] - [ DEBUG ] VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2016-11-07 13:21:34 [ main:3255 ] - [ DEBUG ] Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2016-11-07 13:21:34 [ main:3259 ] - [ DEBUG ] Find JAR URL: file:/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/model
+2016-11-07 13:21:34 [ main:3260 ] - [ DEBUG ] Not a JAR: file:/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/model
+2016-11-07 13:21:35 [ main:3355 ] - [ DEBUG ] Reader entry: UserInfo.class
+2016-11-07 13:21:35 [ main:3355 ] - [ DEBUG ] Listing file:/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/model
+2016-11-07 13:21:35 [ main:3356 ] - [ DEBUG ] Find JAR URL: file:/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/model/UserInfo.class
+2016-11-07 13:21:35 [ main:3356 ] - [ DEBUG ] Not a JAR: file:/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/com/server/user/dao/model/UserInfo.class
+2016-11-07 13:21:35 [ main:3358 ] - [ DEBUG ] Reader entry: ����   2 H
+2016-11-07 13:21:35 [ main:3359 ] - [ DEBUG ] Checking to see if class com.server.user.dao.model.UserInfo matches criteria [is assignable to Object]
+2016-11-07 13:21:35 [ main:3361 ] - [ DEBUG ] Scanned package: 'com.server.user.dao.model' for aliases
+2016-11-07 13:21:35 [ main:3362 ] - [ DEBUG ] Registered plugin: 'com.github.pagehelper.PageHelper@53e211ee'
+2016-11-07 13:21:35 [ main:3486 ] - [ DEBUG ] Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+2016-11-07 13:21:35 [ main:3491 ] - [ DEBUG ] Parsed configuration file: 'class path resource [config/mybatis-config.xml]'
+2016-11-07 13:21:35 [ main:3618 ] - [ DEBUG ] Parsed mapper file: 'file [/Users/jk/Documents/android/dubbox/myserver/server-user/server-user-dao/target/classes/config/mapper/UserMapper.xml]'
+2016-11-07 13:21:35 [ main:3619 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2016-11-07 13:21:35 [ main:3621 ] - [ DEBUG ] Finished creating instance of bean 'sqlSessionFactory'
+2016-11-07 13:21:35 [ main:3621 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.mybatis.spring.mapper.MapperScannerConfigurer#0'
+2016-11-07 13:21:35 [ main:3622 ] - [ DEBUG ] Creating shared instance of singleton bean 'transactionManager'
+2016-11-07 13:21:35 [ main:3622 ] - [ DEBUG ] Creating instance of bean 'transactionManager'
+2016-11-07 13:21:35 [ main:3629 ] - [ DEBUG ] Eagerly caching bean 'transactionManager' to allow for resolving potential circular references
+2016-11-07 13:21:35 [ main:3633 ] - [ DEBUG ] Returning cached instance of singleton bean 'dataSource'
+2016-11-07 13:21:35 [ main:3633 ] - [ DEBUG ] Invoking afterPropertiesSet() on bean with name 'transactionManager'
+2016-11-07 13:21:35 [ main:3633 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2016-11-07 13:21:35 [ main:3634 ] - [ DEBUG ] Finished creating instance of bean 'transactionManager'
+2016-11-07 13:21:35 [ main:3635 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2016-11-07 13:21:35 [ main:3635 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+2016-11-07 13:21:35 [ main:3635 ] - [ DEBUG ] Creating shared instance of singleton bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+2016-11-07 13:21:35 [ main:3636 ] - [ DEBUG ] Creating instance of bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+2016-11-07 13:21:35 [ main:3638 ] - [ DEBUG ] Eagerly caching bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0' to allow for resolving potential circular references
+2016-11-07 13:21:35 [ main:3642 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+2016-11-07 13:21:35 [ main:3643 ] - [ DEBUG ] Invoking afterPropertiesSet() on bean with name 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+2016-11-07 13:21:35 [ main:3643 ] - [ DEBUG ] Finished creating instance of bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+2016-11-07 13:21:35 [ main:3644 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2016-11-07 13:21:35 [ main:3644 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+2016-11-07 13:21:35 [ main:3644 ] - [ DEBUG ] Creating shared instance of singleton bean 'userMapper'
+2016-11-07 13:21:35 [ main:3645 ] - [ DEBUG ] Creating instance of bean 'userMapper'
+2016-11-07 13:21:35 [ main:3646 ] - [ DEBUG ] Eagerly caching bean 'userMapper' to allow for resolving potential circular references
+2016-11-07 13:21:35 [ main:3653 ] - [ DEBUG ] Returning cached instance of singleton bean 'sqlSessionFactory'
+2016-11-07 13:21:35 [ main:3654 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2016-11-07 13:21:35 [ main:3668 ] - [ DEBUG ] Invoking afterPropertiesSet() on bean with name 'userMapper'
+2016-11-07 13:21:35 [ main:3669 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2016-11-07 13:21:35 [ main:3669 ] - [ DEBUG ] Finished creating instance of bean 'userMapper'
+2016-11-07 13:21:35 [ main:3672 ] - [ DEBUG ] Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@22db8f4]
+2016-11-07 13:21:35 [ main:3672 ] - [ DEBUG ] Returning cached instance of singleton bean 'lifecycleProcessor'
+2016-11-07 13:21:35 [ main:3677 ] - [ DEBUG ] Returning cached instance of singleton bean 'sqlSessionFactory'
+2016-11-07 13:21:35 [ main:3680 ] - [ DEBUG ] Searching for key 'spring.liveBeansView.mbeanDomain' in [systemProperties]
+2016-11-07 13:21:35 [ main:3681 ] - [ DEBUG ] Searching for key 'spring.liveBeansView.mbeanDomain' in [systemEnvironment]
+2016-11-07 13:21:35 [ main:3681 ] - [ DEBUG ] Could not find key 'spring.liveBeansView.mbeanDomain' in any property source. Returning [null]
+2016-11-07 13:21:35 [ main:3682 ] - [ DEBUG ] Storing ApplicationContext in cache under key [[MergedContextConfiguration@646be2c3 testClass = AppTest, locations = '{classpath:META-INF/spring/user-database.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+2016-11-07 13:21:35 [ main:3688 ] - [ DEBUG ] Processing injected method of bean 'com.server.user.dao.AppTest': AutowiredFieldElement for private com.server.user.dao.mapper.UserMapper com.server.user.dao.AppTest.userMapper
+2016-11-07 13:21:35 [ main:3692 ] - [ DEBUG ] Returning cached instance of singleton bean 'userMapper'
+2016-11-07 13:21:35 [ main:3697 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2016-11-07 13:21:35 [ main:3704 ] - [ DEBUG ] Autowiring by type from bean name 'com.server.user.dao.AppTest' to bean named 'userMapper'
+2016-11-07 13:21:35 [ main:3705 ] - [ DEBUG ] Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2016-11-07 13:21:35 [ main:3727 ] - [ DEBUG ] Creating a new SqlSession
+2016-11-07 13:21:35 [ main:3750 ] - [ DEBUG ] SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6e9c413e] was not registered for synchronization because synchronization is not active
+2016-11-07 13:21:35 [ main:3762 ] - [ DEBUG ] Fetching JDBC Connection from DataSource
+2016-11-07 13:21:35 [ main:3817 ] - [ DEBUG ] JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@64b31700] will not be managed by Spring
+2016-11-07 13:21:35 [ main:3822 ] - [ DEBUG ] ==>  Preparing: INSERT INTO T_USER ( T_NAME,T_NICK_NAME,T_AGE ) VALUES ( ?, ?, ? ) 
+2016-11-07 13:21:35 [ main:3888 ] - [ DEBUG ] ==> Parameters: 李焱生(String), smile(String), 13(Integer)
+2016-11-07 13:21:35 [ main:3892 ] - [ DEBUG ] <==    Updates: 1
+2016-11-07 13:21:35 [ main:3899 ] - [ DEBUG ] Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6e9c413e]
+2016-11-07 13:21:35 [ main:3899 ] - [ DEBUG ] Returning JDBC Connection to DataSource
+2016-11-07 13:21:35 [ main:3900 ] - [ DEBUG ] After test method: context [[TestContext@516be40f testClass = AppTest, testInstance = com.server.user.dao.AppTest@3c0a50da, testMethod = testInsert@AppTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@646be2c3 testClass = AppTest, locations = '{classpath:META-INF/spring/user-database.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]], class dirties context [false], class mode [null], method dirties context [false].
+2016-11-07 13:21:35 [ main:3902 ] - [ DEBUG ] Retrieved @ProfileValueSourceConfiguration [null] for test class [com.server.user.dao.AppTest]
+2016-11-07 13:21:35 [ main:3903 ] - [ DEBUG ] Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.server.user.dao.AppTest]
+2016-11-07 13:21:35 [ main:3904 ] - [ DEBUG ] Performing dependency injection for test context [[TestContext@516be40f testClass = AppTest, testInstance = com.server.user.dao.AppTest@54f5f647, testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@646be2c3 testClass = AppTest, locations = '{classpath:META-INF/spring/user-database.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]].
+2016-11-07 13:21:35 [ main:3905 ] - [ DEBUG ] Retrieved ApplicationContext from cache with key [[MergedContextConfiguration@646be2c3 testClass = AppTest, locations = '{classpath:META-INF/spring/user-database.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]].
+2016-11-07 13:21:35 [ main:3906 ] - [ DEBUG ] Processing injected method of bean 'com.server.user.dao.AppTest': AutowiredFieldElement for private com.server.user.dao.mapper.UserMapper com.server.user.dao.AppTest.userMapper
+2016-11-07 13:21:35 [ main:3906 ] - [ DEBUG ] Returning cached instance of singleton bean 'userMapper'
+2016-11-07 13:21:39 [ main:8136 ] - [ DEBUG ] Creating a new SqlSession
+2016-11-07 13:21:39 [ main:8137 ] - [ DEBUG ] SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6650813a] was not registered for synchronization because synchronization is not active
+2016-11-07 13:21:39 [ main:8167 ] - [ DEBUG ] Fetching JDBC Connection from DataSource
+2016-11-07 13:21:39 [ main:8179 ] - [ DEBUG ] JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@64b31700] will not be managed by Spring
+2016-11-07 13:21:39 [ main:8181 ] - [ DEBUG ] ==>  Preparing: SELECT T_ID,T_NAME,T_NICK_NAME,T_AGE FROM T_USER WHERE T_ID = ? 
+2016-11-07 13:21:39 [ main:8186 ] - [ DEBUG ] ==> Parameters: 1(Long)
+2016-11-07 13:21:40 [ main:8423 ] - [ DEBUG ] <==      Total: 1
+2016-11-07 13:21:40 [ main:8425 ] - [ DEBUG ] Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6650813a]
+2016-11-07 13:21:40 [ main:8427 ] - [ DEBUG ] Returning JDBC Connection to DataSource
+2016-11-07 13:21:42 [ main:10404 ] - [ INFO ] UserInfo{id=1, name='李焱生', nickName='smile', age=13}
+2016-11-07 13:21:50 [ main:19023 ] - [ DEBUG ] After test method: context [[TestContext@516be40f testClass = AppTest, testInstance = com.server.user.dao.AppTest@54f5f647, testMethod = testQueryUser@AppTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@646be2c3 testClass = AppTest, locations = '{classpath:META-INF/spring/user-database.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]], class dirties context [false], class mode [null], method dirties context [false].
+2016-11-07 13:21:50 [ main:19024 ] - [ DEBUG ] After test class: context [[TestContext@516be40f testClass = AppTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@646be2c3 testClass = AppTest, locations = '{classpath:META-INF/spring/user-database.xml}', classes = '{}', contextInitializerClasses = '[]', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader', parent = [null]]]], dirtiesContext [false].
+2016-11-07 13:21:50 [ Thread-1:19028 ] - [ INFO ] Closing org.springframework.context.support.GenericApplicationContext@6328d34a: startup date [Mon Nov 07 13:21:32 CST 2016]; root of context hierarchy
+2016-11-07 13:21:50 [ Thread-1:19029 ] - [ DEBUG ] Returning cached instance of singleton bean 'sqlSessionFactory'
+2016-11-07 13:21:50 [ Thread-1:19030 ] - [ DEBUG ] Returning cached instance of singleton bean 'lifecycleProcessor'
+2016-11-07 13:21:50 [ Thread-1:19030 ] - [ INFO ] Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@7bd7d6d6: defining beans [org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0,dataSource,sqlSessionFactory,org.mybatis.spring.mapper.MapperScannerConfigurer#0,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor,userMapper]; root of factory hierarchy
+2016-11-07 13:21:50 [ Thread-1:19032 ] - [ DEBUG ] Retrieved dependent beans for bean 'userMapper': [com.server.user.dao.AppTest]
+2016-11-07 13:21:50 [ Thread-1:19041 ] - [ DEBUG ] Retrieved dependent beans for bean 'com.github.pagehelper.PageHelper#24569dba': [sqlSessionFactory]
+2016-11-07 13:21:50 [ Thread-1:19042 ] - [ DEBUG ] Invoking destroy method 'close' on bean with name 'dataSource'
+2016-11-07 13:21:50 [ Thread-1:19048 ] - [ INFO ] {dataSource-1} closed
