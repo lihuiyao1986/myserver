@@ -19,6 +19,15 @@ public class StringUtils {
         }
     }
 
+    /**
+     * trimNull
+     * @param str
+     * @return
+     */
+    public static String trimNull(String str){
+        return trimNull(str,"");
+    }
+
 
     /**
      * 是否为空

@@ -1,10 +1,12 @@
 package com.server.model;
 
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
 /**
  * Created by jk on 16/11/7.
  */
+@XmlRootElement
 public class APIResp implements Serializable{
 
     private static final long serialVersionUID = -5053094488261580073L;
