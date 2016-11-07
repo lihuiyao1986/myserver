@@ -1,6 +1,7 @@
 package com.myserver.user.api;
 
 import com.alibaba.dubbo.rpc.protocol.rest.support.ContentType;
+import com.server.exception.APIException;
 import com.server.user.api.interfaces.IGetUserAPI;
 import com.server.user.api.model.User;
 
@@ -19,12 +20,13 @@ public class GetUserAPIImpl implements IGetUserAPI {
     @GET
     @Path("/get/{userName}")
     @Override
-    public User getUserByID(@PathParam("userName")String userName,@QueryParam("userId")long userId) {
+    public User getUserByID(@PathParam("userName")String userName,@QueryParam("userId")long userId) throws APIException{
         User user = new User();
         user.setAge(12);
         user.setName("李焱生");
         user.setNickname("smile~");
-        return user;
+        throw new APIException("1808","系统出错啦");
+        //return user;
     }
 
     @POST

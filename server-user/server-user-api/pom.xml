@@ -20,6 +20,11 @@
             <artifactId>dubbo</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.server</groupId>
+            <artifactId>server-common</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
         </dependency>

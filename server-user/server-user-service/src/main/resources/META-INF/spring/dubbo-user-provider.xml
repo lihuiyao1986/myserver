@@ -48,11 +48,11 @@
 
     <!-- use tomcat server -->
     <dubbo:protocol name="rest" port="8888" threads="500" contextpath="services" server="tomcat" accepts="500"
-                    extension="com.server.user.api.extension.TraceInterceptor,
-                    com.server.user.api.extension.TraceFilter,
-                    com.server.user.api.extension.ClientTraceFilter,
-                    com.server.user.api.extension.DynamicTraceBinding,
-                    com.server.user.api.extension.CustomExceptionMapper,
+                    extension="com.server.extension.TraceInterceptor,
+                    com.server.extension.TraceFilter,
+                    com.server.extension.AppExceptionMapper,
+                    com.server.extension.ClientTraceFilter,
+                    com.server.extension.DynamicTraceBinding,
                     com.alibaba.dubbo.rpc.protocol.rest.support.LoggingFilter"/>
 
     <!-- use the external tomcat or other server with the servlet approach; the port and contextpath must be exactly the same as those in external server -->

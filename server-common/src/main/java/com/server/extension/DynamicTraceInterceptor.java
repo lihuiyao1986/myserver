@@ -13,27 +13,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.server.user.api.extension;
+package com.server.extension;
 
 import javax.annotation.Priority;
 import javax.ws.rs.Priorities;
-import javax.ws.rs.container.ContainerRequestContext;
-import javax.ws.rs.container.ContainerRequestFilter;
-import javax.ws.rs.container.ContainerResponseContext;
-import javax.ws.rs.container.ContainerResponseFilter;
+import javax.ws.rs.WebApplicationException;
+import javax.ws.rs.ext.ReaderInterceptor;
+import javax.ws.rs.ext.ReaderInterceptorContext;
+import javax.ws.rs.ext.WriterInterceptor;
+import javax.ws.rs.ext.WriterInterceptorContext;
 import java.io.IOException;
 
 /**
  * @author lishen
  */
 @Priority(Priorities.USER)
-public class TraceFilter implements ContainerRequestFilter, ContainerResponseFilter {
+public class DynamicTraceInterceptor implements ReaderInterceptor, WriterInterceptor {
 
-    public void filter(ContainerRequestContext requestContext) throws IOException {
-        System.out.println("Request filter invoked");
+    public Object aroundReadFrom(ReaderInterceptorContext readerInterceptorContext) throws IOException, WebApplicationException {
+        return readerInterceptorContext.proceed();
     }
 
-    public void filter(ContainerRequestContext containerRequestContext, ContainerResponseContext containerResponseContext) throws IOException {
-        System.out.println("Response filter invoked");
+    public void aroundWriteTo(WriterInterceptorContext writerInterceptorContext) throws IOException, WebApplicationException {
+        writerInterceptorContext.proceed();
     }
 }

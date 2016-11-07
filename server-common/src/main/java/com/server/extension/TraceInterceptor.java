@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.server.user.api.extension;
+package com.server.extension;
 
 import javax.annotation.Priority;
 import javax.ws.rs.Priorities;
@@ -28,15 +28,15 @@ import java.io.IOException;
  * @author lishen
  */
 @Priority(Priorities.USER)
-public class DynamicTraceInterceptor implements ReaderInterceptor, WriterInterceptor {
+public class TraceInterceptor implements ReaderInterceptor, WriterInterceptor {
 
     public Object aroundReadFrom(ReaderInterceptorContext readerInterceptorContext) throws IOException, WebApplicationException {
-        System.out.println("Dynamic reader interceptor invoked");
+        System.out.println("Reader interceptor invoked");
         return readerInterceptorContext.proceed();
     }
 
     public void aroundWriteTo(WriterInterceptorContext writerInterceptorContext) throws IOException, WebApplicationException {
-        System.out.println("Dynamic writer interceptor invoked");
+        System.out.println("Writer interceptor invoked");
         writerInterceptorContext.proceed();
     }
 }
