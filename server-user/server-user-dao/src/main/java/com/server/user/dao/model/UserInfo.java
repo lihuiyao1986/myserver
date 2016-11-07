@@ -1,19 +1,26 @@
 package com.server.user.dao.model;
 
-import com.server.user.dao.base.BaseDaoModel;
+import javax.persistence.*;
 
 /**
  * UserInfo
  */
+@Entity
+@Table(name = "T_USER")
 public class UserInfo extends BaseDaoModel{
 
-    private long id;
-
+    @Column(name = "T_NAME")
     private String name;
 
+    @Column(name = "T_NICK_NAME")
     private String nickName;
 
+    @Column(name = "T_AGE")
     private int age;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "T_ADDRESS_ID")
+    private AddressInfo addressInfo;
 
     public String getName() {
         return name;
@@ -39,18 +46,17 @@ public class UserInfo extends BaseDaoModel{
         this.age = age;
     }
 
-    public long getId() {
-        return id;
+    public AddressInfo getAddressInfo() {
+        return addressInfo;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setAddressInfo(AddressInfo addressInfo) {
+        this.addressInfo = addressInfo;
     }
 
     @Override
     public String toString() {
         return "UserInfo{" +
-                "id=" + id +
                 ", name='" + name + '\'' +
                 ", nickName='" + nickName + '\'' +
                 ", age=" + age +

@@ -1,5 +1,7 @@
 package com.server.user.dao.base;
 
+import com.server.user.dao.model.BaseDaoModel;
+
 import java.util.List;
 
 /**
