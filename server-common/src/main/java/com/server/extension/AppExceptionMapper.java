@@ -6,7 +6,6 @@ import com.server.exception.APIException;
 import com.server.model.APIResp;
 import com.server.utils.StringUtils;
 
-import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerRequestFilter;
