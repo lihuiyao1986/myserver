@@ -1,6 +1,6 @@
-package com.myserver.user.service;
+package com.myserver.user.dubbo;
 
-import com.server.user.api.interfaces.IUserService;
+import com.server.user.api.dubbo.IUserService;
 import com.server.user.api.model.User;
 
 /**

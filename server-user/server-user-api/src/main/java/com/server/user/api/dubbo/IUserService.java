@@ -1,4 +1,4 @@
-package com.server.user.api.interfaces;
+package com.server.user.api.dubbo;
 
 import com.server.user.api.model.User;
 

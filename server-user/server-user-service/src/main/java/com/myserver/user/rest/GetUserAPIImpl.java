@@ -1,9 +1,9 @@
-package com.myserver.user.api;
+package com.myserver.user.rest;
 
 import com.alibaba.dubbo.rpc.protocol.rest.support.ContentType;
 import com.server.exception.APIException;
-import com.server.user.api.interfaces.IGetUserAPI;
 import com.server.user.api.model.User;
+import com.server.user.api.rest.IGetUserAPI;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;

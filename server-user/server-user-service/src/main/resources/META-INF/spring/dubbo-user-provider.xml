@@ -62,11 +62,11 @@
     <dubbo:protocol name="hessian" port="8890"/>
     <dubbo:protocol name="webservice" port="8892"/>
 
-	<dubbo:service interface="com.server.user.api.interfaces.IUserService" ref="userService"  protocol="dubbo"/>
-    <dubbo:service interface="com.server.user.api.interfaces.IGetUserAPI" ref="getUserAPI" protocol="rest" validation="true"/>
+	<dubbo:service interface="com.server.user.api.dubbo.IUserService" ref="userService"  protocol="dubbo"/>
+    <dubbo:service interface="com.server.user.api.rest.IGetUserAPI" ref="getUserAPI" protocol="rest" validation="true"/>
 
-    <bean class="com.myserver.user.service.UserServiceImpl" id="userService"/>
+    <bean class="com.myserver.user.dubbo.UserServiceImpl" id="userService"/>
 
-    <bean class="com.myserver.user.api.GetUserAPIImpl" id="getUserAPI"/>
+    <bean class="com.myserver.user.rest.GetUserAPIImpl" id="getUserAPI"/>
 
 </beans>

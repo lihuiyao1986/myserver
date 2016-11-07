@@ -5,6 +5,9 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/resources"/>
+        <dependent-module archiveName="server-user-api-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/server-user-api/server-user-api">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="server-user-service"/>
         <property name="java-output-path" value="/server-user-service/target/classes"/>
     </wb-module>
