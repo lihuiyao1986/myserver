@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.server.user.dao.mapper.UserMapper">
+
+    <!--map影射-->
+    <resultMap id="UserMap" type="com.server.user.dao.model.UserInfo">
+        <id column="T_ID" property="id" />
+        <result column="T_NAME" property="name"/>
+        <result column="T_NICK_NAME" property="nickName"/>
+        <result column="T_AGE" property="age"/>
+    </resultMap>
+
+    <!--查询基本字段-->
+    <sql id="BASE_QUERY_FIELDS">
+        T_ID,T_NAME,T_NICK_NAME,T_AGE
+    </sql>
+
+    <!--查询基本字段-->
+    <sql id="BASE_INSERT_FIELDS">
+        T_NAME,T_NICK_NAME,T_AGE
+    </sql>
+
+    <!--表名-->
+    <sql id="TABLE_NAME">T_USER</sql>
+
+    <!--更新语句-->
+    <sql id="BASE_UPDATE_SQL">
+        <set>
+            <if test="name!=null and name!=''">
+                T_NAME = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="nickName!=null and nickName!=''">
+                T_NICK_NAME = #{nickName,jdbcType=VARCHAR},
+            </if>
+            <if test="age!=null">
+                T_AGE = #{age,jdbcType=VARCHAR},
+            </if>
+        </set>
+    </sql>
+
+    <!--查询用户信息-->
+    <select id="getUser" resultMap="UserMap" parameterType="long">
+        SELECT <include refid="BASE_QUERY_FIELDS"/>
+        FROM <include refid="TABLE_NAME"/>
+        WHERE T_ID = #{userId,jdbcType=BIGINT}
+    </select>
+
+    <!--保存用户信息-->
+    <insert id="insert" parameterType="UserInfo" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO<include refid="TABLE_NAME"/>
+        (
+        <include refid="BASE_INSERT_FIELDS"/>
+        )
+        VALUES
+        (
+        #{name,jdbcType=VARCHAR},
+        #{nickName,jdbcType=VARCHAR},
+        #{age,jdbcType=INTEGER}
+        )
+    </insert>
+
+</mapper>

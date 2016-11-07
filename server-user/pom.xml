@@ -25,6 +25,5 @@
   	<module>server-user-api</module>
   	<module>server-user-service</module>
     <module>server-user-dao</module>
-      <module>../server-user-web</module>
   </modules>
 </project>

@@ -1,38 +1,40 @@
 package com.server.user.dao;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import com.server.user.dao.mapper.UserMapper;
+import com.server.user.dao.model.UserInfo;
+import org.apache.log4j.Logger;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = "classpath:META-INF/spring/user-database.xml")
+public class AppTest {
+
+    private Logger logger = Logger.getLogger(AppTest.class);
+
+    @Autowired
+    private UserMapper userMapper;
+
+
+    @Test
+    public void testInsert(){
+        UserInfo userInfo = new UserInfo();
+        userInfo.setAge(13);
+        userInfo.setName("李焱生");
+        userInfo.setNickName("smile");
+        int count = userMapper.insert(userInfo);
+        System.out.print(" count = " + count);
     }
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
+    @Test
+    public void testQueryUser(){
+        UserInfo user = userMapper.getUser(1L);
+        logger.info(user);
     }
 }

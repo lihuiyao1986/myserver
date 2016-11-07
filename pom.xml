@@ -76,6 +76,16 @@
             governing permissions and&#10;limitations under the License.</copyright>
         <profile.name>oss</profile.name>
 
+        <!--mybatis-->
+        <mybatis.version>3.3.0</mybatis.version>
+        <mybatis-page-version>4.1.5</mybatis-page-version>
+        <jsqlparser.version>0.9.5</jsqlparser.version>
+        <mybatis-spring.version>1.2.3</mybatis-spring.version>
+
+        <!--mysql驱动-->
+        <mysql-connector-java.version>5.1.38</mysql-connector-java.version>
+        <druid.version>1.0.16</druid.version>
+
         <!-- for maven compiler plugin -->
         <maven_compiler_plugin_version>2.3.2</maven_compiler_plugin_version>
         <java_source_version>1.6</java_source_version>
@@ -87,7 +97,7 @@
         <maven_war_plugin_version>2.1.1</maven_war_plugin_version>
         <maven_install_plugin_version>2.3.1</maven_install_plugin_version>
         <maven_deploy_plugin_version>2.7</maven_deploy_plugin_version>
-
+        <javax.persistence.version>1.0.2</javax.persistence.version>
         <maven-surefire-plugin_version>2.17</maven-surefire-plugin_version>
     </properties>
     <dependencyManagement>
@@ -255,6 +265,33 @@
                 <artifactId>jackson-databind</artifactId>
                 <version>${jackson_version}</version>
             </dependency>
+            <!-- mybatis -->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper</artifactId>
+                <version>${mybatis-page-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis-spring</artifactId>
+                <version>${mybatis-spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.jsqlparser</groupId>
+                <artifactId>jsqlparser</artifactId>
+                <version>${jsqlparser.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper</artifactId>
+                <version>3.3.7</version>
+            </dependency>
+
             <!-- Log libs -->
             <dependency>
                 <groupId>org.slf4j</groupId>
@@ -377,6 +414,22 @@
                 <groupId>de.ruedigermoeller</groupId>
                 <artifactId>fst</artifactId>
                 <version>1.55</version>
+            </dependency>
+            <!--数据库驱动-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector-java.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.persistence</groupId>
+                <artifactId>persistence-api</artifactId>
+                <version>${javax.persistence.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
