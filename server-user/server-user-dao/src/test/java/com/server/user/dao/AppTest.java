@@ -1,7 +1,7 @@
 package com.server.user.dao;
 
-import com.server.user.dao.base.BaseDao;
-import com.server.user.dao.hibernate.IUserDao;
+import com.server.user.dao.hibernate.AddressDao;
+import com.server.user.dao.hibernate.UserDao;
 import com.server.user.dao.model.AddressInfo;
 import com.server.user.dao.model.UserInfo;
 import org.apache.log4j.Logger;
@@ -10,6 +10,9 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Unit test for simple App.
@@ -21,15 +24,14 @@ public class AppTest {
     private Logger logger = Logger.getLogger(AppTest.class);
 
     @Autowired
-    private IUserDao userDao;
+    private UserDao userDao;
 
     @Autowired
-    private BaseDao baseDao;
-
+    private AddressDao addressDao;
 
     @Test
     public void testQueryUser(){
-        UserInfo user = userDao.getUser(1L);
+        UserInfo user = userDao.get(1L);
         logger.info(user);
     }
 
@@ -43,8 +45,19 @@ public class AppTest {
         addressInfo.setAddressName("浙江杭州西湖三段");
         addressInfo.setCityCode("0571");
         addressInfo.setCityName("杭州市");
-        user.setAddressInfo(addressInfo);
-        baseDao.save(user);
+        addressInfo.setUserInfo(user);
+
+        AddressInfo addressInfo1 = new AddressInfo();
+        addressInfo1.setAddressName("江西省九江市东风大道");
+        addressInfo1.setCityCode("0792");
+        addressInfo1.setCityName("九江市");
+        addressInfo1.setUserInfo(user);
+
+        List<AddressInfo> addrs = new ArrayList<AddressInfo>();
+        addrs.add(addressInfo);
+        addrs.add(addressInfo1);
+        user.setAddressInfos(addrs);
+        userDao.save(user);
     }
 
     @Test
@@ -53,6 +66,6 @@ public class AppTest {
         addressInfo.setAddressName("浙江杭州西湖三段");
         addressInfo.setCityCode("0571");
         addressInfo.setCityName("杭州市");
-        baseDao.save(addressInfo);
+        addressDao.save(addressInfo);
     }
 }

@@ -1,8 +1,6 @@
 package com.server.user.dao.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * Created by jk on 16/11/7.
@@ -19,6 +17,10 @@ public class AddressInfo extends BaseDaoModel {
 
     @Column(name = "T_CITY_CODE")
     private String cityCode;
+
+    @ManyToOne(cascade = CascadeType.ALL,optional = true)
+    @JoinColumn(name = "T_USER_ID")
+    private UserInfo userInfo;
 
     public String getAddressName() {
         return addressName;
@@ -42,6 +44,14 @@ public class AddressInfo extends BaseDaoModel {
 
     public void setCityCode(String cityCode) {
         this.cityCode = cityCode;
+    }
+
+    public UserInfo getUserInfo() {
+        return userInfo;
+    }
+
+    public void setUserInfo(UserInfo userInfo) {
+        this.userInfo = userInfo;
     }
 
     @Override
