@@ -3,7 +3,7 @@ package com.server.extension;
 import com.alibaba.dubbo.rpc.protocol.rest.support.ContentType;
 import com.server.constants.Errorcode;
 import com.server.exception.APIException;
-import com.server.model.APIResp;
+import com.server.model.RespEntity;
 import com.server.utils.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
@@ -32,7 +32,7 @@ public class AppExceptionMapper implements ExceptionMapper<Exception>,ContainerR
 
     @Override
     public Response toResponse(Exception exception) {
-        APIResp resp = new APIResp();
+        RespEntity resp = new RespEntity();
         String type = ContentType.APPLICATION_JSON_UTF_8;
         if (request!=null){
             String accept = StringUtils.trimNull((String) request.getAttribute(ACCEPT));
@@ -41,11 +41,11 @@ public class AppExceptionMapper implements ExceptionMapper<Exception>,ContainerR
             }
         }
         if (exception instanceof APIException){
-            resp.setCode(((APIException)exception).getErrorCode());
-            resp.setMessage(((APIException) exception).getErrorMsg());
+            resp.setErrorcode(((APIException) exception).getErrorCode());
+            resp.setErrormsg(((APIException) exception).getErrorMsg());
         }else{
-            resp.setCode(Errorcode.FAIL_CODE);
-            resp.setMessage(StringUtils.trimNull(exception.getLocalizedMessage(),Errorcode.FAIL_MSG));
+            resp.setErrorcode(Errorcode.FAIL_CODE);
+            resp.setErrormsg(StringUtils.trimNull(exception.getLocalizedMessage(),Errorcode.FAIL_MSG));
         }
         return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity(resp).type(type).build();
     }

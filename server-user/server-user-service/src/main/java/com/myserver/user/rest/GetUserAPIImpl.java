@@ -1,5 +1,6 @@
 package com.myserver.user.rest;
 
+import com.alibaba.dubbo.config.annotation.Service;
 import com.alibaba.dubbo.rpc.protocol.rest.support.ContentType;
 import com.server.exception.APIException;
 import com.server.user.api.model.User;
@@ -16,6 +17,7 @@ import javax.ws.rs.core.MediaType;
 /**
  * Created by jk on 16/11/6.
  */
+@Service(protocol = {"rest","dubbo"},validation = "true")
 @Path("/user")
 @Consumes({MediaType.APPLICATION_JSON, MediaType.TEXT_XML})
 @Produces({ContentType.APPLICATION_JSON_UTF_8, ContentType.TEXT_XML_UTF_8})
