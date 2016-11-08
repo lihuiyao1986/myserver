@@ -2,11 +2,13 @@ package com.myserver.user.rest;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.alibaba.dubbo.rpc.protocol.rest.support.ContentType;
+import com.myserver.user.model.UserRespEntity;
+import com.server.constants.Errorcode;
 import com.server.exception.APIException;
+import com.server.model.BaseRespEntity;
 import com.server.user.api.model.User;
 import com.server.user.api.rest.IGetUserAPI;
 import com.server.user.dao.hibernate.UserDao;
-import com.server.user.dao.mapper.UserMapper;
 import com.server.user.dao.model.UserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
@@ -31,7 +33,7 @@ public class GetUserAPIImpl implements IGetUserAPI {
     @Path("/get/{userName}")
     @Override
     @Transactional(readOnly = true)
-    public User getUserByID(@PathParam("userName")String userName,@QueryParam("userId")long userId) throws APIException{
+    public UserRespEntity getUserByID(@PathParam("userName")String userName,@QueryParam("userId")long userId) throws APIException{
         UserInfo userInfo = userDao.get(userId);
         User user = null;
         if (userInfo !=null){
@@ -40,7 +42,11 @@ public class GetUserAPIImpl implements IGetUserAPI {
             user.setName(userInfo.getName());
             user.setNickname(userInfo.getNickName());
             user.setAddressInfos(userInfo.getAddressInfos());
-            return user;
+            UserRespEntity respEntity = new UserRespEntity();
+            respEntity.setErrormsg(Errorcode.SUCC_MSG);
+            respEntity.setErrorcode(Errorcode.SUCC_CODE);
+            respEntity.setUser(user);
+            return respEntity;
         }else {
             throw new APIException("1009","用户不存在");
         }
@@ -49,11 +55,15 @@ public class GetUserAPIImpl implements IGetUserAPI {
     @POST
     @Path("/register")
     @Override
-    public User registerUser(User user) {
+    public UserRespEntity registerUser(User user) {
         User user1 = new User();
         user1.setAge(12);
         user1.setName("李焱生");
         user1.setNickname("smile~");
-        return user1;
+        UserRespEntity respEntity = new UserRespEntity();
+        respEntity.setErrormsg(Errorcode.SUCC_MSG);
+        respEntity.setErrorcode(Errorcode.SUCC_CODE);
+        respEntity.setUser(user1);
+        return respEntity;
     }
 }

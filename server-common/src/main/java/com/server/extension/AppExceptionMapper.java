@@ -3,7 +3,7 @@ package com.server.extension;
 import com.alibaba.dubbo.rpc.protocol.rest.support.ContentType;
 import com.server.constants.Errorcode;
 import com.server.exception.APIException;
-import com.server.model.RespEntity;
+import com.server.model.BaseRespEntity;
 import com.server.utils.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
@@ -32,7 +32,7 @@ public class AppExceptionMapper implements ExceptionMapper<Exception>,ContainerR
 
     @Override
     public Response toResponse(Exception exception) {
-        RespEntity resp = new RespEntity();
+        BaseRespEntity resp = new BaseRespEntity();
         String type = ContentType.APPLICATION_JSON_UTF_8;
         if (request!=null){
             String accept = StringUtils.trimNull((String) request.getAttribute(ACCEPT));
@@ -45,7 +45,7 @@ public class AppExceptionMapper implements ExceptionMapper<Exception>,ContainerR
             resp.setErrormsg(((APIException) exception).getErrorMsg());
         }else{
             resp.setErrorcode(Errorcode.FAIL_CODE);
-            resp.setErrormsg(StringUtils.trimNull(exception.getLocalizedMessage(),Errorcode.FAIL_MSG));
+            resp.setErrormsg(StringUtils.trimNull(exception.getLocalizedMessage(), Errorcode.FAIL_MSG));
         }
         return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity(resp).type(type).build();
     }

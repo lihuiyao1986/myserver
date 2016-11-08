@@ -1,5 +1,6 @@
 package com.server.user.api.model;
 
+import com.server.model.BaseModel;
 import com.server.user.dao.model.AddressInfo;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -14,7 +15,7 @@ import java.util.Set;
  */
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-public class User implements Serializable {
+public class User extends BaseModel {
 
     private static final long serialVersionUID = 2508320148658156845L;
 
