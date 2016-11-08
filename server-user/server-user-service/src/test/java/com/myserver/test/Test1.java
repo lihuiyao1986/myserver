@@ -1,6 +1,5 @@
 package com.myserver.test;
 
-import com.server.user.api.model.User;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -25,17 +24,6 @@ public class Test1 {
         client = ClientBuilder.newClient();
     }
 
-    /**
-     *
-     */
-    @Test
-    public void testRegister(){
-        User user = new User();
-        user.setNickname("liyannn");
-        User respUser = client.target("http://127.0.0.1:8888/services/user/register.json")
-                .request().post(Entity.entity(user,MediaType.APPLICATION_JSON_TYPE),User.class);
-        logger.log(Level.ALL,respUser.toString());
-    }
 
 
 }

@@ -1,21 +1,22 @@
 package com.myserver.user.dubbo;
 
 import com.alibaba.dubbo.config.annotation.Service;
-import com.server.user.api.dubbo.IUserService;
-import com.server.user.api.model.User;
+import com.server.entity.user.api.dubbo.IUserService;
+import com.server.entity.user.dao.UserDaoEntity;
+import com.server.user.dao.hibernate.UserDao;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
- * Created by jk on 16/11/6.
+ * 用户service
  */
 @Service(protocol = {"dubbo"},validation = "true")
 public class UserServiceImpl implements IUserService {
 
+    @Autowired
+    private UserDao userDao;
+
     @Override
-    public User getUserById(long userId) {
-        User user = new User();
-        user.setAge(12);
-        user.setName("李焱生");
-        user.setNickname("smile~");
-        return user;
+    public UserDaoEntity getUserByLoginName(String loginName) {
+        return userDao.getByLoginName(loginName);
     }
 }

@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/myserver.iml" filepath="$PROJECT_DIR$/myserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/server-common/server-common.iml" filepath="$PROJECT_DIR$/server-common/server-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server-entity/server-entity.iml" filepath="$PROJECT_DIR$/server-entity/server-entity.iml" />
       <module fileurl="file://$PROJECT_DIR$/server-user/server-user.iml" filepath="$PROJECT_DIR$/server-user/server-user.iml" />
       <module fileurl="file://$PROJECT_DIR$/server-user/server-user-api/server-user-api.iml" filepath="$PROJECT_DIR$/server-user/server-user-api/server-user-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/server-user/server-user-dao/server-user-dao.iml" filepath="$PROJECT_DIR$/server-user/server-user-dao/server-user-dao.iml" />

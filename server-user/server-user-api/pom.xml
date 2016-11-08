@@ -21,7 +21,7 @@
         </dependency>
         <dependency>
             <groupId>com.server</groupId>
-            <artifactId>server-common</artifactId>
+            <artifactId>server-entity</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
         <dependency>

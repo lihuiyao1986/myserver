@@ -4,7 +4,7 @@
 2016-11-08 10:41:47 [ main:7813 ] - [ ERROR ] BLOB/TEXT column 'userInfo' used in key specification without a key length
 2016-11-08 11:09:59 [ main:4723 ] - [ ERROR ] HHH000388: Unsuccessful: alter table T_ADDRESS add constraint FK_1rv55ftepm0d1kpm0yqboxpl foreign key (userInfo) references T_USER (T_ID)
 2016-11-08 11:09:59 [ main:4724 ] - [ ERROR ] BLOB/TEXT column 'userInfo' used in key specification without a key length
-2016-11-08 11:12:20 [ main:3891 ] - [ ERROR ] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3c153a1] to prepare test instance [com.server.user.dao.AppTest@37918c79]
+2016-11-08 11:12:20 [ main:3891 ] - [ ERROR ] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3c153a1] to prepare test instance [AppTest@37918c79]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
@@ -30,7 +30,7 @@ java.lang.IllegalStateException: Failed to load ApplicationContext
 	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:74)
 	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:211)
 	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:67)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory com.server.user.dao.base.BaseDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: java.util.Set, at table: T_USER, for columns: [org.hibernate.mapping.Column(addressInfos)]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory BaseDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: java.util.Set, at table: T_USER, for columns: [org.hibernate.mapping.Column(addressInfos)]
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
@@ -49,7 +49,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
 	... 23 more
-Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory com.server.user.dao.base.BaseDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: java.util.Set, at table: T_USER, for columns: [org.hibernate.mapping.Column(addressInfos)]
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory BaseDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: java.util.Set, at table: T_USER, for columns: [org.hibernate.mapping.Column(addressInfos)]
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
@@ -82,7 +82,7 @@ Caused by: org.hibernate.MappingException: Could not determine type for: java.ut
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
 	... 51 more
-2016-11-08 11:15:10 [ main:4212 ] - [ ERROR ] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3c153a1] to prepare test instance [com.server.user.dao.AppTest@37918c79]
+2016-11-08 11:15:10 [ main:4212 ] - [ ERROR ] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3c153a1] to prepare test instance [AppTest@37918c79]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
@@ -108,7 +108,7 @@ java.lang.IllegalStateException: Failed to load ApplicationContext
 	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:74)
 	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:211)
 	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:67)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory com.server.user.dao.base.BaseDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: java.util.Set, at table: T_USER, for columns: [org.hibernate.mapping.Column(addressInfos)]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory BaseDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: java.util.Set, at table: T_USER, for columns: [org.hibernate.mapping.Column(addressInfos)]
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
@@ -127,7 +127,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
 	... 23 more
-Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory com.server.user.dao.base.BaseDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: java.util.Set, at table: T_USER, for columns: [org.hibernate.mapping.Column(addressInfos)]
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory BaseDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: java.util.Set, at table: T_USER, for columns: [org.hibernate.mapping.Column(addressInfos)]
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
@@ -164,7 +164,7 @@ Caused by: org.hibernate.MappingException: Could not determine type for: java.ut
 2016-11-08 11:16:29 [ main:4926 ] - [ ERROR ] BLOB/TEXT column 'userInfo' used in key specification without a key length
 2016-11-08 11:16:53 [ main:4665 ] - [ ERROR ] HHH000388: Unsuccessful: alter table T_ADDRESS add constraint FK_1rv55ftepm0d1kpm0yqboxpl foreign key (userInfo) references T_USER (T_ID)
 2016-11-08 11:16:53 [ main:4665 ] - [ ERROR ] BLOB/TEXT column 'userInfo' used in key specification without a key length
-2016-11-08 11:20:27 [ main:4148 ] - [ ERROR ] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3c153a1] to prepare test instance [com.server.user.dao.AppTest@37918c79]
+2016-11-08 11:20:27 [ main:4148 ] - [ ERROR ] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3c153a1] to prepare test instance [AppTest@37918c79]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
@@ -190,7 +190,7 @@ java.lang.IllegalStateException: Failed to load ApplicationContext
 	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:74)
 	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:211)
 	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:67)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory com.server.user.dao.base.BaseDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: java.util.Set, at table: T_USER, for columns: [org.hibernate.mapping.Column(addressInfos)]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory BaseDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: java.util.Set, at table: T_USER, for columns: [org.hibernate.mapping.Column(addressInfos)]
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
@@ -209,7 +209,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
 	... 23 more
-Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory com.server.user.dao.base.BaseDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: java.util.Set, at table: T_USER, for columns: [org.hibernate.mapping.Column(addressInfos)]
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory BaseDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: java.util.Set, at table: T_USER, for columns: [org.hibernate.mapping.Column(addressInfos)]
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
@@ -242,7 +242,7 @@ Caused by: org.hibernate.MappingException: Could not determine type for: java.ut
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
 	... 51 more
-2016-11-08 13:22:26 [ main:4620 ] - [ ERROR ] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3c153a1] to prepare test instance [com.server.user.dao.AppTest@37918c79]
+2016-11-08 13:22:26 [ main:4620 ] - [ ERROR ] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3c153a1] to prepare test instance [AppTest@37918c79]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
@@ -268,7 +268,7 @@ java.lang.IllegalStateException: Failed to load ApplicationContext
 	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:74)
 	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:211)
 	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:67)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory com.server.user.dao.base.BaseDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is java.lang.NullPointerException
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory BaseDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is java.lang.NullPointerException
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
@@ -287,7 +287,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
 	... 23 more
-Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory com.server.user.dao.base.BaseDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is java.lang.NullPointerException
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory BaseDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is java.lang.NullPointerException
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
@@ -321,3 +321,235 @@ Caused by: java.lang.NullPointerException
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
 	... 51 more
+2016-11-08 20:24:02 [ main:4500 ] - [ ERROR ] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4278a03f] to prepare test instance [com.server.entity.user.dao.AppTest@1534f01b]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:249)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:157)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:74)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:211)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:67)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory com.server.entity.dao.BaseDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.server.entity.user.dao.UserDaoEntity.channelUser references an unknown entity: com.server.entity.channel.dao.ChannelUserDaoEntity
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:261)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 23 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory com.server.entity.dao.BaseDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.server.entity.user.dao.UserDaoEntity.channelUser references an unknown entity: com.server.entity.channel.dao.ChannelUserDaoEntity
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 39 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.server.entity.user.dao.UserDaoEntity.channelUser references an unknown entity: com.server.entity.channel.dao.ChannelUserDaoEntity
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1116)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:545)
+	... 41 more
+Caused by: org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.server.entity.user.dao.UserDaoEntity.channelUser references an unknown entity: com.server.entity.channel.dao.ChannelUserDaoEntity
+	at org.hibernate.cfg.ToOneFkSecondPass.doSecondPass(ToOneFkSecondPass.java:109)
+	at org.hibernate.cfg.Configuration.processEndOfQueue(Configuration.java:1598)
+	at org.hibernate.cfg.Configuration.processFkSecondPassInOrder(Configuration.java:1521)
+	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1422)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1846)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1930)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBuilder.buildSessionFactory(LocalSessionFactoryBuilder.java:372)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:454)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:439)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	... 51 more
+2016-11-08 20:28:15 [ main:17963 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelAffiliateAccountAppQueue add constraint FK_4wwl73vw7o5ho5e3h02vll01p foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
+2016-11-08 20:28:15 [ main:17964 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:28:15 [ main:18031 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelAffiliateSubAccount add constraint FK_gnvkl3inqd6y7t9o2btdd9t5w foreign key (channelServiceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
+2016-11-08 20:28:15 [ main:18032 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:28:15 [ main:18111 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_6a6py6mlwujjb7oovo4512bgh foreign key (accountOwner_T_ID) references BIZ_Participant (T_ID)
+2016-11-08 20:28:15 [ main:18111 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:28:15 [ main:18187 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_c0efy4t7c2qjovml0ek8y9p5u foreign key (channelProvider_T_ID) references BIZ_Participant (T_ID)
+2016-11-08 20:28:15 [ main:18188 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:28:15 [ main:18267 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_dwgu5by2610dhydu2pr4eq5s1 foreign key (sp_T_ID) references BIZ_ServicePoint (T_ID)
+2016-11-08 20:28:15 [ main:18267 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:28:15 [ main:18337 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_q212t5o7eg38ifxjc8iukcdf8 foreign key (gender_T_ID) references DIC_Gender (T_ID)
+2016-11-08 20:28:15 [ main:18338 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:28:15 [ main:18406 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_rmnej2ba5vsienwx0graoqeo9 foreign key (group_T_ID) references BIZ_ChannelUserGroup (T_ID)
+2016-11-08 20:28:15 [ main:18406 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:28:15 [ main:18475 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_g948vcfunk60bwwnttkp1qax3 foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
+2016-11-08 20:28:15 [ main:18475 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:28:15 [ main:18537 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUserGroup add constraint FK_cm8rurpt4nm5rjs4q38vshcya foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
+2016-11-08 20:28:15 [ main:18538 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:28:15 [ main:18604 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_MessageProtocol add constraint FK_ivjbglxv330obwp4r5u4qse9s foreign key (dataFormat_T_ID) references DIC_DataFormat (T_ID)
+2016-11-08 20:28:15 [ main:18604 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:28:15 [ main:18671 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_MessageProtocol add constraint FK_fbar6f0y536umcn7eujbci3js foreign key (signAlgorithm_T_ID) references DIC_SignAlgorithm (T_ID)
+2016-11-08 20:28:15 [ main:18671 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:28:15 [ main:18737 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_Participant add constraint FK_tcobuddjsld5iltjsh68ikilv foreign key (status_T_ID) references DIC_ServiceStatus (T_ID)
+2016-11-08 20:28:15 [ main:18738 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:28:15 [ main:18818 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_1r0kqwia4deotoaqcjq0vtvkg foreign key (localCommProtocol_T_ID) references DIC_CommProtocol (T_ID)
+2016-11-08 20:28:15 [ main:18818 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:28:15 [ main:18894 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_mm9pqok8lernvkgo6i9d6a7ru foreign key (localMsgProtocol_T_ID) references BIZ_MessageProtocol (T_ID)
+2016-11-08 20:28:15 [ main:18895 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:28:16 [ main:18973 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_hbteh3tmiw6ytyg9ut9j250e8 foreign key (owner_T_ID) references BIZ_Participant (T_ID)
+2016-11-08 20:28:16 [ main:18973 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:28:16 [ main:19050 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_puoykn1oqwhu542pqxmok0mkk foreign key (remoteCommProtocol_T_ID) references DIC_CommProtocol (T_ID)
+2016-11-08 20:28:16 [ main:19050 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:28:16 [ main:19129 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_hykohwbaggj2grotmiqhaf4nb foreign key (remoteMsgProtocol_T_ID) references BIZ_MessageProtocol (T_ID)
+2016-11-08 20:28:16 [ main:19129 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:28:16 [ main:19211 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_bvbyaxfnybm1mfvm3gaqfhof foreign key (status_T_ID) references DIC_ServiceStatus (T_ID)
+2016-11-08 20:28:16 [ main:19211 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:28:16 [ main:19283 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_Orgnization add constraint FK_7mijxr4qdjckfodl75trw1gd foreign key (parentOrg_T_ID) references SYS_Orgnization (T_ID)
+2016-11-08 20:28:16 [ main:19283 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:28:16 [ main:19350 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_Orgnization add constraint FK_81gmvyhocouf4eemwqcc0i6bm foreign key (type_T_ID) references DIC_OrgType (T_ID)
+2016-11-08 20:28:16 [ main:19351 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:28:16 [ main:19434 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_bsui0dw6n9mof0ju68v2o4bw8 foreign key (affiliateAccountAppQueue_T_ID) references BIZ_ChannelAffiliateAccountAppQueue (T_ID)
+2016-11-08 20:28:16 [ main:19434 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:28:16 [ main:19517 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_8f0m1f9kj3ck4093u2y96d1cv foreign key (affiliateSubAccount_T_ID) references BIZ_ChannelAffiliateSubAccount (T_ID)
+2016-11-08 20:28:16 [ main:19517 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:28:16 [ main:19600 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_7vktfwklbg0i9je74hm3n2tor foreign key (channelUser_T_ID) references BIZ_ChannelUser (T_ID)
+2016-11-08 20:28:16 [ main:19600 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:28:16 [ main:19679 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_nn4kveek77ncj2wlkq5lp7p4y foreign key (gender_T_ID) references DIC_Gender (T_ID)
+2016-11-08 20:28:16 [ main:19680 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:28:16 [ main:19761 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_hbgsjmfv8f4wel70m02ayv3n4 foreign key (orgnization_T_ID) references SYS_Orgnization (T_ID)
+2016-11-08 20:28:16 [ main:19761 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:28:16 [ main:19841 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_s4gq77e652hl1m1li3296arq6 foreign key (status_T_ID) references DIC_UserStatus (T_ID)
+2016-11-08 20:28:16 [ main:19841 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:29:59 [ main:12042 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelAffiliateAccountAppQueue add constraint FK_4wwl73vw7o5ho5e3h02vll01p foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
+2016-11-08 20:29:59 [ main:12043 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:29:59 [ main:12111 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelAffiliateSubAccount add constraint FK_gnvkl3inqd6y7t9o2btdd9t5w foreign key (channelServiceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
+2016-11-08 20:29:59 [ main:12111 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:29:59 [ main:12192 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_6a6py6mlwujjb7oovo4512bgh foreign key (accountOwner_T_ID) references BIZ_Participant (T_ID)
+2016-11-08 20:29:59 [ main:12192 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:29:59 [ main:12272 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_c0efy4t7c2qjovml0ek8y9p5u foreign key (channelProvider_T_ID) references BIZ_Participant (T_ID)
+2016-11-08 20:29:59 [ main:12272 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:29:59 [ main:12350 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_dwgu5by2610dhydu2pr4eq5s1 foreign key (sp_T_ID) references BIZ_ServicePoint (T_ID)
+2016-11-08 20:29:59 [ main:12351 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:29:59 [ main:12419 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_q212t5o7eg38ifxjc8iukcdf8 foreign key (gender_T_ID) references DIC_Gender (T_ID)
+2016-11-08 20:29:59 [ main:12419 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:29:59 [ main:12487 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_rmnej2ba5vsienwx0graoqeo9 foreign key (group_T_ID) references BIZ_ChannelUserGroup (T_ID)
+2016-11-08 20:29:59 [ main:12488 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:29:59 [ main:12562 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_g948vcfunk60bwwnttkp1qax3 foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
+2016-11-08 20:29:59 [ main:12562 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:29:59 [ main:12625 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUserGroup add constraint FK_cm8rurpt4nm5rjs4q38vshcya foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
+2016-11-08 20:29:59 [ main:12626 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:29:59 [ main:12698 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_MessageProtocol add constraint FK_ivjbglxv330obwp4r5u4qse9s foreign key (dataFormat_T_ID) references DIC_DataFormat (T_ID)
+2016-11-08 20:29:59 [ main:12698 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:29:59 [ main:12766 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_MessageProtocol add constraint FK_fbar6f0y536umcn7eujbci3js foreign key (signAlgorithm_T_ID) references DIC_SignAlgorithm (T_ID)
+2016-11-08 20:29:59 [ main:12766 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:30:00 [ main:12835 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_Participant add constraint FK_tcobuddjsld5iltjsh68ikilv foreign key (status_T_ID) references DIC_ServiceStatus (T_ID)
+2016-11-08 20:30:00 [ main:12836 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:30:00 [ main:12916 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_1r0kqwia4deotoaqcjq0vtvkg foreign key (localCommProtocol_T_ID) references DIC_CommProtocol (T_ID)
+2016-11-08 20:30:00 [ main:12917 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:30:00 [ main:12996 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_mm9pqok8lernvkgo6i9d6a7ru foreign key (localMsgProtocol_T_ID) references BIZ_MessageProtocol (T_ID)
+2016-11-08 20:30:00 [ main:12996 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:30:00 [ main:13084 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_hbteh3tmiw6ytyg9ut9j250e8 foreign key (owner_T_ID) references BIZ_Participant (T_ID)
+2016-11-08 20:30:00 [ main:13084 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:30:00 [ main:13169 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_puoykn1oqwhu542pqxmok0mkk foreign key (remoteCommProtocol_T_ID) references DIC_CommProtocol (T_ID)
+2016-11-08 20:30:00 [ main:13170 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:30:00 [ main:13250 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_hykohwbaggj2grotmiqhaf4nb foreign key (remoteMsgProtocol_T_ID) references BIZ_MessageProtocol (T_ID)
+2016-11-08 20:30:00 [ main:13250 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:30:00 [ main:13328 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_bvbyaxfnybm1mfvm3gaqfhof foreign key (status_T_ID) references DIC_ServiceStatus (T_ID)
+2016-11-08 20:30:00 [ main:13328 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:30:00 [ main:13395 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_Orgnization add constraint FK_7mijxr4qdjckfodl75trw1gd foreign key (parentOrg_T_ID) references SYS_Orgnization (T_ID)
+2016-11-08 20:30:00 [ main:13395 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:30:00 [ main:13465 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_Orgnization add constraint FK_81gmvyhocouf4eemwqcc0i6bm foreign key (type_T_ID) references DIC_OrgType (T_ID)
+2016-11-08 20:30:00 [ main:13465 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:30:00 [ main:13552 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_bsui0dw6n9mof0ju68v2o4bw8 foreign key (affiliateAccountAppQueue_T_ID) references BIZ_ChannelAffiliateAccountAppQueue (T_ID)
+2016-11-08 20:30:00 [ main:13552 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:30:00 [ main:13639 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_8f0m1f9kj3ck4093u2y96d1cv foreign key (affiliateSubAccount_T_ID) references BIZ_ChannelAffiliateSubAccount (T_ID)
+2016-11-08 20:30:00 [ main:13639 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:30:01 [ main:13855 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_7vktfwklbg0i9je74hm3n2tor foreign key (channelUser_T_ID) references BIZ_ChannelUser (T_ID)
+2016-11-08 20:30:01 [ main:13855 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:30:01 [ main:13941 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_nn4kveek77ncj2wlkq5lp7p4y foreign key (gender_T_ID) references DIC_Gender (T_ID)
+2016-11-08 20:30:01 [ main:13942 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:30:01 [ main:14021 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_hbgsjmfv8f4wel70m02ayv3n4 foreign key (orgnization_T_ID) references SYS_Orgnization (T_ID)
+2016-11-08 20:30:01 [ main:14021 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:30:01 [ main:14104 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_s4gq77e652hl1m1li3296arq6 foreign key (status_T_ID) references DIC_UserStatus (T_ID)
+2016-11-08 20:30:01 [ main:14105 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:34:54 [ main:11181 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelAffiliateAccountAppQueue add constraint FK_4wwl73vw7o5ho5e3h02vll01p foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
+2016-11-08 20:34:54 [ main:11183 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:34:54 [ main:11240 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelAffiliateSubAccount add constraint FK_gnvkl3inqd6y7t9o2btdd9t5w foreign key (channelServiceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
+2016-11-08 20:34:54 [ main:11240 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:34:54 [ main:11313 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_6a6py6mlwujjb7oovo4512bgh foreign key (accountOwner_T_ID) references BIZ_Participant (T_ID)
+2016-11-08 20:34:54 [ main:11313 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:34:54 [ main:11388 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_c0efy4t7c2qjovml0ek8y9p5u foreign key (channelProvider_T_ID) references BIZ_Participant (T_ID)
+2016-11-08 20:34:54 [ main:11389 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:34:54 [ main:11463 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_dwgu5by2610dhydu2pr4eq5s1 foreign key (sp_T_ID) references BIZ_ServicePoint (T_ID)
+2016-11-08 20:34:54 [ main:11463 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:34:54 [ main:11535 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_q212t5o7eg38ifxjc8iukcdf8 foreign key (gender_T_ID) references DIC_Gender (T_ID)
+2016-11-08 20:34:54 [ main:11535 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:34:54 [ main:11602 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_rmnej2ba5vsienwx0graoqeo9 foreign key (group_T_ID) references BIZ_ChannelUserGroup (T_ID)
+2016-11-08 20:34:54 [ main:11603 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:34:55 [ main:11669 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_g948vcfunk60bwwnttkp1qax3 foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
+2016-11-08 20:34:55 [ main:11670 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:34:55 [ main:11731 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUserGroup add constraint FK_cm8rurpt4nm5rjs4q38vshcya foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
+2016-11-08 20:34:55 [ main:11731 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:34:55 [ main:11795 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_MessageProtocol add constraint FK_ivjbglxv330obwp4r5u4qse9s foreign key (dataFormat_T_ID) references DIC_DataFormat (T_ID)
+2016-11-08 20:34:55 [ main:11795 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:34:55 [ main:11859 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_MessageProtocol add constraint FK_fbar6f0y536umcn7eujbci3js foreign key (signAlgorithm_T_ID) references DIC_SignAlgorithm (T_ID)
+2016-11-08 20:34:55 [ main:11859 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:34:55 [ main:11928 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_Participant add constraint FK_tcobuddjsld5iltjsh68ikilv foreign key (status_T_ID) references DIC_ServiceStatus (T_ID)
+2016-11-08 20:34:55 [ main:11930 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:34:55 [ main:12006 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_1r0kqwia4deotoaqcjq0vtvkg foreign key (localCommProtocol_T_ID) references DIC_CommProtocol (T_ID)
+2016-11-08 20:34:55 [ main:12006 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:34:55 [ main:12084 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_mm9pqok8lernvkgo6i9d6a7ru foreign key (localMsgProtocol_T_ID) references BIZ_MessageProtocol (T_ID)
+2016-11-08 20:34:55 [ main:12084 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:34:55 [ main:12162 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_hbteh3tmiw6ytyg9ut9j250e8 foreign key (owner_T_ID) references BIZ_Participant (T_ID)
+2016-11-08 20:34:55 [ main:12162 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:34:55 [ main:12241 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_puoykn1oqwhu542pqxmok0mkk foreign key (remoteCommProtocol_T_ID) references DIC_CommProtocol (T_ID)
+2016-11-08 20:34:55 [ main:12242 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:34:55 [ main:12316 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_hykohwbaggj2grotmiqhaf4nb foreign key (remoteMsgProtocol_T_ID) references BIZ_MessageProtocol (T_ID)
+2016-11-08 20:34:55 [ main:12317 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:34:55 [ main:12394 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_bvbyaxfnybm1mfvm3gaqfhof foreign key (status_T_ID) references DIC_ServiceStatus (T_ID)
+2016-11-08 20:34:55 [ main:12395 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:34:55 [ main:12457 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_Orgnization add constraint FK_7mijxr4qdjckfodl75trw1gd foreign key (parentOrg_T_ID) references SYS_Orgnization (T_ID)
+2016-11-08 20:34:55 [ main:12457 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:34:55 [ main:12526 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_Orgnization add constraint FK_81gmvyhocouf4eemwqcc0i6bm foreign key (type_T_ID) references DIC_OrgType (T_ID)
+2016-11-08 20:34:55 [ main:12527 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:34:55 [ main:12606 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_bsui0dw6n9mof0ju68v2o4bw8 foreign key (affiliateAccountAppQueue_T_ID) references BIZ_ChannelAffiliateAccountAppQueue (T_ID)
+2016-11-08 20:34:55 [ main:12607 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:34:56 [ main:12684 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_8f0m1f9kj3ck4093u2y96d1cv foreign key (affiliateSubAccount_T_ID) references BIZ_ChannelAffiliateSubAccount (T_ID)
+2016-11-08 20:34:56 [ main:12685 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:34:56 [ main:12766 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_7vktfwklbg0i9je74hm3n2tor foreign key (channelUser_T_ID) references BIZ_ChannelUser (T_ID)
+2016-11-08 20:34:56 [ main:12766 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:34:56 [ main:12844 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_nn4kveek77ncj2wlkq5lp7p4y foreign key (gender_T_ID) references DIC_Gender (T_ID)
+2016-11-08 20:34:56 [ main:12844 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:34:56 [ main:12920 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_hbgsjmfv8f4wel70m02ayv3n4 foreign key (orgnization_T_ID) references SYS_Orgnization (T_ID)
+2016-11-08 20:34:56 [ main:12921 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-08 20:34:56 [ main:12997 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_s4gq77e652hl1m1li3296arq6 foreign key (status_T_ID) references DIC_UserStatus (T_ID)
+2016-11-08 20:34:56 [ main:12998 ] - [ ERROR ] Cannot add foreign key constraint

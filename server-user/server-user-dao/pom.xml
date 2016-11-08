@@ -20,6 +20,11 @@
           <scope>test</scope>
       </dependency>
       <dependency>
+          <groupId>com.server</groupId>
+          <artifactId>server-entity</artifactId>
+          <version>${project.parent.version}</version>
+      </dependency>
+      <dependency>
           <groupId>com.github.pagehelper</groupId>
           <artifactId>pagehelper</artifactId>
       </dependency>

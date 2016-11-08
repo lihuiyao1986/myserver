@@ -118,7 +118,7 @@
             </value>
         </property>
         <!-- 自动扫描实体对象com.server.model的包结构中存放实体类 -->
-        <property name="packagesToScan" value="com.server.user.dao.model" />
+        <property name="packagesToScan" value="com.server.entity" />
     </bean>
 
     <!-- 事务注解驱动 -->

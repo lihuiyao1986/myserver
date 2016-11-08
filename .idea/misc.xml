@@ -53,6 +53,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/common/pom.xml" />
+        <option value="$PROJECT_DIR$/server-model/pom.xml" />
         <option value="$PROJECT_DIR$/server-user-dao/pom.xml" />
         <option value="$PROJECT_DIR$/server-user-web/pom.xml" />
       </set>

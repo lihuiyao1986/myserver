@@ -36,7 +36,7 @@
     <dubbo:annotation package="com.myserver.user" />
     <context:component-scan base-package="com.myserver.user"/>
 
-    <dubbo:protocol name="dubbo" serialization="kryo" optimizer="com.server.user.api.common.SerializationOptimizerImpl"/>
+    <dubbo:protocol name="dubbo" serialization="kryo" optimizer="com.server.entity.user.api.common.SerializationOptimizerImpl"/>
     <!--<dubbo:protocol name="dubbo" serialization="fst" optimizer="com.alibaba.dubbo.demo.SerializationOptimizerImpl"/>-->
 
     <!--<dubbo:protocol name="dubbo" serialization="nativejava"/>-->
@@ -54,11 +54,11 @@
 
     <!-- use tomcat server -->
     <dubbo:protocol name="rest" port="8888" threads="500" contextpath="services" server="tomcat" accepts="500"
-                    extension="com.server.extension.TraceInterceptor,
-                    com.server.extension.TraceFilter,
-                    com.server.extension.AppExceptionMapper,
-                    com.server.extension.ClientTraceFilter,
-                    com.server.extension.DynamicTraceBinding,
+                    extension="com.server.entity.extension.TraceInterceptor,
+                    com.server.entity.extension.TraceFilter,
+                    com.server.entity.extension.AppExceptionMapper,
+                    com.server.entity.extension.ClientTraceFilter,
+                    com.server.entity.extension.DynamicTraceBinding,
                     com.alibaba.dubbo.rpc.protocol.rest.support.LoggingFilter"/>
 
     <!-- use the external tomcat or other server with the servlet approach; the port and contextpath must be exactly the same as those in external server -->

@@ -632,6 +632,12 @@
                 <artifactId>ehcache-core</artifactId>
                 <version>${ehcache.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.dangdang</groupId>
+                <artifactId>config-toolkit</artifactId>
+                <version>3.1.7-RELEASE</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <build>
@@ -747,5 +753,6 @@
   <modules>
   	  <module>server-user</module>
       <module>server-common</module>
+      <module>server-entity</module>
   </modules>
 </project>
