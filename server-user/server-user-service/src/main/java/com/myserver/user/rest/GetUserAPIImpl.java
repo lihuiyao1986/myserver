@@ -4,6 +4,7 @@ import com.alibaba.dubbo.rpc.protocol.rest.support.ContentType;
 import com.server.exception.APIException;
 import com.server.user.api.model.User;
 import com.server.user.api.rest.IGetUserAPI;
+import com.server.user.dao.hibernate.UserDao;
 import com.server.user.dao.mapper.UserMapper;
 import com.server.user.dao.model.UserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,20 +23,21 @@ import javax.ws.rs.core.MediaType;
 public class GetUserAPIImpl implements IGetUserAPI {
 
     @Autowired
-    private UserMapper userDao;
+    private UserDao userDao;
 
     @GET
     @Path("/get/{userName}")
     @Override
     @Transactional(readOnly = true)
     public User getUserByID(@PathParam("userName")String userName,@QueryParam("userId")long userId) throws APIException{
-        UserInfo userInfo = userDao.getUser(userId);
+        UserInfo userInfo = userDao.get(userId);
         User user = null;
         if (userInfo !=null){
             user = new User();
             user.setAge(userInfo.getAge());
             user.setName(userInfo.getName());
             user.setNickname(userInfo.getNickName());
+            user.setAddressInfos(userInfo.getAddressInfos());
             return user;
         }else {
             throw new APIException("1009","用户不存在");

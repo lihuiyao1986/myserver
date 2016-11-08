@@ -1,7 +1,7 @@
 package com.server.user.dao.model;
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.Set;
 
 /**
  * UserInfo
@@ -19,8 +19,8 @@ public class UserInfo extends BaseDaoModel{
     @Column(name = "T_AGE")
     private int age;
 
-    @OneToMany(cascade = CascadeType.ALL,mappedBy = "userInfo")
-    private List<AddressInfo> addressInfos;
+    @OneToMany(cascade = {CascadeType.REFRESH, CascadeType.PERSIST,CascadeType.MERGE, CascadeType.REMOVE},targetEntity = AddressInfo.class,fetch = FetchType.EAGER)
+    private Set<AddressInfo> addressInfos;
 
     public String getName() {
         return name;
@@ -46,11 +46,11 @@ public class UserInfo extends BaseDaoModel{
         this.age = age;
     }
 
-    public List<AddressInfo> getAddressInfos() {
+    public Set<AddressInfo> getAddressInfos() {
         return addressInfos;
     }
 
-    public void setAddressInfos(List<AddressInfo> addressInfos) {
+    public void setAddressInfos(Set<AddressInfo> addressInfos) {
         this.addressInfos = addressInfos;
     }
 

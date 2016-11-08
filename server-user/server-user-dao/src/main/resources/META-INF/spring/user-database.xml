@@ -121,9 +121,6 @@
         <property name="packagesToScan" value="com.server.user.dao.model" />
     </bean>
 
-    <!-- 配置事务异常封装 -->
-    <bean id="persistenceExceptionTranslationPostProcessor" class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
-
     <!-- 事务注解驱动 -->
     <tx:annotation-driven transaction-manager="hibernateTransactionManager" />
 

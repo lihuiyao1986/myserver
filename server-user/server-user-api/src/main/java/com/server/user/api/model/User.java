@@ -1,9 +1,12 @@
 package com.server.user.api.model;
 
+import com.server.user.dao.model.AddressInfo;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * Created by jk on 16/11/6.
@@ -42,6 +45,16 @@ public class User implements Serializable {
 
     public void setNickname(String nickname) {
         this.nickname = nickname;
+    }
+
+    private List<AddressInfo> addressInfos;
+
+    public List<AddressInfo> getAddressInfos() {
+        return addressInfos;
+    }
+
+    public void setAddressInfos(List<AddressInfo> addressInfos) {
+        this.addressInfos = addressInfos;
     }
 
     @Override

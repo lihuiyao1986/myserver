@@ -18,8 +18,8 @@ public class AddressInfo extends BaseDaoModel {
     @Column(name = "T_CITY_CODE")
     private String cityCode;
 
-    @ManyToOne(cascade = CascadeType.ALL,optional = true)
-    @JoinColumn(name = "T_USER_ID")
+    @ManyToOne(cascade = {CascadeType.REFRESH,CascadeType.MERGE},targetEntity = UserInfo.class,fetch = FetchType.EAGER)
+    @JoinColumn(name = "T_USER_ID",referencedColumnName = "T_ID")
     private UserInfo userInfo;
 
     public String getAddressName() {

@@ -12,7 +12,9 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Unit test for simple App.
@@ -53,7 +55,7 @@ public class AppTest {
         addressInfo1.setCityName("九江市");
         addressInfo1.setUserInfo(user);
 
-        List<AddressInfo> addrs = new ArrayList<AddressInfo>();
+        Set<AddressInfo> addrs = new HashSet<AddressInfo>();
         addrs.add(addressInfo);
         addrs.add(addressInfo1);
         user.setAddressInfos(addrs);
@@ -67,5 +69,17 @@ public class AppTest {
         addressInfo.setCityCode("0571");
         addressInfo.setCityName("杭州市");
         addressDao.save(addressInfo);
+    }
+
+    @Test
+    public void testGetUser(){
+        UserInfo userInfo = userDao.get(1L);
+        System.out.println(userInfo.getAddressInfos());
+    }
+
+    @Test
+    public void testGetAddress(){
+        AddressInfo addressInfo = addressDao.get(1L);
+        System.out.println(addressInfo);
     }
 }
