@@ -16,7 +16,7 @@ public class BaseDaoEntity extends BaseModel {
 
     @Id
     @Column(name = "T_ID")
-    @GeneratedValue(strategy = GenerationType.AUTO,generator = "native")
+    @GeneratedValue(generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
     private long id;
 

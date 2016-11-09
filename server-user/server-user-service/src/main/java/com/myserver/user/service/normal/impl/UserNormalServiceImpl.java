@@ -1,9 +1,12 @@
 package com.myserver.user.service.normal.impl;
 
 import com.myserver.user.service.normal.IUserNormalService;
+import com.server.entity.user.api.entity.req.LoginReqEntity;
+import com.server.entity.user.dao.LoginLog;
 import com.server.entity.user.dao.UserDaoEntity;
 import com.server.entity.user.dao.UserStatusDaoEntity;
 import com.server.entity.utils.StringUtils;
+import com.server.user.dao.hibernate.LoginLogDao;
 import com.server.user.dao.hibernate.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -19,6 +22,9 @@ public class UserNormalServiceImpl implements IUserNormalService {
 
     @Autowired
     private UserDao userDao;
+
+    @Autowired
+    private LoginLogDao loginLogDao;
 
     // 登录失败最大重试次数
     @Value("${login.maxLoginRetryTimes}")
@@ -90,5 +96,30 @@ public class UserNormalServiceImpl implements IUserNormalService {
         user.setLastUpdateDate(now);
         userDao.update(user);
         return user;
+    }
+
+    /**
+     * 记录登录日志
+     * @param loginParam
+     * @param asyn
+     */
+    @Override
+    public void logLogin(LoginReqEntity loginParam, boolean asyn,UserDaoEntity user) {
+        final LoginLog loginLog = new LoginLog();
+        loginLog.setLocalIP(StringUtils.trimNull(loginParam.getLocalIP()));
+        loginLog.setRemoteIP(StringUtils.trimNull(loginParam.getRemoteIP()));
+        loginLog.setOwnership(user.getOwnership());
+        loginLog.setSessionID(StringUtils.trimNull(loginParam.getSessionId()));
+        loginLog.setUser(user);
+        if (asyn){
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    loginLogDao.save(loginLog);
+                }
+            }).start();
+        }else{
+            loginLogDao.save(loginLog);
+        }
     }
 }

@@ -1,5 +1,6 @@
 package com.myserver.user.service.normal;
 
+import com.server.entity.user.api.entity.req.LoginReqEntity;
 import com.server.entity.user.dao.UserDaoEntity;
 
 /**
@@ -36,5 +37,13 @@ public interface IUserNormalService {
      * @return
      */
     public UserDaoEntity lockUser(UserDaoEntity user);
+
+
+    /**
+     * 记录登录日志
+     * @param loginParam
+     * @param asyn
+     */
+    public void logLogin(LoginReqEntity loginParam,boolean asyn,UserDaoEntity user);
 
 }

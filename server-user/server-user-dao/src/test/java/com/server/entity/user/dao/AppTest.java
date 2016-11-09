@@ -1,5 +1,6 @@
 package com.server.entity.user.dao;
 
+import com.server.user.dao.hibernate.LoginLogDao;
 import com.server.user.dao.hibernate.UserDao;
 import org.apache.log4j.Logger;
 import org.junit.Test;
@@ -23,6 +24,9 @@ public class AppTest {
     @Autowired
     private UserDao userDao;
 
+    @Autowired
+    private LoginLogDao loginLogDao;
+
     @Test
     public void testQueryUserByLoginName(){
         UserDaoEntity userDaoEntity = userDao.getByLoginName("eslink");
@@ -33,6 +37,15 @@ public class AppTest {
     public void testQuerySystemTime(){
         Date date = userDao.getSystemTime();
         System.out.println(" systemTime = " + date);
+    }
+
+    @Test
+    public void testLogLogin(){
+        LoginLog loginLog = new LoginLog();
+        UserDaoEntity userDaoEntity = userDao.getByLoginName("eslink");
+        loginLog.setOwnership(userDaoEntity.getOwnership());
+        loginLog.setUser(userDaoEntity);
+        loginLogDao.save(loginLog);
     }
 
 }

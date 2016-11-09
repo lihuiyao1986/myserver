@@ -9,7 +9,6 @@ import com.server.entity.model.APIRespEntity;
 import com.server.entity.user.api.dubbo.IUserService;
 import com.server.entity.user.api.entity.req.LoginReqEntity;
 import com.server.entity.user.dao.UserDaoEntity;
-import com.server.entity.user.dao.UserStatusDaoEntity;
 import com.server.entity.utils.ObjectUtils;
 import com.server.entity.utils.StringUtils;
 import com.server.user.dao.hibernate.UserDao;
@@ -65,7 +64,7 @@ public class UserServiceImpl implements IUserService {
         Date now = new Date();
         if(user.getLastloginRetryDate() != null && now.getTime() - user.getLastloginRetryDate().getTime() >= accountLockedInterval * 1000){
             //解锁用户
-            userNormalService.unlockUser(user);
+            user = userNormalService.unlockUser(user);
         }
 
         // 密码错误
@@ -79,6 +78,9 @@ public class UserServiceImpl implements IUserService {
         if (!userNormalService.checkLoginable(user)){
             throw new APIException(UserErrorcode.LOGIN_STATUS_ABNORMAL,"登录账户状态不正确或该账户不允许登录，请联系管理员。");
         }
+
+        // 登录成功后，需要记录登录日志
+        userNormalService.logLogin(reqEntity.getReqParam(),true,user);
 
         return new APIRespEntity<UserDaoEntity>(user);
     }
