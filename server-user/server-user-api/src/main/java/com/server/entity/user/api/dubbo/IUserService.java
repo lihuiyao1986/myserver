@@ -1,6 +1,7 @@
 package com.server.entity.user.api.dubbo;
 
 
+import com.server.entity.annotation.API;
 import com.server.entity.exception.APIException;
 import com.server.entity.model.APIReqEntity;
 import com.server.entity.model.APIRespEntity;
@@ -8,7 +9,7 @@ import com.server.entity.user.api.entity.req.LoginReqEntity;
 import com.server.entity.user.dao.UserDaoEntity;
 
 /**
- * Created by jk on 16/11/6.
+ * 用户服务
  */
 public interface IUserService {
 
@@ -17,6 +18,7 @@ public interface IUserService {
      * @param loginName
      * @return
      */
+    @API
     public APIRespEntity<UserDaoEntity> getUserByLoginName(APIReqEntity<String> loginName)throws APIException;
 
 
@@ -24,6 +26,7 @@ public interface IUserService {
      * 用户登录
      * @return
      */
+    @API
     public APIRespEntity<UserDaoEntity> login(APIReqEntity<LoginReqEntity> reqEntity)throws APIException;
 
 

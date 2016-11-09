@@ -44,15 +44,24 @@ public class AppExceptionMapper implements ExceptionMapper<Exception>,ContainerR
         if (exception instanceof APIException){
             String errorCode = StringUtils.trimNull(((APIException) exception).getErrorCode(),GlobalErrorcode.FAIL_CODE);
             resp.setErrorcode(errorCode);
-            String message = StringUtils.trimNull(((APIException) exception).getErrorMsg(),GlobalErrorcode.FAIL_MSG);
-            String errorMsg = ErrorcodeInfoLoader.getInstance().getMessage(errorCode,message);
-            resp.setErrormsg(errorMsg);
+            resp.setErrormsg(inflateErrorMsg((APIException) exception));
         }else{
             resp.setErrorcode(GlobalErrorcode.FAIL_CODE);
             String errorMsg = ErrorcodeInfoLoader.getInstance().getMessage(GlobalErrorcode.FAIL_CODE,GlobalErrorcode.FAIL_MSG);
             resp.setErrormsg(StringUtils.trimNull(errorMsg));
         }
         return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity(resp).type(type).build();
+    }
+
+    /**
+     * 解析错误代码
+     * @param exception
+     * @return
+     */
+    private String inflateErrorMsg(APIException exception){
+        String errorCode = StringUtils.trimNull(exception.getErrorCode(),GlobalErrorcode.FAIL_CODE);
+        String message = StringUtils.trimNull(exception.getErrorMsg(),GlobalErrorcode.FAIL_MSG);
+        return ErrorcodeInfoLoader.getInstance().getMessage(errorCode,message);
     }
 
     @Override

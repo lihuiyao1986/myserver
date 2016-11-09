@@ -2,6 +2,7 @@ package com.myserver.user.dubbo;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.myserver.user.constant.UserErrorcode;
+import com.server.entity.annotation.API;
 import com.server.entity.exception.APIException;
 import com.server.entity.model.APIReqEntity;
 import com.server.entity.model.APIRespEntity;
@@ -27,8 +28,9 @@ public class UserServiceImpl implements IUserService {
     @Autowired
     private UserDao userDao;
 
-    @Override
+
     @Transactional(readOnly = true)
+    @Override
     public APIRespEntity<UserDaoEntity> getUserByLoginName(APIReqEntity<String> params) throws APIException{
         UserDaoEntity userDaoEntity = userDao.getByLoginName(StringUtils.trimNull(params.getReqParam()));
         if (userDaoEntity == null){

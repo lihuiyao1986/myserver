@@ -59,8 +59,8 @@ public class UserAPIImpl implements IUserAPI {
         if (entity.isSucc()){
             respEntity.setResult(entity.getRespResult());
         }else{
-            respEntity.setErrormsg(respEntity.getErrormsg());
-            respEntity.setErrorcode(respEntity.getErrorcode());
+            respEntity.setErrormsg(entity.getCode());
+            respEntity.setErrorcode(entity.getMessage());
         }
         return respEntity;
     }
