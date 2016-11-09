@@ -1,813 +1,100 @@
-2016-11-08 10:40:52 [ main:5016 ] - [ ERROR ] HHH000388: Unsuccessful: alter table T_ADDRESS add constraint FK_1rv55ftepm0d1kpm0yqboxpl foreign key (userInfo) references T_USER (T_ID)
-2016-11-08 10:40:52 [ main:5017 ] - [ ERROR ] BLOB/TEXT column 'userInfo' used in key specification without a key length
-2016-11-08 10:41:47 [ main:7812 ] - [ ERROR ] HHH000388: Unsuccessful: alter table T_ADDRESS add constraint FK_1rv55ftepm0d1kpm0yqboxpl foreign key (userInfo) references T_USER (T_ID)
-2016-11-08 10:41:47 [ main:7813 ] - [ ERROR ] BLOB/TEXT column 'userInfo' used in key specification without a key length
-2016-11-08 11:09:59 [ main:4723 ] - [ ERROR ] HHH000388: Unsuccessful: alter table T_ADDRESS add constraint FK_1rv55ftepm0d1kpm0yqboxpl foreign key (userInfo) references T_USER (T_ID)
-2016-11-08 11:09:59 [ main:4724 ] - [ ERROR ] BLOB/TEXT column 'userInfo' used in key specification without a key length
-2016-11-08 11:12:20 [ main:3891 ] - [ ERROR ] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3c153a1] to prepare test instance [AppTest@37918c79]
-java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
-	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
-	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:228)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:230)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:249)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:157)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:74)
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:211)
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:67)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory BaseDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: java.util.Set, at table: T_USER, for columns: [org.hibernate.mapping.Column(addressInfos)]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
-	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
-	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
-	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109)
-	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:261)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
-	... 23 more
-Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory BaseDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: java.util.Set, at table: T_USER, for columns: [org.hibernate.mapping.Column(addressInfos)]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
-	... 39 more
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: java.util.Set, at table: T_USER, for columns: [org.hibernate.mapping.Column(addressInfos)]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1192)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1116)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:545)
-	... 41 more
-Caused by: org.hibernate.MappingException: Could not determine type for: java.util.Set, at table: T_USER, for columns: [org.hibernate.mapping.Column(addressInfos)]
-	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:336)
-	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:310)
-	at org.hibernate.mapping.Property.isValid(Property.java:241)
-	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:496)
-	at org.hibernate.mapping.RootClass.validate(RootClass.java:270)
-	at org.hibernate.cfg.Configuration.validate(Configuration.java:1360)
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1851)
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1930)
-	at org.springframework.orm.hibernate4.LocalSessionFactoryBuilder.buildSessionFactory(LocalSessionFactoryBuilder.java:372)
-	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:454)
-	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:439)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
-	... 51 more
-2016-11-08 11:15:10 [ main:4212 ] - [ ERROR ] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3c153a1] to prepare test instance [AppTest@37918c79]
-java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
-	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
-	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:228)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:230)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:249)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:157)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:74)
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:211)
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:67)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory BaseDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: java.util.Set, at table: T_USER, for columns: [org.hibernate.mapping.Column(addressInfos)]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
-	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
-	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
-	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109)
-	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:261)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
-	... 23 more
-Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory BaseDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: java.util.Set, at table: T_USER, for columns: [org.hibernate.mapping.Column(addressInfos)]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
-	... 39 more
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: java.util.Set, at table: T_USER, for columns: [org.hibernate.mapping.Column(addressInfos)]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1192)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1116)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:545)
-	... 41 more
-Caused by: org.hibernate.MappingException: Could not determine type for: java.util.Set, at table: T_USER, for columns: [org.hibernate.mapping.Column(addressInfos)]
-	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:336)
-	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:310)
-	at org.hibernate.mapping.Property.isValid(Property.java:241)
-	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:496)
-	at org.hibernate.mapping.RootClass.validate(RootClass.java:270)
-	at org.hibernate.cfg.Configuration.validate(Configuration.java:1360)
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1851)
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1930)
-	at org.springframework.orm.hibernate4.LocalSessionFactoryBuilder.buildSessionFactory(LocalSessionFactoryBuilder.java:372)
-	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:454)
-	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:439)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
-	... 51 more
-2016-11-08 11:16:29 [ main:4925 ] - [ ERROR ] HHH000388: Unsuccessful: alter table T_ADDRESS add constraint FK_1rv55ftepm0d1kpm0yqboxpl foreign key (userInfo) references T_USER (T_ID)
-2016-11-08 11:16:29 [ main:4926 ] - [ ERROR ] BLOB/TEXT column 'userInfo' used in key specification without a key length
-2016-11-08 11:16:53 [ main:4665 ] - [ ERROR ] HHH000388: Unsuccessful: alter table T_ADDRESS add constraint FK_1rv55ftepm0d1kpm0yqboxpl foreign key (userInfo) references T_USER (T_ID)
-2016-11-08 11:16:53 [ main:4665 ] - [ ERROR ] BLOB/TEXT column 'userInfo' used in key specification without a key length
-2016-11-08 11:20:27 [ main:4148 ] - [ ERROR ] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3c153a1] to prepare test instance [AppTest@37918c79]
-java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
-	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
-	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:228)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:230)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:249)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:157)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:74)
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:211)
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:67)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory BaseDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: java.util.Set, at table: T_USER, for columns: [org.hibernate.mapping.Column(addressInfos)]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
-	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
-	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
-	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109)
-	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:261)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
-	... 23 more
-Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory BaseDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: java.util.Set, at table: T_USER, for columns: [org.hibernate.mapping.Column(addressInfos)]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
-	... 39 more
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is org.hibernate.MappingException: Could not determine type for: java.util.Set, at table: T_USER, for columns: [org.hibernate.mapping.Column(addressInfos)]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1192)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1116)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:545)
-	... 41 more
-Caused by: org.hibernate.MappingException: Could not determine type for: java.util.Set, at table: T_USER, for columns: [org.hibernate.mapping.Column(addressInfos)]
-	at org.hibernate.mapping.SimpleValue.getType(SimpleValue.java:336)
-	at org.hibernate.mapping.SimpleValue.isValid(SimpleValue.java:310)
-	at org.hibernate.mapping.Property.isValid(Property.java:241)
-	at org.hibernate.mapping.PersistentClass.validate(PersistentClass.java:496)
-	at org.hibernate.mapping.RootClass.validate(RootClass.java:270)
-	at org.hibernate.cfg.Configuration.validate(Configuration.java:1360)
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1851)
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1930)
-	at org.springframework.orm.hibernate4.LocalSessionFactoryBuilder.buildSessionFactory(LocalSessionFactoryBuilder.java:372)
-	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:454)
-	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:439)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
-	... 51 more
-2016-11-08 13:22:26 [ main:4620 ] - [ ERROR ] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@3c153a1] to prepare test instance [AppTest@37918c79]
-java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
-	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
-	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:228)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:230)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:249)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:157)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:74)
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:211)
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:67)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'baseDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory BaseDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is java.lang.NullPointerException
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
-	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
-	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
-	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109)
-	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:261)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
-	... 23 more
-Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory BaseDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is java.lang.NullPointerException
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
-	... 39 more
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is java.lang.NullPointerException
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1192)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1116)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:545)
-	... 41 more
-Caused by: java.lang.NullPointerException
-	at org.hibernate.cfg.annotations.CollectionBinder.bindCollectionSecondPass(CollectionBinder.java:1460)
-	at org.hibernate.cfg.annotations.CollectionBinder.bindOneToManySecondPass(CollectionBinder.java:864)
-	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:779)
-	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:728)
-	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:70)
-	at org.hibernate.cfg.Configuration.originalSecondPassCompile(Configuration.java:1697)
-	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1426)
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1846)
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1930)
-	at org.springframework.orm.hibernate4.LocalSessionFactoryBuilder.buildSessionFactory(LocalSessionFactoryBuilder.java:372)
-	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:454)
-	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:439)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
-	... 51 more
-2016-11-08 20:24:02 [ main:4500 ] - [ ERROR ] Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4278a03f] to prepare test instance [com.server.entity.user.dao.AppTest@1534f01b]
-java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
-	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
-	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:228)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:230)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:249)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:231)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:60)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:229)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:50)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:222)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:300)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193)
-	at org.junit.runner.JUnitCore.run(JUnitCore.java:157)
-	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:74)
-	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:211)
-	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:67)
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userDao': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory com.server.entity.dao.BaseDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.server.entity.user.dao.UserDaoEntity.channelUser references an unknown entity: com.server.entity.channel.dao.ChannelUserDaoEntity
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
-	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
-	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
-	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109)
-	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:261)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
-	... 23 more
-Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected org.hibernate.SessionFactory com.server.entity.dao.BaseDao.sessionFactory; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.server.entity.user.dao.UserDaoEntity.channelUser references an unknown entity: com.server.entity.channel.dao.ChannelUserDaoEntity
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:573)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
-	... 39 more
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [META-INF/spring/user-database.xml]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.server.entity.user.dao.UserDaoEntity.channelUser references an unknown entity: com.server.entity.channel.dao.ChannelUserDaoEntity
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1192)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1116)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1014)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:545)
-	... 41 more
-Caused by: org.hibernate.AnnotationException: @OneToOne or @ManyToOne on com.server.entity.user.dao.UserDaoEntity.channelUser references an unknown entity: com.server.entity.channel.dao.ChannelUserDaoEntity
-	at org.hibernate.cfg.ToOneFkSecondPass.doSecondPass(ToOneFkSecondPass.java:109)
-	at org.hibernate.cfg.Configuration.processEndOfQueue(Configuration.java:1598)
-	at org.hibernate.cfg.Configuration.processFkSecondPassInOrder(Configuration.java:1521)
-	at org.hibernate.cfg.Configuration.secondPassCompile(Configuration.java:1422)
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1846)
-	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1930)
-	at org.springframework.orm.hibernate4.LocalSessionFactoryBuilder.buildSessionFactory(LocalSessionFactoryBuilder.java:372)
-	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:454)
-	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:439)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
-	... 51 more
-2016-11-08 20:28:15 [ main:17963 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelAffiliateAccountAppQueue add constraint FK_4wwl73vw7o5ho5e3h02vll01p foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
-2016-11-08 20:28:15 [ main:17964 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:28:15 [ main:18031 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelAffiliateSubAccount add constraint FK_gnvkl3inqd6y7t9o2btdd9t5w foreign key (channelServiceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
-2016-11-08 20:28:15 [ main:18032 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:28:15 [ main:18111 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_6a6py6mlwujjb7oovo4512bgh foreign key (accountOwner_T_ID) references BIZ_Participant (T_ID)
-2016-11-08 20:28:15 [ main:18111 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:28:15 [ main:18187 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_c0efy4t7c2qjovml0ek8y9p5u foreign key (channelProvider_T_ID) references BIZ_Participant (T_ID)
-2016-11-08 20:28:15 [ main:18188 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:28:15 [ main:18267 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_dwgu5by2610dhydu2pr4eq5s1 foreign key (sp_T_ID) references BIZ_ServicePoint (T_ID)
-2016-11-08 20:28:15 [ main:18267 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:28:15 [ main:18337 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_q212t5o7eg38ifxjc8iukcdf8 foreign key (gender_T_ID) references DIC_Gender (T_ID)
-2016-11-08 20:28:15 [ main:18338 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:28:15 [ main:18406 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_rmnej2ba5vsienwx0graoqeo9 foreign key (group_T_ID) references BIZ_ChannelUserGroup (T_ID)
-2016-11-08 20:28:15 [ main:18406 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:28:15 [ main:18475 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_g948vcfunk60bwwnttkp1qax3 foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
-2016-11-08 20:28:15 [ main:18475 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:28:15 [ main:18537 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUserGroup add constraint FK_cm8rurpt4nm5rjs4q38vshcya foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
-2016-11-08 20:28:15 [ main:18538 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:28:15 [ main:18604 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_MessageProtocol add constraint FK_ivjbglxv330obwp4r5u4qse9s foreign key (dataFormat_T_ID) references DIC_DataFormat (T_ID)
-2016-11-08 20:28:15 [ main:18604 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:28:15 [ main:18671 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_MessageProtocol add constraint FK_fbar6f0y536umcn7eujbci3js foreign key (signAlgorithm_T_ID) references DIC_SignAlgorithm (T_ID)
-2016-11-08 20:28:15 [ main:18671 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:28:15 [ main:18737 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_Participant add constraint FK_tcobuddjsld5iltjsh68ikilv foreign key (status_T_ID) references DIC_ServiceStatus (T_ID)
-2016-11-08 20:28:15 [ main:18738 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:28:15 [ main:18818 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_1r0kqwia4deotoaqcjq0vtvkg foreign key (localCommProtocol_T_ID) references DIC_CommProtocol (T_ID)
-2016-11-08 20:28:15 [ main:18818 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:28:15 [ main:18894 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_mm9pqok8lernvkgo6i9d6a7ru foreign key (localMsgProtocol_T_ID) references BIZ_MessageProtocol (T_ID)
-2016-11-08 20:28:15 [ main:18895 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:28:16 [ main:18973 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_hbteh3tmiw6ytyg9ut9j250e8 foreign key (owner_T_ID) references BIZ_Participant (T_ID)
-2016-11-08 20:28:16 [ main:18973 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:28:16 [ main:19050 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_puoykn1oqwhu542pqxmok0mkk foreign key (remoteCommProtocol_T_ID) references DIC_CommProtocol (T_ID)
-2016-11-08 20:28:16 [ main:19050 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:28:16 [ main:19129 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_hykohwbaggj2grotmiqhaf4nb foreign key (remoteMsgProtocol_T_ID) references BIZ_MessageProtocol (T_ID)
-2016-11-08 20:28:16 [ main:19129 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:28:16 [ main:19211 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_bvbyaxfnybm1mfvm3gaqfhof foreign key (status_T_ID) references DIC_ServiceStatus (T_ID)
-2016-11-08 20:28:16 [ main:19211 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:28:16 [ main:19283 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_Orgnization add constraint FK_7mijxr4qdjckfodl75trw1gd foreign key (parentOrg_T_ID) references SYS_Orgnization (T_ID)
-2016-11-08 20:28:16 [ main:19283 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:28:16 [ main:19350 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_Orgnization add constraint FK_81gmvyhocouf4eemwqcc0i6bm foreign key (type_T_ID) references DIC_OrgType (T_ID)
-2016-11-08 20:28:16 [ main:19351 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:28:16 [ main:19434 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_bsui0dw6n9mof0ju68v2o4bw8 foreign key (affiliateAccountAppQueue_T_ID) references BIZ_ChannelAffiliateAccountAppQueue (T_ID)
-2016-11-08 20:28:16 [ main:19434 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:28:16 [ main:19517 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_8f0m1f9kj3ck4093u2y96d1cv foreign key (affiliateSubAccount_T_ID) references BIZ_ChannelAffiliateSubAccount (T_ID)
-2016-11-08 20:28:16 [ main:19517 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:28:16 [ main:19600 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_7vktfwklbg0i9je74hm3n2tor foreign key (channelUser_T_ID) references BIZ_ChannelUser (T_ID)
-2016-11-08 20:28:16 [ main:19600 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:28:16 [ main:19679 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_nn4kveek77ncj2wlkq5lp7p4y foreign key (gender_T_ID) references DIC_Gender (T_ID)
-2016-11-08 20:28:16 [ main:19680 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:28:16 [ main:19761 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_hbgsjmfv8f4wel70m02ayv3n4 foreign key (orgnization_T_ID) references SYS_Orgnization (T_ID)
-2016-11-08 20:28:16 [ main:19761 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:28:16 [ main:19841 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_s4gq77e652hl1m1li3296arq6 foreign key (status_T_ID) references DIC_UserStatus (T_ID)
-2016-11-08 20:28:16 [ main:19841 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:29:59 [ main:12042 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelAffiliateAccountAppQueue add constraint FK_4wwl73vw7o5ho5e3h02vll01p foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
-2016-11-08 20:29:59 [ main:12043 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:29:59 [ main:12111 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelAffiliateSubAccount add constraint FK_gnvkl3inqd6y7t9o2btdd9t5w foreign key (channelServiceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
-2016-11-08 20:29:59 [ main:12111 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:29:59 [ main:12192 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_6a6py6mlwujjb7oovo4512bgh foreign key (accountOwner_T_ID) references BIZ_Participant (T_ID)
-2016-11-08 20:29:59 [ main:12192 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:29:59 [ main:12272 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_c0efy4t7c2qjovml0ek8y9p5u foreign key (channelProvider_T_ID) references BIZ_Participant (T_ID)
-2016-11-08 20:29:59 [ main:12272 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:29:59 [ main:12350 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_dwgu5by2610dhydu2pr4eq5s1 foreign key (sp_T_ID) references BIZ_ServicePoint (T_ID)
-2016-11-08 20:29:59 [ main:12351 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:29:59 [ main:12419 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_q212t5o7eg38ifxjc8iukcdf8 foreign key (gender_T_ID) references DIC_Gender (T_ID)
-2016-11-08 20:29:59 [ main:12419 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:29:59 [ main:12487 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_rmnej2ba5vsienwx0graoqeo9 foreign key (group_T_ID) references BIZ_ChannelUserGroup (T_ID)
-2016-11-08 20:29:59 [ main:12488 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:29:59 [ main:12562 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_g948vcfunk60bwwnttkp1qax3 foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
-2016-11-08 20:29:59 [ main:12562 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:29:59 [ main:12625 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUserGroup add constraint FK_cm8rurpt4nm5rjs4q38vshcya foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
-2016-11-08 20:29:59 [ main:12626 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:29:59 [ main:12698 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_MessageProtocol add constraint FK_ivjbglxv330obwp4r5u4qse9s foreign key (dataFormat_T_ID) references DIC_DataFormat (T_ID)
-2016-11-08 20:29:59 [ main:12698 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:29:59 [ main:12766 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_MessageProtocol add constraint FK_fbar6f0y536umcn7eujbci3js foreign key (signAlgorithm_T_ID) references DIC_SignAlgorithm (T_ID)
-2016-11-08 20:29:59 [ main:12766 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:30:00 [ main:12835 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_Participant add constraint FK_tcobuddjsld5iltjsh68ikilv foreign key (status_T_ID) references DIC_ServiceStatus (T_ID)
-2016-11-08 20:30:00 [ main:12836 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:30:00 [ main:12916 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_1r0kqwia4deotoaqcjq0vtvkg foreign key (localCommProtocol_T_ID) references DIC_CommProtocol (T_ID)
-2016-11-08 20:30:00 [ main:12917 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:30:00 [ main:12996 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_mm9pqok8lernvkgo6i9d6a7ru foreign key (localMsgProtocol_T_ID) references BIZ_MessageProtocol (T_ID)
-2016-11-08 20:30:00 [ main:12996 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:30:00 [ main:13084 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_hbteh3tmiw6ytyg9ut9j250e8 foreign key (owner_T_ID) references BIZ_Participant (T_ID)
-2016-11-08 20:30:00 [ main:13084 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:30:00 [ main:13169 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_puoykn1oqwhu542pqxmok0mkk foreign key (remoteCommProtocol_T_ID) references DIC_CommProtocol (T_ID)
-2016-11-08 20:30:00 [ main:13170 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:30:00 [ main:13250 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_hykohwbaggj2grotmiqhaf4nb foreign key (remoteMsgProtocol_T_ID) references BIZ_MessageProtocol (T_ID)
-2016-11-08 20:30:00 [ main:13250 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:30:00 [ main:13328 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_bvbyaxfnybm1mfvm3gaqfhof foreign key (status_T_ID) references DIC_ServiceStatus (T_ID)
-2016-11-08 20:30:00 [ main:13328 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:30:00 [ main:13395 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_Orgnization add constraint FK_7mijxr4qdjckfodl75trw1gd foreign key (parentOrg_T_ID) references SYS_Orgnization (T_ID)
-2016-11-08 20:30:00 [ main:13395 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:30:00 [ main:13465 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_Orgnization add constraint FK_81gmvyhocouf4eemwqcc0i6bm foreign key (type_T_ID) references DIC_OrgType (T_ID)
-2016-11-08 20:30:00 [ main:13465 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:30:00 [ main:13552 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_bsui0dw6n9mof0ju68v2o4bw8 foreign key (affiliateAccountAppQueue_T_ID) references BIZ_ChannelAffiliateAccountAppQueue (T_ID)
-2016-11-08 20:30:00 [ main:13552 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:30:00 [ main:13639 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_8f0m1f9kj3ck4093u2y96d1cv foreign key (affiliateSubAccount_T_ID) references BIZ_ChannelAffiliateSubAccount (T_ID)
-2016-11-08 20:30:00 [ main:13639 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:30:01 [ main:13855 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_7vktfwklbg0i9je74hm3n2tor foreign key (channelUser_T_ID) references BIZ_ChannelUser (T_ID)
-2016-11-08 20:30:01 [ main:13855 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:30:01 [ main:13941 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_nn4kveek77ncj2wlkq5lp7p4y foreign key (gender_T_ID) references DIC_Gender (T_ID)
-2016-11-08 20:30:01 [ main:13942 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:30:01 [ main:14021 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_hbgsjmfv8f4wel70m02ayv3n4 foreign key (orgnization_T_ID) references SYS_Orgnization (T_ID)
-2016-11-08 20:30:01 [ main:14021 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:30:01 [ main:14104 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_s4gq77e652hl1m1li3296arq6 foreign key (status_T_ID) references DIC_UserStatus (T_ID)
-2016-11-08 20:30:01 [ main:14105 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:34:54 [ main:11181 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelAffiliateAccountAppQueue add constraint FK_4wwl73vw7o5ho5e3h02vll01p foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
-2016-11-08 20:34:54 [ main:11183 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:34:54 [ main:11240 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelAffiliateSubAccount add constraint FK_gnvkl3inqd6y7t9o2btdd9t5w foreign key (channelServiceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
-2016-11-08 20:34:54 [ main:11240 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:34:54 [ main:11313 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_6a6py6mlwujjb7oovo4512bgh foreign key (accountOwner_T_ID) references BIZ_Participant (T_ID)
-2016-11-08 20:34:54 [ main:11313 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:34:54 [ main:11388 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_c0efy4t7c2qjovml0ek8y9p5u foreign key (channelProvider_T_ID) references BIZ_Participant (T_ID)
-2016-11-08 20:34:54 [ main:11389 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:34:54 [ main:11463 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_dwgu5by2610dhydu2pr4eq5s1 foreign key (sp_T_ID) references BIZ_ServicePoint (T_ID)
-2016-11-08 20:34:54 [ main:11463 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:34:54 [ main:11535 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_q212t5o7eg38ifxjc8iukcdf8 foreign key (gender_T_ID) references DIC_Gender (T_ID)
-2016-11-08 20:34:54 [ main:11535 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:34:54 [ main:11602 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_rmnej2ba5vsienwx0graoqeo9 foreign key (group_T_ID) references BIZ_ChannelUserGroup (T_ID)
-2016-11-08 20:34:54 [ main:11603 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:34:55 [ main:11669 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_g948vcfunk60bwwnttkp1qax3 foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
-2016-11-08 20:34:55 [ main:11670 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:34:55 [ main:11731 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUserGroup add constraint FK_cm8rurpt4nm5rjs4q38vshcya foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
-2016-11-08 20:34:55 [ main:11731 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:34:55 [ main:11795 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_MessageProtocol add constraint FK_ivjbglxv330obwp4r5u4qse9s foreign key (dataFormat_T_ID) references DIC_DataFormat (T_ID)
-2016-11-08 20:34:55 [ main:11795 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:34:55 [ main:11859 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_MessageProtocol add constraint FK_fbar6f0y536umcn7eujbci3js foreign key (signAlgorithm_T_ID) references DIC_SignAlgorithm (T_ID)
-2016-11-08 20:34:55 [ main:11859 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:34:55 [ main:11928 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_Participant add constraint FK_tcobuddjsld5iltjsh68ikilv foreign key (status_T_ID) references DIC_ServiceStatus (T_ID)
-2016-11-08 20:34:55 [ main:11930 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:34:55 [ main:12006 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_1r0kqwia4deotoaqcjq0vtvkg foreign key (localCommProtocol_T_ID) references DIC_CommProtocol (T_ID)
-2016-11-08 20:34:55 [ main:12006 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:34:55 [ main:12084 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_mm9pqok8lernvkgo6i9d6a7ru foreign key (localMsgProtocol_T_ID) references BIZ_MessageProtocol (T_ID)
-2016-11-08 20:34:55 [ main:12084 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:34:55 [ main:12162 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_hbteh3tmiw6ytyg9ut9j250e8 foreign key (owner_T_ID) references BIZ_Participant (T_ID)
-2016-11-08 20:34:55 [ main:12162 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:34:55 [ main:12241 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_puoykn1oqwhu542pqxmok0mkk foreign key (remoteCommProtocol_T_ID) references DIC_CommProtocol (T_ID)
-2016-11-08 20:34:55 [ main:12242 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:34:55 [ main:12316 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_hykohwbaggj2grotmiqhaf4nb foreign key (remoteMsgProtocol_T_ID) references BIZ_MessageProtocol (T_ID)
-2016-11-08 20:34:55 [ main:12317 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:34:55 [ main:12394 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_bvbyaxfnybm1mfvm3gaqfhof foreign key (status_T_ID) references DIC_ServiceStatus (T_ID)
-2016-11-08 20:34:55 [ main:12395 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:34:55 [ main:12457 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_Orgnization add constraint FK_7mijxr4qdjckfodl75trw1gd foreign key (parentOrg_T_ID) references SYS_Orgnization (T_ID)
-2016-11-08 20:34:55 [ main:12457 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:34:55 [ main:12526 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_Orgnization add constraint FK_81gmvyhocouf4eemwqcc0i6bm foreign key (type_T_ID) references DIC_OrgType (T_ID)
-2016-11-08 20:34:55 [ main:12527 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:34:55 [ main:12606 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_bsui0dw6n9mof0ju68v2o4bw8 foreign key (affiliateAccountAppQueue_T_ID) references BIZ_ChannelAffiliateAccountAppQueue (T_ID)
-2016-11-08 20:34:55 [ main:12607 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:34:56 [ main:12684 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_8f0m1f9kj3ck4093u2y96d1cv foreign key (affiliateSubAccount_T_ID) references BIZ_ChannelAffiliateSubAccount (T_ID)
-2016-11-08 20:34:56 [ main:12685 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:34:56 [ main:12766 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_7vktfwklbg0i9je74hm3n2tor foreign key (channelUser_T_ID) references BIZ_ChannelUser (T_ID)
-2016-11-08 20:34:56 [ main:12766 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:34:56 [ main:12844 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_nn4kveek77ncj2wlkq5lp7p4y foreign key (gender_T_ID) references DIC_Gender (T_ID)
-2016-11-08 20:34:56 [ main:12844 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:34:56 [ main:12920 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_hbgsjmfv8f4wel70m02ayv3n4 foreign key (orgnization_T_ID) references SYS_Orgnization (T_ID)
-2016-11-08 20:34:56 [ main:12921 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 20:34:56 [ main:12997 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_s4gq77e652hl1m1li3296arq6 foreign key (status_T_ID) references DIC_UserStatus (T_ID)
-2016-11-08 20:34:56 [ main:12998 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:51:24 [ main:11809 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelAffiliateAccountAppQueue add constraint FK_4wwl73vw7o5ho5e3h02vll01p foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
-2016-11-08 22:51:24 [ main:11810 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:51:24 [ main:11872 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelAffiliateSubAccount add constraint FK_gnvkl3inqd6y7t9o2btdd9t5w foreign key (channelServiceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
-2016-11-08 22:51:24 [ main:11872 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:51:24 [ main:11950 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_6a6py6mlwujjb7oovo4512bgh foreign key (accountOwner_T_ID) references BIZ_Participant (T_ID)
-2016-11-08 22:51:24 [ main:11950 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:51:24 [ main:12035 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_c0efy4t7c2qjovml0ek8y9p5u foreign key (channelProvider_T_ID) references BIZ_Participant (T_ID)
-2016-11-08 22:51:24 [ main:12036 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:51:24 [ main:12117 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_dwgu5by2610dhydu2pr4eq5s1 foreign key (sp_T_ID) references BIZ_ServicePoint (T_ID)
-2016-11-08 22:51:24 [ main:12117 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:51:24 [ main:12195 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_q212t5o7eg38ifxjc8iukcdf8 foreign key (gender_T_ID) references DIC_Gender (T_ID)
-2016-11-08 22:51:24 [ main:12196 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:51:24 [ main:12267 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_rmnej2ba5vsienwx0graoqeo9 foreign key (group_T_ID) references BIZ_ChannelUserGroup (T_ID)
-2016-11-08 22:51:24 [ main:12267 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:51:24 [ main:12338 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_g948vcfunk60bwwnttkp1qax3 foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
-2016-11-08 22:51:24 [ main:12338 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:51:24 [ main:12404 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUserGroup add constraint FK_cm8rurpt4nm5rjs4q38vshcya foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
-2016-11-08 22:51:24 [ main:12404 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:51:24 [ main:12473 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_MessageProtocol add constraint FK_ivjbglxv330obwp4r5u4qse9s foreign key (dataFormat_T_ID) references DIC_DataFormat (T_ID)
-2016-11-08 22:51:24 [ main:12473 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:51:24 [ main:12540 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_MessageProtocol add constraint FK_fbar6f0y536umcn7eujbci3js foreign key (signAlgorithm_T_ID) references DIC_SignAlgorithm (T_ID)
-2016-11-08 22:51:24 [ main:12541 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:51:24 [ main:12604 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_Participant add constraint FK_tcobuddjsld5iltjsh68ikilv foreign key (status_T_ID) references DIC_ServiceStatus (T_ID)
-2016-11-08 22:51:24 [ main:12604 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:51:24 [ main:12682 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_1r0kqwia4deotoaqcjq0vtvkg foreign key (localCommProtocol_T_ID) references DIC_CommProtocol (T_ID)
-2016-11-08 22:51:24 [ main:12682 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:51:24 [ main:12761 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_mm9pqok8lernvkgo6i9d6a7ru foreign key (localMsgProtocol_T_ID) references BIZ_MessageProtocol (T_ID)
-2016-11-08 22:51:24 [ main:12761 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:51:25 [ main:12844 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_hbteh3tmiw6ytyg9ut9j250e8 foreign key (owner_T_ID) references BIZ_Participant (T_ID)
-2016-11-08 22:51:25 [ main:12845 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:51:25 [ main:12925 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_puoykn1oqwhu542pqxmok0mkk foreign key (remoteCommProtocol_T_ID) references DIC_CommProtocol (T_ID)
-2016-11-08 22:51:25 [ main:12925 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:51:25 [ main:13003 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_hykohwbaggj2grotmiqhaf4nb foreign key (remoteMsgProtocol_T_ID) references BIZ_MessageProtocol (T_ID)
-2016-11-08 22:51:25 [ main:13003 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:51:25 [ main:13083 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_bvbyaxfnybm1mfvm3gaqfhof foreign key (status_T_ID) references DIC_ServiceStatus (T_ID)
-2016-11-08 22:51:25 [ main:13084 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:51:25 [ main:13150 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_Orgnization add constraint FK_7mijxr4qdjckfodl75trw1gd foreign key (parentOrg_T_ID) references SYS_Orgnization (T_ID)
-2016-11-08 22:51:25 [ main:13150 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:51:25 [ main:13216 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_Orgnization add constraint FK_81gmvyhocouf4eemwqcc0i6bm foreign key (type_T_ID) references DIC_OrgType (T_ID)
-2016-11-08 22:51:25 [ main:13217 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:51:25 [ main:13295 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_bsui0dw6n9mof0ju68v2o4bw8 foreign key (affiliateAccountAppQueue_T_ID) references BIZ_ChannelAffiliateAccountAppQueue (T_ID)
-2016-11-08 22:51:25 [ main:13299 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:51:25 [ main:13381 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_8f0m1f9kj3ck4093u2y96d1cv foreign key (affiliateSubAccount_T_ID) references BIZ_ChannelAffiliateSubAccount (T_ID)
-2016-11-08 22:51:25 [ main:13381 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:51:25 [ main:13466 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_7vktfwklbg0i9je74hm3n2tor foreign key (channelUser_T_ID) references BIZ_ChannelUser (T_ID)
-2016-11-08 22:51:25 [ main:13467 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:51:25 [ main:13549 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_nn4kveek77ncj2wlkq5lp7p4y foreign key (gender_T_ID) references DIC_Gender (T_ID)
-2016-11-08 22:51:25 [ main:13550 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:51:25 [ main:13631 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_hbgsjmfv8f4wel70m02ayv3n4 foreign key (orgnization_T_ID) references SYS_Orgnization (T_ID)
-2016-11-08 22:51:25 [ main:13631 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:51:25 [ main:13715 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_s4gq77e652hl1m1li3296arq6 foreign key (status_T_ID) references DIC_UserStatus (T_ID)
-2016-11-08 22:51:25 [ main:13716 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:56:55 [ main:12529 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelAffiliateAccountAppQueue add constraint FK_4wwl73vw7o5ho5e3h02vll01p foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
-2016-11-08 22:56:55 [ main:12530 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:56:55 [ main:12592 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelAffiliateSubAccount add constraint FK_gnvkl3inqd6y7t9o2btdd9t5w foreign key (channelServiceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
-2016-11-08 22:56:55 [ main:12592 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:56:55 [ main:12673 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_6a6py6mlwujjb7oovo4512bgh foreign key (accountOwner_T_ID) references BIZ_Participant (T_ID)
-2016-11-08 22:56:55 [ main:12674 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:56:55 [ main:12752 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_c0efy4t7c2qjovml0ek8y9p5u foreign key (channelProvider_T_ID) references BIZ_Participant (T_ID)
-2016-11-08 22:56:55 [ main:12752 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:56:55 [ main:12828 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_dwgu5by2610dhydu2pr4eq5s1 foreign key (sp_T_ID) references BIZ_ServicePoint (T_ID)
-2016-11-08 22:56:55 [ main:12828 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:56:55 [ main:12904 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_q212t5o7eg38ifxjc8iukcdf8 foreign key (gender_T_ID) references DIC_Gender (T_ID)
-2016-11-08 22:56:55 [ main:12904 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:56:55 [ main:12973 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_rmnej2ba5vsienwx0graoqeo9 foreign key (group_T_ID) references BIZ_ChannelUserGroup (T_ID)
-2016-11-08 22:56:55 [ main:12973 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:56:55 [ main:13044 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_g948vcfunk60bwwnttkp1qax3 foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
-2016-11-08 22:56:55 [ main:13046 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:56:55 [ main:13105 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUserGroup add constraint FK_cm8rurpt4nm5rjs4q38vshcya foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
-2016-11-08 22:56:55 [ main:13105 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:56:55 [ main:13172 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_MessageProtocol add constraint FK_ivjbglxv330obwp4r5u4qse9s foreign key (dataFormat_T_ID) references DIC_DataFormat (T_ID)
-2016-11-08 22:56:55 [ main:13172 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:56:55 [ main:13239 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_MessageProtocol add constraint FK_fbar6f0y536umcn7eujbci3js foreign key (signAlgorithm_T_ID) references DIC_SignAlgorithm (T_ID)
-2016-11-08 22:56:55 [ main:13239 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:56:56 [ main:13302 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_Participant add constraint FK_tcobuddjsld5iltjsh68ikilv foreign key (status_T_ID) references DIC_ServiceStatus (T_ID)
-2016-11-08 22:56:56 [ main:13302 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:56:56 [ main:13381 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_1r0kqwia4deotoaqcjq0vtvkg foreign key (localCommProtocol_T_ID) references DIC_CommProtocol (T_ID)
-2016-11-08 22:56:56 [ main:13381 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:56:56 [ main:13460 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_mm9pqok8lernvkgo6i9d6a7ru foreign key (localMsgProtocol_T_ID) references BIZ_MessageProtocol (T_ID)
-2016-11-08 22:56:56 [ main:13460 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:56:56 [ main:13545 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_hbteh3tmiw6ytyg9ut9j250e8 foreign key (owner_T_ID) references BIZ_Participant (T_ID)
-2016-11-08 22:56:56 [ main:13546 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:56:56 [ main:13628 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_puoykn1oqwhu542pqxmok0mkk foreign key (remoteCommProtocol_T_ID) references DIC_CommProtocol (T_ID)
-2016-11-08 22:56:56 [ main:13628 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:56:56 [ main:13707 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_hykohwbaggj2grotmiqhaf4nb foreign key (remoteMsgProtocol_T_ID) references BIZ_MessageProtocol (T_ID)
-2016-11-08 22:56:56 [ main:13707 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:56:56 [ main:13790 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_bvbyaxfnybm1mfvm3gaqfhof foreign key (status_T_ID) references DIC_ServiceStatus (T_ID)
-2016-11-08 22:56:56 [ main:13790 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:56:56 [ main:13854 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_Orgnization add constraint FK_7mijxr4qdjckfodl75trw1gd foreign key (parentOrg_T_ID) references SYS_Orgnization (T_ID)
-2016-11-08 22:56:56 [ main:13854 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:56:56 [ main:13919 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_Orgnization add constraint FK_81gmvyhocouf4eemwqcc0i6bm foreign key (type_T_ID) references DIC_OrgType (T_ID)
-2016-11-08 22:56:56 [ main:13920 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:56:56 [ main:13998 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_bsui0dw6n9mof0ju68v2o4bw8 foreign key (affiliateAccountAppQueue_T_ID) references BIZ_ChannelAffiliateAccountAppQueue (T_ID)
-2016-11-08 22:56:56 [ main:13998 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:56:56 [ main:14095 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_8f0m1f9kj3ck4093u2y96d1cv foreign key (affiliateSubAccount_T_ID) references BIZ_ChannelAffiliateSubAccount (T_ID)
-2016-11-08 22:56:56 [ main:14095 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:56:56 [ main:14171 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_7vktfwklbg0i9je74hm3n2tor foreign key (channelUser_T_ID) references BIZ_ChannelUser (T_ID)
-2016-11-08 22:56:56 [ main:14172 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:56:56 [ main:14255 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_nn4kveek77ncj2wlkq5lp7p4y foreign key (gender_T_ID) references DIC_Gender (T_ID)
-2016-11-08 22:56:56 [ main:14256 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:56:57 [ main:14335 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_hbgsjmfv8f4wel70m02ayv3n4 foreign key (orgnization_T_ID) references SYS_Orgnization (T_ID)
-2016-11-08 22:56:57 [ main:14336 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:56:57 [ main:14415 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_s4gq77e652hl1m1li3296arq6 foreign key (status_T_ID) references DIC_UserStatus (T_ID)
-2016-11-08 22:56:57 [ main:14415 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:57:40 [ main:12948 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelAffiliateAccountAppQueue add constraint FK_4wwl73vw7o5ho5e3h02vll01p foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
-2016-11-08 22:57:40 [ main:12949 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:57:40 [ main:13010 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelAffiliateSubAccount add constraint FK_gnvkl3inqd6y7t9o2btdd9t5w foreign key (channelServiceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
-2016-11-08 22:57:40 [ main:13011 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:57:40 [ main:13084 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_6a6py6mlwujjb7oovo4512bgh foreign key (accountOwner_T_ID) references BIZ_Participant (T_ID)
-2016-11-08 22:57:40 [ main:13084 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:57:41 [ main:13156 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_c0efy4t7c2qjovml0ek8y9p5u foreign key (channelProvider_T_ID) references BIZ_Participant (T_ID)
-2016-11-08 22:57:41 [ main:13156 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:57:41 [ main:13234 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_dwgu5by2610dhydu2pr4eq5s1 foreign key (sp_T_ID) references BIZ_ServicePoint (T_ID)
-2016-11-08 22:57:41 [ main:13235 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:57:41 [ main:13303 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_q212t5o7eg38ifxjc8iukcdf8 foreign key (gender_T_ID) references DIC_Gender (T_ID)
-2016-11-08 22:57:41 [ main:13304 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:57:41 [ main:13370 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_rmnej2ba5vsienwx0graoqeo9 foreign key (group_T_ID) references BIZ_ChannelUserGroup (T_ID)
-2016-11-08 22:57:41 [ main:13370 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:57:41 [ main:13438 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_g948vcfunk60bwwnttkp1qax3 foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
-2016-11-08 22:57:41 [ main:13438 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:57:41 [ main:13496 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUserGroup add constraint FK_cm8rurpt4nm5rjs4q38vshcya foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
-2016-11-08 22:57:41 [ main:13496 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:57:41 [ main:13562 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_MessageProtocol add constraint FK_ivjbglxv330obwp4r5u4qse9s foreign key (dataFormat_T_ID) references DIC_DataFormat (T_ID)
-2016-11-08 22:57:41 [ main:13562 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:57:41 [ main:13631 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_MessageProtocol add constraint FK_fbar6f0y536umcn7eujbci3js foreign key (signAlgorithm_T_ID) references DIC_SignAlgorithm (T_ID)
-2016-11-08 22:57:41 [ main:13631 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:57:41 [ main:13692 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_Participant add constraint FK_tcobuddjsld5iltjsh68ikilv foreign key (status_T_ID) references DIC_ServiceStatus (T_ID)
-2016-11-08 22:57:41 [ main:13692 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:57:41 [ main:13766 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_1r0kqwia4deotoaqcjq0vtvkg foreign key (localCommProtocol_T_ID) references DIC_CommProtocol (T_ID)
-2016-11-08 22:57:41 [ main:13767 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:57:41 [ main:13844 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_mm9pqok8lernvkgo6i9d6a7ru foreign key (localMsgProtocol_T_ID) references BIZ_MessageProtocol (T_ID)
-2016-11-08 22:57:41 [ main:13845 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:57:41 [ main:13921 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_hbteh3tmiw6ytyg9ut9j250e8 foreign key (owner_T_ID) references BIZ_Participant (T_ID)
-2016-11-08 22:57:41 [ main:13922 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:57:41 [ main:13999 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_puoykn1oqwhu542pqxmok0mkk foreign key (remoteCommProtocol_T_ID) references DIC_CommProtocol (T_ID)
-2016-11-08 22:57:41 [ main:14000 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:57:41 [ main:14072 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_hykohwbaggj2grotmiqhaf4nb foreign key (remoteMsgProtocol_T_ID) references BIZ_MessageProtocol (T_ID)
-2016-11-08 22:57:41 [ main:14073 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:57:42 [ main:14148 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_bvbyaxfnybm1mfvm3gaqfhof foreign key (status_T_ID) references DIC_ServiceStatus (T_ID)
-2016-11-08 22:57:42 [ main:14149 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:57:42 [ main:14215 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_Orgnization add constraint FK_7mijxr4qdjckfodl75trw1gd foreign key (parentOrg_T_ID) references SYS_Orgnization (T_ID)
-2016-11-08 22:57:42 [ main:14215 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:57:42 [ main:14278 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_Orgnization add constraint FK_81gmvyhocouf4eemwqcc0i6bm foreign key (type_T_ID) references DIC_OrgType (T_ID)
-2016-11-08 22:57:42 [ main:14278 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:57:42 [ main:14353 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_bsui0dw6n9mof0ju68v2o4bw8 foreign key (affiliateAccountAppQueue_T_ID) references BIZ_ChannelAffiliateAccountAppQueue (T_ID)
-2016-11-08 22:57:42 [ main:14353 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:57:42 [ main:14433 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_8f0m1f9kj3ck4093u2y96d1cv foreign key (affiliateSubAccount_T_ID) references BIZ_ChannelAffiliateSubAccount (T_ID)
-2016-11-08 22:57:42 [ main:14434 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:57:42 [ main:14504 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_7vktfwklbg0i9je74hm3n2tor foreign key (channelUser_T_ID) references BIZ_ChannelUser (T_ID)
-2016-11-08 22:57:42 [ main:14505 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:57:42 [ main:14576 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_nn4kveek77ncj2wlkq5lp7p4y foreign key (gender_T_ID) references DIC_Gender (T_ID)
-2016-11-08 22:57:42 [ main:14576 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:57:42 [ main:14655 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_hbgsjmfv8f4wel70m02ayv3n4 foreign key (orgnization_T_ID) references SYS_Orgnization (T_ID)
-2016-11-08 22:57:42 [ main:14655 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 22:57:42 [ main:14724 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_s4gq77e652hl1m1li3296arq6 foreign key (status_T_ID) references DIC_UserStatus (T_ID)
-2016-11-08 22:57:42 [ main:14724 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:00:41 [ main:11692 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelAffiliateAccountAppQueue add constraint FK_4wwl73vw7o5ho5e3h02vll01p foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
-2016-11-08 23:00:41 [ main:11693 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:00:41 [ main:11752 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelAffiliateSubAccount add constraint FK_gnvkl3inqd6y7t9o2btdd9t5w foreign key (channelServiceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
-2016-11-08 23:00:41 [ main:11753 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:00:41 [ main:11829 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_6a6py6mlwujjb7oovo4512bgh foreign key (accountOwner_T_ID) references BIZ_Participant (T_ID)
-2016-11-08 23:00:41 [ main:11829 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:00:41 [ main:11903 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_c0efy4t7c2qjovml0ek8y9p5u foreign key (channelProvider_T_ID) references BIZ_Participant (T_ID)
-2016-11-08 23:00:41 [ main:11903 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:00:42 [ main:11982 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_dwgu5by2610dhydu2pr4eq5s1 foreign key (sp_T_ID) references BIZ_ServicePoint (T_ID)
-2016-11-08 23:00:42 [ main:11983 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:00:42 [ main:12050 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_q212t5o7eg38ifxjc8iukcdf8 foreign key (gender_T_ID) references DIC_Gender (T_ID)
-2016-11-08 23:00:42 [ main:12051 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:00:42 [ main:12118 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_rmnej2ba5vsienwx0graoqeo9 foreign key (group_T_ID) references BIZ_ChannelUserGroup (T_ID)
-2016-11-08 23:00:42 [ main:12118 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:00:42 [ main:12187 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_g948vcfunk60bwwnttkp1qax3 foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
-2016-11-08 23:00:42 [ main:12187 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:00:42 [ main:12254 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUserGroup add constraint FK_cm8rurpt4nm5rjs4q38vshcya foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
-2016-11-08 23:00:42 [ main:12254 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:00:42 [ main:12318 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_MessageProtocol add constraint FK_ivjbglxv330obwp4r5u4qse9s foreign key (dataFormat_T_ID) references DIC_DataFormat (T_ID)
-2016-11-08 23:00:42 [ main:12319 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:00:42 [ main:12387 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_MessageProtocol add constraint FK_fbar6f0y536umcn7eujbci3js foreign key (signAlgorithm_T_ID) references DIC_SignAlgorithm (T_ID)
-2016-11-08 23:00:42 [ main:12388 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:00:42 [ main:12454 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_Participant add constraint FK_tcobuddjsld5iltjsh68ikilv foreign key (status_T_ID) references DIC_ServiceStatus (T_ID)
-2016-11-08 23:00:42 [ main:12455 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:00:42 [ main:12532 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_1r0kqwia4deotoaqcjq0vtvkg foreign key (localCommProtocol_T_ID) references DIC_CommProtocol (T_ID)
-2016-11-08 23:00:42 [ main:12532 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:00:42 [ main:12610 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_mm9pqok8lernvkgo6i9d6a7ru foreign key (localMsgProtocol_T_ID) references BIZ_MessageProtocol (T_ID)
-2016-11-08 23:00:42 [ main:12611 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:00:42 [ main:12684 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_hbteh3tmiw6ytyg9ut9j250e8 foreign key (owner_T_ID) references BIZ_Participant (T_ID)
-2016-11-08 23:00:42 [ main:12685 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:00:42 [ main:12764 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_puoykn1oqwhu542pqxmok0mkk foreign key (remoteCommProtocol_T_ID) references DIC_CommProtocol (T_ID)
-2016-11-08 23:00:42 [ main:12765 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:00:42 [ main:12839 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_hykohwbaggj2grotmiqhaf4nb foreign key (remoteMsgProtocol_T_ID) references BIZ_MessageProtocol (T_ID)
-2016-11-08 23:00:42 [ main:12839 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:00:42 [ main:12911 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_bvbyaxfnybm1mfvm3gaqfhof foreign key (status_T_ID) references DIC_ServiceStatus (T_ID)
-2016-11-08 23:00:42 [ main:12911 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:00:43 [ main:12976 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_Orgnization add constraint FK_7mijxr4qdjckfodl75trw1gd foreign key (parentOrg_T_ID) references SYS_Orgnization (T_ID)
-2016-11-08 23:00:43 [ main:12976 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:00:43 [ main:13047 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_Orgnization add constraint FK_81gmvyhocouf4eemwqcc0i6bm foreign key (type_T_ID) references DIC_OrgType (T_ID)
-2016-11-08 23:00:43 [ main:13047 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:00:43 [ main:13124 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_bsui0dw6n9mof0ju68v2o4bw8 foreign key (affiliateAccountAppQueue_T_ID) references BIZ_ChannelAffiliateAccountAppQueue (T_ID)
-2016-11-08 23:00:43 [ main:13125 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:00:43 [ main:13200 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_8f0m1f9kj3ck4093u2y96d1cv foreign key (affiliateSubAccount_T_ID) references BIZ_ChannelAffiliateSubAccount (T_ID)
-2016-11-08 23:00:43 [ main:13201 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:00:43 [ main:13277 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_7vktfwklbg0i9je74hm3n2tor foreign key (channelUser_T_ID) references BIZ_ChannelUser (T_ID)
-2016-11-08 23:00:43 [ main:13278 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:00:43 [ main:13353 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_nn4kveek77ncj2wlkq5lp7p4y foreign key (gender_T_ID) references DIC_Gender (T_ID)
-2016-11-08 23:00:43 [ main:13354 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:00:43 [ main:13430 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_hbgsjmfv8f4wel70m02ayv3n4 foreign key (orgnization_T_ID) references SYS_Orgnization (T_ID)
-2016-11-08 23:00:43 [ main:13431 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:00:43 [ main:13512 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_s4gq77e652hl1m1li3296arq6 foreign key (status_T_ID) references DIC_UserStatus (T_ID)
-2016-11-08 23:00:43 [ main:13512 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:08:09 [ main:11404 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelAffiliateAccountAppQueue add constraint FK_4wwl73vw7o5ho5e3h02vll01p foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
-2016-11-08 23:08:09 [ main:11404 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:08:09 [ main:11468 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelAffiliateSubAccount add constraint FK_gnvkl3inqd6y7t9o2btdd9t5w foreign key (channelServiceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
-2016-11-08 23:08:09 [ main:11468 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:08:09 [ main:11554 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_6a6py6mlwujjb7oovo4512bgh foreign key (accountOwner_T_ID) references BIZ_Participant (T_ID)
-2016-11-08 23:08:09 [ main:11555 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:08:10 [ main:11633 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_c0efy4t7c2qjovml0ek8y9p5u foreign key (channelProvider_T_ID) references BIZ_Participant (T_ID)
-2016-11-08 23:08:10 [ main:11634 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:08:10 [ main:11712 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_dwgu5by2610dhydu2pr4eq5s1 foreign key (sp_T_ID) references BIZ_ServicePoint (T_ID)
-2016-11-08 23:08:10 [ main:11713 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:08:10 [ main:11784 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_q212t5o7eg38ifxjc8iukcdf8 foreign key (gender_T_ID) references DIC_Gender (T_ID)
-2016-11-08 23:08:10 [ main:11784 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:08:10 [ main:11857 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_rmnej2ba5vsienwx0graoqeo9 foreign key (group_T_ID) references BIZ_ChannelUserGroup (T_ID)
-2016-11-08 23:08:10 [ main:11857 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:08:10 [ main:11933 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_g948vcfunk60bwwnttkp1qax3 foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
-2016-11-08 23:08:10 [ main:11933 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:08:10 [ main:11994 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUserGroup add constraint FK_cm8rurpt4nm5rjs4q38vshcya foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
-2016-11-08 23:08:10 [ main:11994 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:08:10 [ main:12068 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_MessageProtocol add constraint FK_ivjbglxv330obwp4r5u4qse9s foreign key (dataFormat_T_ID) references DIC_DataFormat (T_ID)
-2016-11-08 23:08:10 [ main:12069 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:08:10 [ main:12142 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_MessageProtocol add constraint FK_fbar6f0y536umcn7eujbci3js foreign key (signAlgorithm_T_ID) references DIC_SignAlgorithm (T_ID)
-2016-11-08 23:08:10 [ main:12143 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:08:10 [ main:12209 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_Participant add constraint FK_tcobuddjsld5iltjsh68ikilv foreign key (status_T_ID) references DIC_ServiceStatus (T_ID)
-2016-11-08 23:08:10 [ main:12209 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:08:10 [ main:12288 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_1r0kqwia4deotoaqcjq0vtvkg foreign key (localCommProtocol_T_ID) references DIC_CommProtocol (T_ID)
-2016-11-08 23:08:10 [ main:12289 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:08:10 [ main:12376 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_mm9pqok8lernvkgo6i9d6a7ru foreign key (localMsgProtocol_T_ID) references BIZ_MessageProtocol (T_ID)
-2016-11-08 23:08:10 [ main:12376 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:08:10 [ main:12454 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_hbteh3tmiw6ytyg9ut9j250e8 foreign key (owner_T_ID) references BIZ_Participant (T_ID)
-2016-11-08 23:08:10 [ main:12454 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:08:10 [ main:12542 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_puoykn1oqwhu542pqxmok0mkk foreign key (remoteCommProtocol_T_ID) references DIC_CommProtocol (T_ID)
-2016-11-08 23:08:10 [ main:12543 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:08:11 [ main:12640 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_hykohwbaggj2grotmiqhaf4nb foreign key (remoteMsgProtocol_T_ID) references BIZ_MessageProtocol (T_ID)
-2016-11-08 23:08:11 [ main:12641 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:08:11 [ main:12726 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_bvbyaxfnybm1mfvm3gaqfhof foreign key (status_T_ID) references DIC_ServiceStatus (T_ID)
-2016-11-08 23:08:11 [ main:12727 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:08:11 [ main:12794 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_Orgnization add constraint FK_7mijxr4qdjckfodl75trw1gd foreign key (parentOrg_T_ID) references SYS_Orgnization (T_ID)
-2016-11-08 23:08:11 [ main:12794 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:08:11 [ main:12864 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_Orgnization add constraint FK_81gmvyhocouf4eemwqcc0i6bm foreign key (type_T_ID) references DIC_OrgType (T_ID)
-2016-11-08 23:08:11 [ main:12865 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:08:11 [ main:12957 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_bsui0dw6n9mof0ju68v2o4bw8 foreign key (affiliateAccountAppQueue_T_ID) references BIZ_ChannelAffiliateAccountAppQueue (T_ID)
-2016-11-08 23:08:11 [ main:12958 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:08:11 [ main:13043 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_8f0m1f9kj3ck4093u2y96d1cv foreign key (affiliateSubAccount_T_ID) references BIZ_ChannelAffiliateSubAccount (T_ID)
-2016-11-08 23:08:11 [ main:13044 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:08:11 [ main:13128 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_7vktfwklbg0i9je74hm3n2tor foreign key (channelUser_T_ID) references BIZ_ChannelUser (T_ID)
-2016-11-08 23:08:11 [ main:13128 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:08:11 [ main:13209 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_nn4kveek77ncj2wlkq5lp7p4y foreign key (gender_T_ID) references DIC_Gender (T_ID)
-2016-11-08 23:08:11 [ main:13209 ] - [ ERROR ] Cannot add foreign key constraint
-2016-11-08 23:08:11 [ main:13293 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_hbgsjmfv8f4wel70m02ayv3n4 foreign key (orgnization_T_ID) references SYS_Orgnization (T_ID)
-2016-11-08 23:08:11 [ main:13294 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:38:35 [ main:11359 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelAffiliateAccountAppQueue add constraint FK_4wwl73vw7o5ho5e3h02vll01p foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
+2016-11-09 13:38:35 [ main:11360 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:38:35 [ main:11419 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelAffiliateSubAccount add constraint FK_gnvkl3inqd6y7t9o2btdd9t5w foreign key (channelServiceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
+2016-11-09 13:38:35 [ main:11419 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:38:36 [ main:11493 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_6a6py6mlwujjb7oovo4512bgh foreign key (accountOwner_T_ID) references BIZ_Participant (T_ID)
+2016-11-09 13:38:36 [ main:11494 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:38:36 [ main:11567 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_c0efy4t7c2qjovml0ek8y9p5u foreign key (channelProvider_T_ID) references BIZ_Participant (T_ID)
+2016-11-09 13:38:36 [ main:11567 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:38:36 [ main:11644 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_dwgu5by2610dhydu2pr4eq5s1 foreign key (sp_T_ID) references BIZ_ServicePoint (T_ID)
+2016-11-09 13:38:36 [ main:11644 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:38:36 [ main:11711 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_q212t5o7eg38ifxjc8iukcdf8 foreign key (gender_T_ID) references DIC_Gender (T_ID)
+2016-11-09 13:38:36 [ main:11711 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:38:36 [ main:11779 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_rmnej2ba5vsienwx0graoqeo9 foreign key (group_T_ID) references BIZ_ChannelUserGroup (T_ID)
+2016-11-09 13:38:36 [ main:11779 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:38:36 [ main:11846 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_g948vcfunk60bwwnttkp1qax3 foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
+2016-11-09 13:38:36 [ main:11847 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:38:36 [ main:11908 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUserGroup add constraint FK_cm8rurpt4nm5rjs4q38vshcya foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
+2016-11-09 13:38:36 [ main:11908 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:38:36 [ main:11972 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_MessageProtocol add constraint FK_ivjbglxv330obwp4r5u4qse9s foreign key (dataFormat_T_ID) references DIC_DataFormat (T_ID)
+2016-11-09 13:38:36 [ main:11973 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:38:36 [ main:12034 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_MessageProtocol add constraint FK_fbar6f0y536umcn7eujbci3js foreign key (signAlgorithm_T_ID) references DIC_SignAlgorithm (T_ID)
+2016-11-09 13:38:36 [ main:12034 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:38:36 [ main:12094 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_Participant add constraint FK_tcobuddjsld5iltjsh68ikilv foreign key (status_T_ID) references DIC_ServiceStatus (T_ID)
+2016-11-09 13:38:36 [ main:12094 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:38:36 [ main:12170 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_1r0kqwia4deotoaqcjq0vtvkg foreign key (localCommProtocol_T_ID) references DIC_CommProtocol (T_ID)
+2016-11-09 13:38:36 [ main:12170 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:38:36 [ main:12242 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_mm9pqok8lernvkgo6i9d6a7ru foreign key (localMsgProtocol_T_ID) references BIZ_MessageProtocol (T_ID)
+2016-11-09 13:38:36 [ main:12243 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:38:36 [ main:12327 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_hbteh3tmiw6ytyg9ut9j250e8 foreign key (owner_T_ID) references BIZ_Participant (T_ID)
+2016-11-09 13:38:36 [ main:12327 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:38:36 [ main:12402 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_puoykn1oqwhu542pqxmok0mkk foreign key (remoteCommProtocol_T_ID) references DIC_CommProtocol (T_ID)
+2016-11-09 13:38:36 [ main:12402 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:38:37 [ main:12475 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_hykohwbaggj2grotmiqhaf4nb foreign key (remoteMsgProtocol_T_ID) references BIZ_MessageProtocol (T_ID)
+2016-11-09 13:38:37 [ main:12476 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:38:37 [ main:12550 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_bvbyaxfnybm1mfvm3gaqfhof foreign key (status_T_ID) references DIC_ServiceStatus (T_ID)
+2016-11-09 13:38:37 [ main:12550 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:38:37 [ main:12614 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_Orgnization add constraint FK_7mijxr4qdjckfodl75trw1gd foreign key (parentOrg_T_ID) references SYS_Orgnization (T_ID)
+2016-11-09 13:38:37 [ main:12615 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:38:37 [ main:12679 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_Orgnization add constraint FK_81gmvyhocouf4eemwqcc0i6bm foreign key (type_T_ID) references DIC_OrgType (T_ID)
+2016-11-09 13:38:37 [ main:12679 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:38:37 [ main:12754 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_bsui0dw6n9mof0ju68v2o4bw8 foreign key (affiliateAccountAppQueue_T_ID) references BIZ_ChannelAffiliateAccountAppQueue (T_ID)
+2016-11-09 13:38:37 [ main:12755 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:38:37 [ main:12832 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_8f0m1f9kj3ck4093u2y96d1cv foreign key (affiliateSubAccount_T_ID) references BIZ_ChannelAffiliateSubAccount (T_ID)
+2016-11-09 13:38:37 [ main:12832 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:38:37 [ main:12909 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_7vktfwklbg0i9je74hm3n2tor foreign key (channelUser_T_ID) references BIZ_ChannelUser (T_ID)
+2016-11-09 13:38:37 [ main:12909 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:38:37 [ main:12988 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_nn4kveek77ncj2wlkq5lp7p4y foreign key (gender_T_ID) references DIC_Gender (T_ID)
+2016-11-09 13:38:37 [ main:12988 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:38:37 [ main:13065 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_hbgsjmfv8f4wel70m02ayv3n4 foreign key (orgnization_T_ID) references SYS_Orgnization (T_ID)
+2016-11-09 13:38:37 [ main:13065 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:45:30 [ main:10870 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelAffiliateAccountAppQueue add constraint FK_4wwl73vw7o5ho5e3h02vll01p foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
+2016-11-09 13:45:30 [ main:10871 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:45:30 [ main:10928 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelAffiliateSubAccount add constraint FK_gnvkl3inqd6y7t9o2btdd9t5w foreign key (channelServiceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
+2016-11-09 13:45:30 [ main:10929 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:45:30 [ main:11000 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_6a6py6mlwujjb7oovo4512bgh foreign key (accountOwner_T_ID) references BIZ_Participant (T_ID)
+2016-11-09 13:45:30 [ main:11000 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:45:30 [ main:11073 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_c0efy4t7c2qjovml0ek8y9p5u foreign key (channelProvider_T_ID) references BIZ_Participant (T_ID)
+2016-11-09 13:45:30 [ main:11074 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:45:30 [ main:11146 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_dwgu5by2610dhydu2pr4eq5s1 foreign key (sp_T_ID) references BIZ_ServicePoint (T_ID)
+2016-11-09 13:45:30 [ main:11146 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:45:30 [ main:11210 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_q212t5o7eg38ifxjc8iukcdf8 foreign key (gender_T_ID) references DIC_Gender (T_ID)
+2016-11-09 13:45:30 [ main:11211 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:45:30 [ main:11275 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_rmnej2ba5vsienwx0graoqeo9 foreign key (group_T_ID) references BIZ_ChannelUserGroup (T_ID)
+2016-11-09 13:45:30 [ main:11275 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:45:31 [ main:11341 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_g948vcfunk60bwwnttkp1qax3 foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
+2016-11-09 13:45:31 [ main:11341 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:45:31 [ main:11396 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUserGroup add constraint FK_cm8rurpt4nm5rjs4q38vshcya foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
+2016-11-09 13:45:31 [ main:11396 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:45:31 [ main:11459 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_MessageProtocol add constraint FK_ivjbglxv330obwp4r5u4qse9s foreign key (dataFormat_T_ID) references DIC_DataFormat (T_ID)
+2016-11-09 13:45:31 [ main:11459 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:45:31 [ main:11520 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_MessageProtocol add constraint FK_fbar6f0y536umcn7eujbci3js foreign key (signAlgorithm_T_ID) references DIC_SignAlgorithm (T_ID)
+2016-11-09 13:45:31 [ main:11520 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:45:31 [ main:11599 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_Participant add constraint FK_tcobuddjsld5iltjsh68ikilv foreign key (status_T_ID) references DIC_ServiceStatus (T_ID)
+2016-11-09 13:45:31 [ main:11599 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:45:31 [ main:12012 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_1r0kqwia4deotoaqcjq0vtvkg foreign key (localCommProtocol_T_ID) references DIC_CommProtocol (T_ID)
+2016-11-09 13:45:31 [ main:12012 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:45:31 [ main:12086 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_mm9pqok8lernvkgo6i9d6a7ru foreign key (localMsgProtocol_T_ID) references BIZ_MessageProtocol (T_ID)
+2016-11-09 13:45:31 [ main:12086 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:45:31 [ main:12155 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_hbteh3tmiw6ytyg9ut9j250e8 foreign key (owner_T_ID) references BIZ_Participant (T_ID)
+2016-11-09 13:45:31 [ main:12155 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:45:31 [ main:12228 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_puoykn1oqwhu542pqxmok0mkk foreign key (remoteCommProtocol_T_ID) references DIC_CommProtocol (T_ID)
+2016-11-09 13:45:31 [ main:12228 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:45:31 [ main:12304 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_hykohwbaggj2grotmiqhaf4nb foreign key (remoteMsgProtocol_T_ID) references BIZ_MessageProtocol (T_ID)
+2016-11-09 13:45:31 [ main:12304 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:45:32 [ main:12378 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_bvbyaxfnybm1mfvm3gaqfhof foreign key (status_T_ID) references DIC_ServiceStatus (T_ID)
+2016-11-09 13:45:32 [ main:12378 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:45:32 [ main:12439 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_Orgnization add constraint FK_7mijxr4qdjckfodl75trw1gd foreign key (parentOrg_T_ID) references SYS_Orgnization (T_ID)
+2016-11-09 13:45:32 [ main:12439 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:45:32 [ main:12501 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_Orgnization add constraint FK_81gmvyhocouf4eemwqcc0i6bm foreign key (type_T_ID) references DIC_OrgType (T_ID)
+2016-11-09 13:45:32 [ main:12501 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:45:32 [ main:12579 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_bsui0dw6n9mof0ju68v2o4bw8 foreign key (affiliateAccountAppQueue_T_ID) references BIZ_ChannelAffiliateAccountAppQueue (T_ID)
+2016-11-09 13:45:32 [ main:12579 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:45:32 [ main:12651 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_8f0m1f9kj3ck4093u2y96d1cv foreign key (affiliateSubAccount_T_ID) references BIZ_ChannelAffiliateSubAccount (T_ID)
+2016-11-09 13:45:32 [ main:12652 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:45:32 [ main:12723 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_7vktfwklbg0i9je74hm3n2tor foreign key (channelUser_T_ID) references BIZ_ChannelUser (T_ID)
+2016-11-09 13:45:32 [ main:12723 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:45:32 [ main:12798 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_nn4kveek77ncj2wlkq5lp7p4y foreign key (gender_T_ID) references DIC_Gender (T_ID)
+2016-11-09 13:45:32 [ main:12799 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 13:45:32 [ main:12872 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_hbgsjmfv8f4wel70m02ayv3n4 foreign key (orgnization_T_ID) references SYS_Orgnization (T_ID)
+2016-11-09 13:45:32 [ main:12872 ] - [ ERROR ] Cannot add foreign key constraint

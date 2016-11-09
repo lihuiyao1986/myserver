@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -270,5 +271,13 @@ public class BaseDao<T,PK extends Serializable> {
         }
         session.flush();
         session.clear();
+    }
+
+    /**
+     * 获得数据库时间
+     * @return
+     */
+    public Date getSystemTime() {
+        return (Date)getSession().createSQLQuery("select current_timestamp() from dual").uniqueResult();
     }
 }

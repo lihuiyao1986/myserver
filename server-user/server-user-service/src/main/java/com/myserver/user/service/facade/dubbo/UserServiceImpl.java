@@ -2,6 +2,7 @@ package com.myserver.user.service.facade.dubbo;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.myserver.user.constant.UserErrorcode;
+import com.myserver.user.service.normal.IUserNormalService;
 import com.server.entity.exception.APIException;
 import com.server.entity.model.APIReqEntity;
 import com.server.entity.model.APIRespEntity;
@@ -26,6 +27,9 @@ public class UserServiceImpl implements IUserService {
 
     @Autowired
     private UserDao userDao;
+
+    @Autowired
+    private IUserNormalService userNormalService;
 
 
     @Transactional(readOnly = true)
@@ -61,43 +65,22 @@ public class UserServiceImpl implements IUserService {
         Date now = new Date();
         if(user.getLastloginRetryDate() != null && now.getTime() - user.getLastloginRetryDate().getTime() >= accountLockedInterval * 1000){
             //解锁用户
-            //userService.unlockUser(user);
+            userNormalService.unlockUser(user);
         }
 
         // 密码错误
-        if (!checkPwd(loginPwd,user.getLoginPwd())){
+        if (!userNormalService.checkPwd(loginPwd, user.getLoginPwd())){
+            // 锁住用户
+            userNormalService.lockUser(user);
             return new APIRespEntity(UserErrorcode.PWD_OR_ACCT_ERROR,"用户账户或密码错误");
         }
 
         // 校验账户状态，是否可以登录
-        if (!checkLoginable(user)){
+        if (!userNormalService.checkLoginable(user)){
             throw new APIException(UserErrorcode.LOGIN_STATUS_ABNORMAL,"登录账户状态不正确或该账户不允许登录，请联系管理员。");
         }
 
         return new APIRespEntity<UserDaoEntity>(user);
     }
 
-    /**
-     * 校验用户是否可以登录
-     * @param user
-     * @return
-     */
-    private boolean checkLoginable(UserDaoEntity user){
-        String userstate = StringUtils.trimNull(user.getStatus().getCode());
-        if (!UserStatusDaoEntity.ACTIVE.equals(userstate) || !user.isLoginOrNot()) {
-            return false;
-        }else{
-            return true;
-        }
-    }
-
-    /**
-     * 校验密码
-     * @param newPwd
-     * @param orignalPwd
-     * @return
-     */
-    private boolean checkPwd(String newPwd,String orignalPwd){
-        return newPwd.equals(orignalPwd);
-    }
 }

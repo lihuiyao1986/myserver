@@ -26,7 +26,7 @@
 	   http://www.springframework.org/schema/aop
 	   http://www.springframework.org/schema/aop/spring-aop.xsd
 	   http://www.springframework.org/schema/context
-	   http://www.springframework.org/schema/context/spring-context-2.5.xsd ">
+	   http://www.springframework.org/schema/context/spring-context.xsd">
 
     <dubbo:application name="user-provider" owner="programmer" organization="dubbox"/>
 
@@ -48,7 +48,6 @@
     <!--<dubbo:protocol name="dubbo" serialization="dubbo"/>-->
 
 
-    <!--TODO according to the spring convention, we should use something like keep-alive-->
     <!-- use netty server -->
     <!--<dubbo:protocol name="rest" port="8888" keepalive="true" server="netty" iothreads="5" threads="100" contextpath="services"/>-->
 
@@ -79,5 +78,19 @@
         <!--在该切入点使用自定义拦截器 -->
         <aop:advisor pointcut-ref="APIInterceptorPoint" advice-ref="APIInterceptor" />
     </aop:config>
+
+    <!--属性文件-->
+    <context:property-placeholder location="classpath:user_api_config.properties" ignore-unresolvable="true" order="2"/>
+
+
+    <!-- 读取属性文件 -->
+    <!--<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">-->
+        <!--<property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />-->
+        <!--<property name="locations">-->
+            <!--<list>-->
+                <!--<value>classpath:user_api_config.properties</value>-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
 
 </beans>

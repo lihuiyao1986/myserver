@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.util.Date;
+
 
 /**
  * Unit test for simple App.
@@ -25,6 +27,12 @@ public class AppTest {
     public void testQueryUserByLoginName(){
         UserDaoEntity userDaoEntity = userDao.getByLoginName("eslink");
         System.out.println(" user = " + userDaoEntity);
+    }
+
+    @Test
+    public void testQuerySystemTime(){
+        Date date = userDao.getSystemTime();
+        System.out.println(" systemTime = " + date);
     }
 
 }
