@@ -36,8 +36,8 @@
     <!--<dubbo:monitor protocol="registry"/>-->
 
     <!-- here we demonstrate both annotation-based and xml-based configs -->
-    <dubbo:annotation package="com.myserver.user" />
-    <context:component-scan base-package="com.myserver.user"/>
+    <dubbo:annotation package="com.myserver.user.service" />
+    <context:component-scan base-package="com.myserver.user.service"/>
 
     <dubbo:protocol name="dubbo" serialization="kryo" optimizer="com.server.entity.user.api.common.SerializationOptimizerImpl"/>
     <!--<dubbo:protocol name="dubbo" serialization="fst" optimizer="com.alibaba.dubbo.demo.SerializationOptimizerImpl"/>-->
@@ -75,7 +75,7 @@
     <bean id="APIInterceptor" class="com.server.entity.interceptor.APIInterceptor" />
     <aop:config>
         <!--切入点 -->
-        <aop:pointcut id="APIInterceptorPoint" expression="execution(public * com.myserver.user.dubbo.*.*(..)) " />
+        <aop:pointcut id="APIInterceptorPoint" expression="execution(public * com.myserver.user.service.facade.dubbo.*.*(..)) " />
         <!--在该切入点使用自定义拦截器 -->
         <aop:advisor pointcut-ref="APIInterceptorPoint" advice-ref="APIInterceptor" />
     </aop:config>

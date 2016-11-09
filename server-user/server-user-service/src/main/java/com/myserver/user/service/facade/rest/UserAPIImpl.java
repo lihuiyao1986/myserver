@@ -1,4 +1,4 @@
-package com.myserver.user.rest;
+package com.myserver.user.service.facade.rest;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.alibaba.dubbo.rpc.protocol.rest.support.ContentType;
@@ -19,7 +19,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
 /**
- * UserAPIImpl
+ * UserAPIImpl-以rest风格对外暴露的服务
  */
 @Service(protocol = {"rest","dubbo"},validation = "true")
 @Path("/user")

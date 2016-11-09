@@ -1,8 +1,7 @@
-package com.myserver.user.dubbo;
+package com.myserver.user.service.facade.dubbo;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.myserver.user.constant.UserErrorcode;
-import com.server.entity.annotation.API;
 import com.server.entity.exception.APIException;
 import com.server.entity.model.APIReqEntity;
 import com.server.entity.model.APIRespEntity;
@@ -19,7 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Date;
 
 /**
- * 用户service
+ * 用户service-以duubo协议对外暴露的服务
  */
 @Service(protocol = {"dubbo"},validation = "true")
 @Transactional
@@ -67,7 +66,7 @@ public class UserServiceImpl implements IUserService {
 
         // 密码错误
         if (!checkPwd(loginPwd,user.getLoginPwd())){
-            throw new APIException(UserErrorcode.PWD_OR_ACCT_ERROR,"用户账户或密码错误");
+            return new APIRespEntity(UserErrorcode.PWD_OR_ACCT_ERROR,"用户账户或密码错误");
         }
 
         // 校验账户状态，是否可以登录
