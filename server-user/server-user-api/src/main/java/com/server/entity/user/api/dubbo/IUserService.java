@@ -1,6 +1,7 @@
 package com.server.entity.user.api.dubbo;
 
 
+import com.server.entity.exception.APIException;
 import com.server.entity.user.dao.UserDaoEntity;
 
 /**
@@ -14,6 +15,15 @@ public interface IUserService {
      * @return
      */
     public UserDaoEntity getUserByLoginName(String loginName);
+
+
+    /**
+     * 用户登录
+     * @param loginName
+     * @param loginPwd
+     * @return
+     */
+    public UserDaoEntity login(String loginName,String loginPwd)throws APIException;
 
 
 }

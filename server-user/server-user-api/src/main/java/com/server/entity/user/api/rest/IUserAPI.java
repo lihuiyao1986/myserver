@@ -1,5 +1,6 @@
 package com.server.entity.user.api.rest;
 
+import com.server.entity.exception.APIException;
 import com.server.entity.user.web.UserRespEntity;
 
 /**
@@ -14,4 +15,12 @@ public interface IUserAPI {
      */
     public UserRespEntity getUserByLoginName(String loginName);
 
+
+    /**
+     * 用户登录
+     * @param loginName
+     * @param loginPwd
+     * @return
+     */
+    public UserRespEntity login(String loginName,String loginPwd)throws APIException;
 }

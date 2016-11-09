@@ -4,6 +4,7 @@ import com.alibaba.dubbo.config.annotation.Service;
 import com.alibaba.dubbo.rpc.protocol.rest.support.ContentType;
 
 import com.server.entity.constants.Errorcode;
+import com.server.entity.exception.APIException;
 import com.server.entity.user.api.dubbo.IUserService;
 import com.server.entity.user.api.rest.IUserAPI;
 import com.server.entity.user.dao.UserDaoEntity;
@@ -38,6 +39,21 @@ public class UserAPIImpl implements IUserAPI {
             respEntity.setResult(entity);
         }else{
             respEntity.setErrormsg("用户信息不存在");
+            respEntity.setErrorcode(Errorcode.FAIL_CODE);
+        }
+        return respEntity;
+    }
+
+    @GET
+    @Path("/login/{loginName}/{loginPwd}")
+    @Override
+    public UserRespEntity login(@PathParam("loginName")String loginName, @PathParam("loginPwd")String loginPwd) throws APIException {
+        UserDaoEntity entity = userService.login(loginName, loginPwd);
+        UserRespEntity respEntity = new UserRespEntity();
+        if (entity!=null){
+            respEntity.setResult(entity);
+        }else{
+            respEntity.setErrormsg("登录失败！");
             respEntity.setErrorcode(Errorcode.FAIL_CODE);
         }
         return respEntity;

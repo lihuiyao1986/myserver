@@ -24,9 +24,8 @@ public class UserDao extends BaseDao<UserDaoEntity,Long> {
      */
     @Transactional(readOnly = true)
     public UserDaoEntity getByLoginName(String loginName){
-        Criteria criteria = getCriteria();
-        criteria.add(Restrictions.eq("loginName",loginName));
-        List<UserDaoEntity> list = criteria.list();
+        String hql = " from UserDaoEntity u where u.loginName = ? ";
+        List<UserDaoEntity> list = findByHql(hql,loginName);
         return Collections3.isEmpty(list) ? null : list.get(0);
     }
 
