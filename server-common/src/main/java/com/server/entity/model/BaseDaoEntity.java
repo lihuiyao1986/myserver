@@ -10,7 +10,7 @@ import java.io.Serializable;
  * BaseDaoModel
  */
 @MappedSuperclass
-public class BaseDaoEntity implements Serializable {
+public class BaseDaoEntity extends BaseModel {
 
     private static final long serialVersionUID = 5564472672113187720L;
 

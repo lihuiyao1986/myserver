@@ -13,7 +13,7 @@ public interface IUserAPI {
      * @param loginName
      * @return
      */
-    public UserRespEntity getUserByLoginName(String loginName);
+    public UserRespEntity getUserByLoginName(String loginName)throws APIException ;
 
 
     /**

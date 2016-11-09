@@ -3,9 +3,12 @@ package com.myserver.user.rest;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.alibaba.dubbo.rpc.protocol.rest.support.ContentType;
 
-import com.server.entity.constants.Errorcode;
+import com.server.entity.constants.GlobalErrorcode;
 import com.server.entity.exception.APIException;
+import com.server.entity.model.APIReqEntity;
+import com.server.entity.model.APIRespEntity;
 import com.server.entity.user.api.dubbo.IUserService;
+import com.server.entity.user.api.entity.req.LoginReqEntity;
 import com.server.entity.user.api.rest.IUserAPI;
 import com.server.entity.user.dao.UserDaoEntity;
 import com.server.entity.user.web.UserRespEntity;
@@ -32,14 +35,14 @@ public class UserAPIImpl implements IUserAPI {
     @Path("/getByLoginName/{loginName}")
     @Transactional(readOnly = true)
     @Override
-    public UserRespEntity getUserByLoginName(@PathParam("loginName") String loginName) {
-        UserDaoEntity entity = userService.getUserByLoginName(loginName);
+    public UserRespEntity getUserByLoginName(@PathParam("loginName") String loginName) throws APIException {
+        APIRespEntity<UserDaoEntity> entity = userService.getUserByLoginName(new APIReqEntity<String>(loginName));
         UserRespEntity respEntity = new UserRespEntity();
-        if (entity!=null){
-            respEntity.setResult(entity);
+        if (entity.isSucc()){
+            respEntity.setResult(entity.getRespResult());
         }else{
-            respEntity.setErrormsg("用户信息不存在");
-            respEntity.setErrorcode(Errorcode.FAIL_CODE);
+            respEntity.setErrormsg(entity.getMessage());
+            respEntity.setErrorcode(entity.getCode());
         }
         return respEntity;
     }
@@ -48,13 +51,16 @@ public class UserAPIImpl implements IUserAPI {
     @Path("/login/{loginName}/{loginPwd}")
     @Override
     public UserRespEntity login(@PathParam("loginName")String loginName, @PathParam("loginPwd")String loginPwd) throws APIException {
-        UserDaoEntity entity = userService.login(loginName, loginPwd);
+        LoginReqEntity reqParam = new LoginReqEntity();
+        reqParam.setLoginName(loginName);
+        reqParam.setLoginPwd(loginPwd);
+        APIRespEntity<UserDaoEntity> entity = userService.login(new APIReqEntity<LoginReqEntity>(reqParam));
         UserRespEntity respEntity = new UserRespEntity();
-        if (entity!=null){
-            respEntity.setResult(entity);
+        if (entity.isSucc()){
+            respEntity.setResult(entity.getRespResult());
         }else{
-            respEntity.setErrormsg("登录失败！");
-            respEntity.setErrorcode(Errorcode.FAIL_CODE);
+            respEntity.setErrormsg(respEntity.getErrormsg());
+            respEntity.setErrorcode(respEntity.getErrorcode());
         }
         return respEntity;
     }

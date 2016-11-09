@@ -1,9 +1,12 @@
 package com.myserver.user.dubbo;
 
 import com.alibaba.dubbo.config.annotation.Service;
-import com.server.entity.constants.Errorcode;
+import com.myserver.user.constant.UserErrorcode;
 import com.server.entity.exception.APIException;
+import com.server.entity.model.APIReqEntity;
+import com.server.entity.model.APIRespEntity;
 import com.server.entity.user.api.dubbo.IUserService;
+import com.server.entity.user.api.entity.req.LoginReqEntity;
 import com.server.entity.user.dao.UserDaoEntity;
 import com.server.entity.user.dao.UserStatusDaoEntity;
 import com.server.entity.utils.ObjectUtils;
@@ -26,22 +29,29 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     @Transactional(readOnly = true)
-    public UserDaoEntity getUserByLoginName(String loginName) {
-        return userDao.getByLoginName(loginName);
+    public APIRespEntity<UserDaoEntity> getUserByLoginName(APIReqEntity<String> params) throws APIException{
+        UserDaoEntity userDaoEntity = userDao.getByLoginName(StringUtils.trimNull(params.getReqParam()));
+        if (userDaoEntity == null){
+            throw new APIException(UserErrorcode.USER_NOT_EXIST,"用户不存在");
+        }
+        return new APIRespEntity<UserDaoEntity>(userDaoEntity);
     }
 
     @Override
-    public UserDaoEntity login(String loginName, String loginPwd)throws APIException{
+    public APIRespEntity<UserDaoEntity> login(APIReqEntity<LoginReqEntity> reqEntity)throws APIException{
 
-        if (StringUtils.trimNull(loginName).isEmpty() || StringUtils.trimNull(loginPwd).isEmpty()){
-            throw new APIException(Errorcode.FAIL_CODE,"登录账号或密码为空");
+        String loginName = StringUtils.trimNull(reqEntity.getReqParam().getLoginName());
+        String loginPwd = StringUtils.trimNull(reqEntity.getReqParam().getLoginPwd());
+
+        if (loginName.isEmpty() || loginPwd.isEmpty()){
+            throw new APIException(UserErrorcode.PWD_OR_ACCT_NULL,"登录账号或密码为空");
         }
 
         UserDaoEntity user = userDao.getByLoginName(loginName);
 
         // 用户不存在
         if (ObjectUtils.isEmpty(user)){
-            throw new APIException(Errorcode.FAIL_CODE,"用户不存在");
+            throw new APIException(UserErrorcode.USER_NOT_EXIST,"用户不存在");
         }
 
         //用户因登录密码不对，限制锁定。
@@ -55,14 +65,15 @@ public class UserServiceImpl implements IUserService {
 
         // 密码错误
         if (!checkPwd(loginPwd,user.getLoginPwd())){
-            throw new APIException(Errorcode.FAIL_CODE,"用户账户或密码错误");
+            throw new APIException(UserErrorcode.PWD_OR_ACCT_ERROR,"用户账户或密码错误");
         }
 
         // 校验账户状态，是否可以登录
         if (!checkLoginable(user)){
-            throw new APIException(Errorcode.FAIL_CODE,"登录账户状态不正确或该账户不允许登录，请联系管理员。");
+            throw new APIException(UserErrorcode.LOGIN_STATUS_ABNORMAL,"登录账户状态不正确或该账户不允许登录，请联系管理员。");
         }
-        return user;
+
+        return new APIRespEntity<UserDaoEntity>(user);
     }
 
     /**

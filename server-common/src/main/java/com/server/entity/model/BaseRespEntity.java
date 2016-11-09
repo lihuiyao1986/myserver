@@ -1,7 +1,6 @@
 package com.server.entity.model;
 
-import com.server.entity.constants.Errorcode;
-import com.server.entity.utils.StringUtils;
+import com.server.entity.constants.GlobalErrorcode;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -14,9 +13,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class BaseRespEntity extends BaseModel{
 
-    private String errormsg = Errorcode.SUCC_CODE;
+    private String errormsg = GlobalErrorcode.SUCC_CODE;
 
-    private String errorcode = Errorcode.SUCC_MSG;
+    private String errorcode = GlobalErrorcode.SUCC_MSG;
     
     public String getErrormsg() {
         return errormsg;

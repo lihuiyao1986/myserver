@@ -1,7 +1,8 @@
 package com.server.entity.extension;
 
 import com.alibaba.dubbo.rpc.protocol.rest.support.ContentType;
-import com.server.entity.constants.Errorcode;
+import com.server.entity.constants.GlobalErrorcode;
+import com.server.entity.constants.ErrorcodeInfoLoader;
 import com.server.entity.exception.APIException;
 import com.server.entity.model.BaseRespEntity;
 import com.server.entity.utils.StringUtils;
@@ -41,11 +42,15 @@ public class AppExceptionMapper implements ExceptionMapper<Exception>,ContainerR
             }
         }
         if (exception instanceof APIException){
-            resp.setErrorcode(((APIException) exception).getErrorCode());
-            resp.setErrormsg(((APIException) exception).getErrorMsg());
+            String errorCode = StringUtils.trimNull(((APIException) exception).getErrorCode(),GlobalErrorcode.FAIL_CODE);
+            resp.setErrorcode(errorCode);
+            String message = StringUtils.trimNull(((APIException) exception).getErrorMsg(),GlobalErrorcode.FAIL_MSG);
+            String errorMsg = ErrorcodeInfoLoader.getInstance().getMessage(errorCode,message);
+            resp.setErrormsg(errorMsg);
         }else{
-            resp.setErrorcode(Errorcode.FAIL_CODE);
-            resp.setErrormsg(StringUtils.trimNull(exception.getLocalizedMessage(), Errorcode.FAIL_MSG));
+            resp.setErrorcode(GlobalErrorcode.FAIL_CODE);
+            String errorMsg = ErrorcodeInfoLoader.getInstance().getMessage(GlobalErrorcode.FAIL_CODE,GlobalErrorcode.FAIL_MSG);
+            resp.setErrormsg(StringUtils.trimNull(errorMsg));
         }
         return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity(resp).type(type).build();
     }

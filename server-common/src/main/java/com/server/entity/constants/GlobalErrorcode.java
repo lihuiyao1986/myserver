@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Created by jk on 16/11/7.
  */
-public class Errorcode implements Serializable {
+public class GlobalErrorcode implements Serializable {
 
     private static final long serialVersionUID = -7395413572253424677L;
 
