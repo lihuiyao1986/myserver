@@ -59,7 +59,11 @@ public class UserNormalServiceImpl implements IUserNormalService {
      */
     @Override
     public UserDaoEntity unlockUser(UserDaoEntity user) {
-        return null;
+        user.setAccountLockedTime(null);
+        user.setLoginRetryTimes(0);
+        user.setLastloginRetryDate(null);
+        userDao.update(user);
+        return user;
     }
 
     /**
