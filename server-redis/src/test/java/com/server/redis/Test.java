@@ -1,6 +1,8 @@
 package com.server.redis;
 
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -11,9 +13,12 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(locations = "classpath:META-INF/spring/redis-context.xml")
 public class Test {
 
+    @Autowired
+    private RedisTemplate<String,String> redisTemplate;
+
     @org.junit.Test
     public void test(){
-
+        redisTemplate.convertAndSend("user:topic","hello world");
     }
 
 }

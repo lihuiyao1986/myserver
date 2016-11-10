@@ -23,11 +23,14 @@
 
     <!--redis连接工厂-->
     <bean id="connectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"
-          p:hostName="${redis.host}" p:port="${redis.port}" p:password="${redis.pass}"  p:poolConfig-ref="poolConfig"/>
+          p:hostName="${redis.host}" p:timeout="${redis.timeout}" p:port="${redis.port}" p:password="${redis.pass}" p:usePool="true" p:poolConfig-ref="poolConfig"/>
 
     <!--redis模版-->
     <bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate">
         <property name="connectionFactory"   ref="connectionFactory" />
+        <property name="defaultSerializer">
+            <bean class="org.springframework.data.redis.serializer.StringRedisSerializer"/>
+        </property>
     </bean>
 
     <!--缓存-->
@@ -35,7 +38,29 @@
         <constructor-arg ref="redisTemplate"/>
     </bean>
 
+    <!--扫描-->
+    <context:component-scan base-package="com.server.redis"/>
+
     <!--启动注解-->
     <cache:annotation-driven cache-manager="cacheManager"/>
+
+    <!--消息-->
+    <bean class="org.springframework.data.redis.listener.RedisMessageListenerContainer" destroy-method="destroy">
+        <property name="connectionFactory" ref="connectionFactory"/>
+        <property name="taskExecutor">
+            <bean class="org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler">
+                <property name="poolSize" value="3"></property>
+            </bean>
+        </property>
+        <property name="messageListeners">
+            <map>
+                <entry key-ref="topicMessageListener">
+                    <bean class="org.springframework.data.redis.listener.ChannelTopic">
+                        <constructor-arg value="user:topic"/>
+                    </bean>
+                </entry>
+            </map>
+        </property>
+    </bean>
 
 </beans>
