@@ -8,16 +8,14 @@ import com.server.entity.model.APIRespEntity;
 import com.server.entity.utils.StringUtils;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
-import org.apache.log4j.Logger;
-
-import java.lang.annotation.Annotation;
+import org.slf4j.Logger;
 
 /**
  * api拦截器
  */
 public class APIInterceptor implements MethodInterceptor {
 
-    private final static Logger logger = Logger.getLogger (APIInterceptor.class.getName ());
+    private Logger logger = org.slf4j.LoggerFactory.getLogger(APIInterceptor.class);
 
     @Override
     public Object invoke(MethodInvocation methodInvocation) throws Throwable {

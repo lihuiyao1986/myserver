@@ -1,7 +1,7 @@
 package com.myserver.user.service.normal;
 
-import com.server.entity.user.api.entity.req.LoginReqEntity;
 import com.server.entity.user.dao.UserDaoEntity;
+import com.server.entity.user.web.req.LoginReqEntity;
 
 /**
  * 不对外暴露的服务

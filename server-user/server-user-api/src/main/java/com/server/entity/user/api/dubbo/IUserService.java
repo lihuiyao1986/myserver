@@ -5,8 +5,8 @@ import com.server.entity.annotation.API;
 import com.server.entity.exception.APIException;
 import com.server.entity.model.APIReqEntity;
 import com.server.entity.model.APIRespEntity;
-import com.server.entity.user.api.entity.req.LoginReqEntity;
 import com.server.entity.user.dao.UserDaoEntity;
+import com.server.entity.user.web.req.LoginReqEntity;
 
 /**
  * 用户服务

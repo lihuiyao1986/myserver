@@ -3,15 +3,14 @@ package com.myserver.user.service.facade.rest;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.alibaba.dubbo.rpc.protocol.rest.support.ContentType;
 
-import com.server.entity.constants.GlobalErrorcode;
 import com.server.entity.exception.APIException;
 import com.server.entity.model.APIReqEntity;
 import com.server.entity.model.APIRespEntity;
 import com.server.entity.user.api.dubbo.IUserService;
-import com.server.entity.user.api.entity.req.LoginReqEntity;
 import com.server.entity.user.api.rest.IUserAPI;
 import com.server.entity.user.dao.UserDaoEntity;
-import com.server.entity.user.web.UserRespEntity;
+import com.server.entity.user.web.req.LoginReqEntity;
+import com.server.entity.user.web.resp.UserRespEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 

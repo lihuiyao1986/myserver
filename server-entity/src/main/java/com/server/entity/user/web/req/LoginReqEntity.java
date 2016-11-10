@@ -1,4 +1,4 @@
-package com.server.entity.user.api.entity.req;
+package com.server.entity.user.web.req;
 
 import com.server.entity.model.BaseModel;
 

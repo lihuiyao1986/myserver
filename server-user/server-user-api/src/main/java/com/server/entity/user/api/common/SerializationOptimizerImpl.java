@@ -1,7 +1,7 @@
 package com.server.entity.user.api.common;
 
 import com.alibaba.dubbo.common.serialize.support.SerializationOptimizer;
-import com.server.entity.user.web.UserRespEntity;
+import com.server.entity.user.web.resp.UserRespEntity;
 
 import java.util.Collection;
 import java.util.LinkedList;

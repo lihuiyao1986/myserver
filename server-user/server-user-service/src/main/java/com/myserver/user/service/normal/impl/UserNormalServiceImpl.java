@@ -1,10 +1,10 @@
 package com.myserver.user.service.normal.impl;
 
 import com.myserver.user.service.normal.IUserNormalService;
-import com.server.entity.user.api.entity.req.LoginReqEntity;
 import com.server.entity.user.dao.LoginLog;
 import com.server.entity.user.dao.UserDaoEntity;
 import com.server.entity.user.dao.UserStatusDaoEntity;
+import com.server.entity.user.web.req.LoginReqEntity;
 import com.server.entity.utils.StringUtils;
 import com.server.user.dao.hibernate.LoginLogDao;
 import com.server.user.dao.hibernate.UserDao;

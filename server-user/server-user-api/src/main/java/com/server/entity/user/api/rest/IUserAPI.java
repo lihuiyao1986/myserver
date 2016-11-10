@@ -1,7 +1,7 @@
 package com.server.entity.user.api.rest;
 
 import com.server.entity.exception.APIException;
-import com.server.entity.user.web.UserRespEntity;
+import com.server.entity.user.web.resp.UserRespEntity;
 
 /**
  * Created by jk on 16/11/6.

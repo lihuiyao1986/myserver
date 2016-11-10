@@ -3,8 +3,8 @@ package com.server.config.manger.dao.hibernate;
 import com.server.entity.configmanager.dao.Resources;
 import com.server.entity.dao.BaseDao;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.transaction.Transactional;
 import java.util.List;
 
 /**

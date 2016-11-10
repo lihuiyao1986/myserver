@@ -15,30 +15,22 @@
   </distributionManagement>
     <properties>
         <!-- Common libs -->
-        <!--<spring.bom.version>3.2.9.RELEASE</spring.bom.version>-->
         <spring.bom.version>4.2.8.RELEASE</spring.bom.version>
-        <javassist_version>3.15.0-GA</javassist_version>
-        <!--<netty_version>3.7.0.Final</netty_version>-->
+        <javassist_version>3.18.0-GA</javassist_version>
         <netty_version>3.9.9.Final</netty_version>
         <mina_version>1.1.7</mina_version>
-        <!--<mina_version>2.0.9</mina_version>-->
         <grizzly_version>2.1.4</grizzly_version>
-        <!--<httpclient_version>4.2.1</httpclient_version>-->
         <httpclient_version>4.3.4</httpclient_version>
         <hessian_lite_version>3.2.1-fixed-2</hessian_lite_version>
-        <!--<xstream_version>1.4.1</xstream_version>-->
         <xstream_version>1.4.8</xstream_version>
-        <!--<fastjson_version>1.1.39</fastjson_version>-->
         <fastjson_version>1.2.6</fastjson_version>
         <bsf_version>3.1</bsf_version>
         <sorcerer_version>0.8</sorcerer_version>
         <zookeeper_version>3.4.6</zookeeper_version>
-        <!--<zkclient_version>0.1</zkclient_version>-->
         <zkclient_version>0.9</zkclient_version>
         <curator_version>2.5.0</curator_version>
         <jedis_version>2.8.0</jedis_version>
         <xmemcached_version>1.3.6</xmemcached_version>
-        <!--<cxf_version>2.6.1</cxf_version>-->
         <cxf_version>3.1.5</cxf_version>
         <thrift_version>0.8.0</thrift_version>
         <thrift2_version>0.9.3</thrift2_version>
@@ -48,7 +40,6 @@
         <servlet_version>3.1.0</servlet_version>
         <jetty_version>6.1.26</jetty_version>
         <validation_version>1.1.0.Final</validation_version>
-        <!--<hibernate_validator_version>4.2.0.Final</hibernate_validator_version>-->
         <hibernate_validator_version>5.2.4.Final</hibernate_validator_version>
         <javax.el-api_version>2.2.4</javax.el-api_version>
         <javax.el_version>2.2.4</javax.el_version>
@@ -57,28 +48,22 @@
         <sca_version>2.0-M5.1</sca_version>
         <guice_version>3.0</guice_version>
         <cglib_version>2.2</cglib_version>
-        <!--<webx_version>3.0.8</webx_version>-->
         <webx_version>3.1.6</webx_version>
-        <!--<jackson_version>2.3.3</jackson_version>-->
         <jackson_version>2.7.1</jackson_version>
 
         <commons_pool_version>1.6</commons_pool_version>
         <commons-lang_version>2.6</commons-lang_version>
         <tomcat_embed_version>8.0.11</tomcat_embed_version>
         <!-- Log libs -->
-        <!--<slf4j_version>1.6.2</slf4j_version>-->
         <slf4j_version>1.7.15</slf4j_version>
         <jcl_version>1.1</jcl_version>
-        <!--<log4j_version>1.2.16</log4j_version>-->
         <log4j_version>1.2.17</log4j_version>
-        <!--<logback_version>1.0.6</logback_version>-->
         <logback_version>1.1.5</logback_version>
         <log4j2_version>2.5</log4j2_version>
         <!-- Test libs -->
         <junit_version>4.10</junit_version>
         <easymock_version>3.0</easymock_version>
         <jmockit_version>0.999.8</jmockit_version>
-
         <!--rest-->
         <rs-api_version>2.0.1</rs-api_version>
         <resteasy-jaxrs_version>3.0.9.Final</resteasy-jaxrs_version>
@@ -96,18 +81,6 @@
         <skip_maven_deploy>false</skip_maven_deploy>
         <updateReleaseInfo>true</updateReleaseInfo>
         <project.build.sourceEncoding>${file_encoding}</project.build.sourceEncoding>
-
-        <!-- generate idea copyright -->
-        <copyright>Copyright 1999-2012 Alibaba Group.&#10; &#10;Licensed under
-            the Apache License, Version 2.0 (the &quot;License&quot;);&#10;you
-            may not use this file except in compliance with the License.&#10;You
-            may obtain a copy of the License at&#10; &#10;
-            http://www.apache.org/licenses/LICENSE-2.0&#10; &#10;Unless required
-            by applicable law or agreed to in writing, software&#10;distributed
-            under the License is distributed on an &quot;AS IS&quot;
-            BASIS,&#10;WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
-            express or implied.&#10;See the License for the specific language
-            governing permissions and&#10;limitations under the License.</copyright>
         <profile.name>oss</profile.name>
 
         <!-- for maven compiler plugin -->
@@ -137,7 +110,6 @@
         <mysql-connector-java.version>5.1.38</mysql-connector-java.version>
         <druid.version>1.0.16</druid.version>
         <javax.persistence.version>1.0.2</javax.persistence.version>
-
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <!--apache commons-->
@@ -158,12 +130,13 @@
     </properties>
     <dependencyManagement>
         <dependencies>
+            <!--dubbox-->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>dubbo</artifactId>
                 <version>2.8.4</version>
             </dependency>
-            <!-- Common libs -->
+            <!--spring-->
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-framework-bom</artifactId>
@@ -171,6 +144,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!-- Common libs -->
             <dependency>
                 <groupId>org.javassist</groupId>
                 <artifactId>javassist</artifactId>
@@ -316,36 +290,16 @@
                 <artifactId>cache-api</artifactId>
                 <version>${jcache_version}</version>
             </dependency>
-            <dependency>
-                <groupId>org.apache.velocity</groupId>
-                <artifactId>velocity</artifactId>
-                <version>${velocity_version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.tuscany.sca</groupId>
-                <artifactId>tuscany-sca-api</artifactId>
-                <version>${sca_version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.google.inject</groupId>
-                <artifactId>guice</artifactId>
-                <version>${guice_version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba.citrus</groupId>
-                <artifactId>citrus-webx-all</artifactId>
-                <version>${webx_version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.fasterxml.jackson.core</groupId>
-                <artifactId>jackson-core</artifactId>
-                <version>${jackson_version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.fasterxml.jackson.core</groupId>
-                <artifactId>jackson-databind</artifactId>
-                <version>${jackson_version}</version>
-            </dependency>
+            <!--<dependency>-->
+                <!--<groupId>com.fasterxml.jackson.core</groupId>-->
+                <!--<artifactId>jackson-core</artifactId>-->
+                <!--<version>${jackson_version}</version>-->
+            <!--</dependency>-->
+            <!--<dependency>-->
+                <!--<groupId>com.fasterxml.jackson.core</groupId>-->
+                <!--<artifactId>jackson-databind</artifactId>-->
+                <!--<version>${jackson_version}</version>-->
+            <!--</dependency>-->
             <!-- Log libs -->
             <dependency>
                 <groupId>org.slf4j</groupId>
@@ -398,39 +352,6 @@
                 <artifactId>junit</artifactId>
                 <version>${junit_version}</version>
                 <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.easymock</groupId>
-                <artifactId>easymock</artifactId>
-                <version>${easymock_version}</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>com.googlecode.jmockit</groupId>
-                <artifactId>jmockit</artifactId>
-                <version>${jmockit_version}</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.easymock</groupId>
-                <artifactId>easymockclassextension</artifactId>
-                <version>${easymock_version}</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>cglib</groupId>
-                <artifactId>cglib-nodep</artifactId>
-                <version>${cglib_version}</version>
-            </dependency>
-            <dependency>
-                <groupId>commons-lang</groupId>
-                <artifactId>commons-lang</artifactId>
-                <version>${commons-lang_version}</version>
-            </dependency>
-            <dependency>
-                <groupId>commons-pool</groupId>
-                <artifactId>commons-pool</artifactId>
-                <version>${commons_pool_version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.tomcat.embed</groupId>
@@ -514,16 +435,16 @@
                 <artifactId>hibernate-core</artifactId>
                 <version>4.3.7.Final</version>
             </dependency>
-
+            <dependency>
+                <groupId>org.hibernate.javax.persistence</groupId>
+                <artifactId>hibernate-jpa-2.1-api</artifactId>
+                <version>1.0.0.Final</version>
+            </dependency>
+            <!--mybatis-->
             <dependency>
                 <groupId>com.github.pagehelper</groupId>
                 <artifactId>pagehelper</artifactId>
                 <version>${mybatis-page-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.jsqlparser</groupId>
-                <artifactId>jsqlparser</artifactId>
-                <version>${jsqlparser.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.mybatis</groupId>
@@ -566,6 +487,18 @@
                 <artifactId>commons-beanutils</artifactId>
                 <version>${commons-beanutils.version}</version>
             </dependency>
+            <!--zookeeper配置-->
+            <dependency>
+                <groupId>com.dangdang</groupId>
+                <artifactId>config-toolkit</artifactId>
+                <version>3.1.7-RELEASE</version>
+            </dependency>
+            <!--redis-->
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-redis</artifactId>
+                <version>1.7.4.RELEASE</version>
+            </dependency>
 
             <!-- User Agent -->
             <dependency>
@@ -590,6 +523,7 @@
                 <artifactId>sitemesh</artifactId>
                 <version>${sitemesh.version}</version>
             </dependency>
+
             <!-- email -->
             <dependency>
                 <groupId>javax.mail</groupId>
@@ -597,6 +531,21 @@
                 <version>${javax.mail-api.version}</version>
             </dependency>
 
+            <!--ehcache-->
+            <dependency>
+                <groupId>net.sf.ehcache</groupId>
+                <artifactId>ehcache-core</artifactId>
+                <version>${ehcache.version}</version>
+            </dependency>
+
+            <!--guava-->
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+
+            <!--pojo copy-->
             <dependency>
                 <groupId>net.sf.dozer</groupId>
                 <artifactId>dozer</artifactId>
@@ -621,36 +570,17 @@
                 <version>${cglib_version}</version>
             </dependency>
 
+            <!--jackson-->
             <dependency>
-                <groupId>com.google.guava</groupId>
-                <artifactId>guava</artifactId>
-                <version>${guava.version}</version>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jackson_version}</version>
             </dependency>
-
             <dependency>
-                <groupId>net.sf.ehcache</groupId>
-                <artifactId>ehcache-core</artifactId>
-                <version>${ehcache.version}</version>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson_version}</version>
             </dependency>
-            <!--zookeeper配置-->
-            <dependency>
-                <groupId>com.dangdang</groupId>
-                <artifactId>config-toolkit</artifactId>
-                <version>3.1.7-RELEASE</version>
-            </dependency>
-            <!--redis-->
-            <dependency>
-                <groupId>org.springframework.data</groupId>
-                <artifactId>spring-data-redis</artifactId>
-                <version>1.7.4.RELEASE</version>
-                <exclusions>
-                    <exclusion>
-                        <artifactId>slf4j-api</artifactId>
-                        <groupId>org.slf4j</groupId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <!-- log begin -->
         </dependencies>
     </dependencyManagement>
     <build>

@@ -15,16 +15,16 @@ public class BaseDaoEntity extends BaseModel {
     private static final long serialVersionUID = 5564472672113187720L;
 
     @Id
-    @Column(name = "T_ID")
+    @Column(length=3)
     @GeneratedValue(generator = "native")
     @GenericGenerator(name = "native", strategy = "native")
-    private long id;
+    protected int id;	//id
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 }

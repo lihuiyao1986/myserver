@@ -1,4 +1,4 @@
-package com.server.entity.user.web;
+package com.server.entity.user.web.resp;
 
 import com.server.entity.model.BaseRespEntity;
 import com.server.entity.user.dao.UserDaoEntity;

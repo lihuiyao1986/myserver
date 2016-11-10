@@ -56,7 +56,7 @@
     <!--<dubbo:protocol name="rest" port="8888" server="tjws" contextpath="services"/>-->
 
     <!-- use tomcat server -->
-    <dubbo:protocol name="rest" port="8888" threads="500" contextpath="services" server="tomcat" accepts="500"
+    <dubbo:protocol name="rest" port="8881" threads="500" contextpath="services" server="tomcat" accepts="500"
                     extension="com.server.entity.extension.TraceInterceptor,
                     com.server.entity.extension.TraceFilter,
                     com.server.entity.extension.AppExceptionMapper,
