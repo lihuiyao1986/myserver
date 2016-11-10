@@ -151,3 +151,55 @@
 2016-11-09 15:11:02 [ main:14449 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_hbgsjmfv8f4wel70m02ayv3n4 foreign key (orgnization_T_ID) references SYS_Orgnization (T_ID)
 2016-11-09 15:11:02 [ main:14450 ] - [ ERROR ] Cannot add foreign key constraint
 2016-11-09 15:11:12 [ main:24609 ] - [ ERROR ] Field 'T_ID' doesn't have a default value
+2016-11-09 22:53:38 [ main:39283 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelAffiliateAccountAppQueue add constraint FK_4wwl73vw7o5ho5e3h02vll01p foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
+2016-11-09 22:53:38 [ main:39284 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 22:53:39 [ main:39846 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelAffiliateSubAccount add constraint FK_gnvkl3inqd6y7t9o2btdd9t5w foreign key (channelServiceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
+2016-11-09 22:53:39 [ main:39846 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 22:53:39 [ main:40105 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_6a6py6mlwujjb7oovo4512bgh foreign key (accountOwner_T_ID) references BIZ_Participant (T_ID)
+2016-11-09 22:53:39 [ main:40106 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 22:53:41 [ main:42193 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_c0efy4t7c2qjovml0ek8y9p5u foreign key (channelProvider_T_ID) references BIZ_Participant (T_ID)
+2016-11-09 22:53:41 [ main:42194 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 22:53:41 [ main:42445 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelServiceAccount add constraint FK_dwgu5by2610dhydu2pr4eq5s1 foreign key (sp_T_ID) references BIZ_ServicePoint (T_ID)
+2016-11-09 22:53:41 [ main:42445 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 22:53:42 [ main:42700 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_q212t5o7eg38ifxjc8iukcdf8 foreign key (gender_T_ID) references DIC_Gender (T_ID)
+2016-11-09 22:53:42 [ main:42701 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 22:53:42 [ main:42950 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_rmnej2ba5vsienwx0graoqeo9 foreign key (group_T_ID) references BIZ_ChannelUserGroup (T_ID)
+2016-11-09 22:53:42 [ main:42951 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 22:53:43 [ main:44109 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUser add constraint FK_g948vcfunk60bwwnttkp1qax3 foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
+2016-11-09 22:53:43 [ main:44110 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 22:53:44 [ main:45480 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ChannelUserGroup add constraint FK_cm8rurpt4nm5rjs4q38vshcya foreign key (serviceAccount_T_ID) references BIZ_ChannelServiceAccount (T_ID)
+2016-11-09 22:53:44 [ main:45480 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 22:53:49 [ main:50200 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_MessageProtocol add constraint FK_ivjbglxv330obwp4r5u4qse9s foreign key (dataFormat_T_ID) references DIC_DataFormat (T_ID)
+2016-11-09 22:53:49 [ main:50201 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 22:53:49 [ main:50443 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_MessageProtocol add constraint FK_fbar6f0y536umcn7eujbci3js foreign key (signAlgorithm_T_ID) references DIC_SignAlgorithm (T_ID)
+2016-11-09 22:53:49 [ main:50443 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 22:53:50 [ main:51354 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_Participant add constraint FK_tcobuddjsld5iltjsh68ikilv foreign key (status_T_ID) references DIC_ServiceStatus (T_ID)
+2016-11-09 22:53:50 [ main:51355 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 22:53:51 [ main:51613 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_1r0kqwia4deotoaqcjq0vtvkg foreign key (localCommProtocol_T_ID) references DIC_CommProtocol (T_ID)
+2016-11-09 22:53:51 [ main:51613 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 22:53:51 [ main:52467 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_mm9pqok8lernvkgo6i9d6a7ru foreign key (localMsgProtocol_T_ID) references BIZ_MessageProtocol (T_ID)
+2016-11-09 22:53:51 [ main:52467 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 22:53:52 [ main:52722 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_hbteh3tmiw6ytyg9ut9j250e8 foreign key (owner_T_ID) references BIZ_Participant (T_ID)
+2016-11-09 22:53:52 [ main:52722 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 22:53:52 [ main:52981 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_puoykn1oqwhu542pqxmok0mkk foreign key (remoteCommProtocol_T_ID) references DIC_CommProtocol (T_ID)
+2016-11-09 22:53:52 [ main:52981 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 22:53:52 [ main:53248 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_hykohwbaggj2grotmiqhaf4nb foreign key (remoteMsgProtocol_T_ID) references BIZ_MessageProtocol (T_ID)
+2016-11-09 22:53:52 [ main:53249 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 22:53:53 [ main:53501 ] - [ ERROR ] HHH000388: Unsuccessful: alter table BIZ_ServicePoint add constraint FK_bvbyaxfnybm1mfvm3gaqfhof foreign key (status_T_ID) references DIC_ServiceStatus (T_ID)
+2016-11-09 22:53:53 [ main:53501 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 22:53:53 [ main:53746 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_LoginLog add constraint FK_9jmw20gx77s9jw5qs80q06e9w foreign key (user_T_ID) references SYS_User (T_ID)
+2016-11-09 22:53:53 [ main:53746 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 22:53:53 [ main:53996 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_Orgnization add constraint FK_7mijxr4qdjckfodl75trw1gd foreign key (parentOrg_T_ID) references SYS_Orgnization (T_ID)
+2016-11-09 22:53:53 [ main:53996 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 22:53:54 [ main:54565 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_Orgnization add constraint FK_81gmvyhocouf4eemwqcc0i6bm foreign key (type_T_ID) references DIC_OrgType (T_ID)
+2016-11-09 22:53:54 [ main:54565 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 22:53:54 [ main:54826 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_bsui0dw6n9mof0ju68v2o4bw8 foreign key (affiliateAccountAppQueue_T_ID) references BIZ_ChannelAffiliateAccountAppQueue (T_ID)
+2016-11-09 22:53:54 [ main:54827 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 22:53:54 [ main:55086 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_8f0m1f9kj3ck4093u2y96d1cv foreign key (affiliateSubAccount_T_ID) references BIZ_ChannelAffiliateSubAccount (T_ID)
+2016-11-09 22:53:54 [ main:55087 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 22:53:54 [ main:55344 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_7vktfwklbg0i9je74hm3n2tor foreign key (channelUser_T_ID) references BIZ_ChannelUser (T_ID)
+2016-11-09 22:53:54 [ main:55345 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 22:53:55 [ main:55606 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_nn4kveek77ncj2wlkq5lp7p4y foreign key (gender_T_ID) references DIC_Gender (T_ID)
+2016-11-09 22:53:55 [ main:55607 ] - [ ERROR ] Cannot add foreign key constraint
+2016-11-09 22:53:55 [ main:55863 ] - [ ERROR ] HHH000388: Unsuccessful: alter table SYS_User add constraint FK_hbgsjmfv8f4wel70m02ayv3n4 foreign key (orgnization_T_ID) references SYS_Orgnization (T_ID)
+2016-11-09 22:53:55 [ main:55863 ] - [ ERROR ] Cannot add foreign key constraint

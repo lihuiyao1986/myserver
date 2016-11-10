@@ -14,12 +14,17 @@
     <dependencies>
         <dependency>
             <groupId>com.server</groupId>
-            <artifactId>server-user-api</artifactId>
+            <artifactId>server-user-dao</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
         <dependency>
             <groupId>com.server</groupId>
-            <artifactId>server-user-dao</artifactId>
+            <artifactId>server-redis</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.server</groupId>
+            <artifactId>server-user-api</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
         <dependency>

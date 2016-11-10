@@ -13,6 +13,7 @@ import com.server.entity.utils.ObjectUtils;
 import com.server.entity.utils.StringUtils;
 import com.server.user.dao.hibernate.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
@@ -33,6 +34,7 @@ public class UserServiceImpl implements IUserService {
 
     @Transactional(readOnly = true)
     @Override
+    @Cacheable("getUserByLoginName")
     public APIRespEntity<UserDaoEntity> getUserByLoginName(APIReqEntity<String> params) throws APIException{
         UserDaoEntity userDaoEntity = userDao.getByLoginName(StringUtils.trimNull(params.getReqParam()));
         if (userDaoEntity == null){
