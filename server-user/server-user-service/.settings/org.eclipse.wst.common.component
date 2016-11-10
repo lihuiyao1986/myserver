@@ -5,7 +5,19 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/resources"/>
-        <dependent-module archiveName="server-user-api-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/server-user-api/server-user-api">
+        <dependent-module archiveName="server-user-dao-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/server-user-dao-0.0.1-SNAPSHOT/server-user-dao-0.0.1-SNAPSHOT">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="server-entity-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/server-entity-0.0.1-SNAPSHOT/server-entity-0.0.1-SNAPSHOT">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="server-common-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/server-common-0.0.1-SNAPSHOT/server-common-0.0.1-SNAPSHOT">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="server-redis-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/server-redis-0.0.1-SNAPSHOT/server-redis-0.0.1-SNAPSHOT">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="server-user-api-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/server-user-api-0.0.1-SNAPSHOT/server-user-api-0.0.1-SNAPSHOT">
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <property name="context-root" value="server-user-service"/>

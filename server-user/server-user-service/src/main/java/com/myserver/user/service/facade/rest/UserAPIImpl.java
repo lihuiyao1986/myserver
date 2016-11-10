@@ -33,7 +33,6 @@ public class UserAPIImpl implements IUserAPI {
 
     @GET
     @Path("/getByLoginName/{loginName}")
-    @Transactional(readOnly = true)
     @Override
     public UserRespEntity getUserByLoginName(@PathParam("loginName") String loginName) throws APIException {
         APIRespEntity<UserDaoEntity> entity = userService.getUserByLoginName(new APIReqEntity<String>(loginName));

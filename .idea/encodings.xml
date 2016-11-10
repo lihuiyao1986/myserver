@@ -2,9 +2,22 @@
 <project version="4">
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-channel-manager" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-channel-manager/server-channel-manager-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-channel-manager/server-channel-manager-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-channel-manager/server-channel-manager-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-config-manager" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-config-manager-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-config-manager/server-config-manger-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-config-manager/server-config-manger-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-config-manager/server-config-manger-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server-entity" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server-redis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-sys-manager" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-sys-manager/server-sys-manager-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-sys-manager/server-sys-manager-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-sys-manager/server-sys-manager-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server-user" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server-user/server-user-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server-user/server-user-dao" charset="UTF-8" />

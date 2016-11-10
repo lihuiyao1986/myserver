@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="server-channel-manager-service:war">
+    <output-path>$PROJECT_DIR$/server-channel-manager/server-channel-manager-service/target</output-path>
+    <root id="archive" name="server-channel-manager-service.war">
+      <element id="artifact" artifact-name="server-channel-manager-service:war exploded" />
+    </root>
+  </artifact>
+</component>

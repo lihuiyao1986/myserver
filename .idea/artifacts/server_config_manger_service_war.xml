@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="server-config-manger-service:war">
+    <output-path>$PROJECT_DIR$/server-config-manager/server-config-manger-service/target</output-path>
+    <root id="archive" name="server-config-manger-service.war">
+      <element id="artifact" artifact-name="server-config-manger-service:war exploded" />
+    </root>
+  </artifact>
+</component>

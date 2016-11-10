@@ -768,5 +768,8 @@
       <module>server-common</module>
       <module>server-entity</module>
       <module>server-redis</module>
+      <module>server-config-manager</module>
+      <module>server-sys-manager</module>
+      <module>server-channel-manager</module>
   </modules>
 </project>

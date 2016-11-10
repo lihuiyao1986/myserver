@@ -24,10 +24,20 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="common" />
+        <module name="server-channel-manager-api" />
+        <module name="server-channel-manager-dao" />
+        <module name="server-channel-manager-service" />
         <module name="server-common" />
+        <module name="server-config-manager-api" />
+        <module name="server-config-manger-api" />
+        <module name="server-config-manger-dao" />
+        <module name="server-config-manger-service" />
         <module name="server-entity" />
         <module name="server-model" />
         <module name="server-redis" />
+        <module name="server-sys-manager-api" />
+        <module name="server-sys-manager-dao" />
+        <module name="server-sys-manager-service" />
         <module name="server-user-api" />
         <module name="server-user-dao" />
         <module name="server-user-service" />
@@ -36,10 +46,23 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="common" target="1.6" />
+      <module name="server-channel-manager" target="1.6" />
+      <module name="server-channel-manager-api" target="1.6" />
+      <module name="server-channel-manager-dao" target="1.6" />
+      <module name="server-channel-manager-service" target="1.6" />
       <module name="server-common" target="1.6" />
+      <module name="server-config-manager" target="1.6" />
+      <module name="server-config-manager-api" target="1.6" />
+      <module name="server-config-manger-api" target="1.6" />
+      <module name="server-config-manger-dao" target="1.6" />
+      <module name="server-config-manger-service" target="1.6" />
       <module name="server-entity" target="1.6" />
       <module name="server-model" target="1.6" />
       <module name="server-redis" target="1.6" />
+      <module name="server-sys-manager" target="1.6" />
+      <module name="server-sys-manager-api" target="1.6" />
+      <module name="server-sys-manager-dao" target="1.6" />
+      <module name="server-sys-manager-service" target="1.6" />
       <module name="server-user-api" target="1.6" />
       <module name="server-user-dao" target="1.6" />
       <module name="server-user-service" target="1.6" />

@@ -7,7 +7,7 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>server-user</artifactId>
-  <name>Maven</name>
+  <name>用户模块</name>
   <url>http://maven.apache.org/</url>
   <inceptionYear>2001</inceptionYear>
   <distributionManagement>

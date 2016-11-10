@@ -32,6 +32,9 @@
     <entry_points version="2.0" />
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/server-channel-manager/server-channel-manager-service" />
+    <file type="web" url="file://$PROJECT_DIR$/server-config-manager/server-config-manger-service" />
+    <file type="web" url="file://$PROJECT_DIR$/server-sys-manager/server-sys-manager-service" />
     <file type="web" url="file://$PROJECT_DIR$/server-user/server-user-service" />
   </component>
   <component name="IdProvider" IDEtalkID="5B4C289167A6BDFA7CA4E6F1991990E4" />
@@ -53,6 +56,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/common/pom.xml" />
+        <option value="$PROJECT_DIR$/server-config-manager-api/pom.xml" />
         <option value="$PROJECT_DIR$/server-model/pom.xml" />
         <option value="$PROJECT_DIR$/server-user-dao/pom.xml" />
         <option value="$PROJECT_DIR$/server-user-web/pom.xml" />

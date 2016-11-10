@@ -3,9 +3,21 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/myserver.iml" filepath="$PROJECT_DIR$/myserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server-channel-manager/server-channel-manager.iml" filepath="$PROJECT_DIR$/server-channel-manager/server-channel-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server-channel-manager/server-channel-manager-api/server-channel-manager-api.iml" filepath="$PROJECT_DIR$/server-channel-manager/server-channel-manager-api/server-channel-manager-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server-channel-manager/server-channel-manager-dao/server-channel-manager-dao.iml" filepath="$PROJECT_DIR$/server-channel-manager/server-channel-manager-dao/server-channel-manager-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server-channel-manager/server-channel-manager-service/server-channel-manager-service.iml" filepath="$PROJECT_DIR$/server-channel-manager/server-channel-manager-service/server-channel-manager-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/server-common/server-common.iml" filepath="$PROJECT_DIR$/server-common/server-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server-config-manager/server-config-manager.iml" filepath="$PROJECT_DIR$/server-config-manager/server-config-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server-config-manager/server-config-manger-api/server-config-manger-api.iml" filepath="$PROJECT_DIR$/server-config-manager/server-config-manger-api/server-config-manger-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server-config-manager/server-config-manger-dao/server-config-manger-dao.iml" filepath="$PROJECT_DIR$/server-config-manager/server-config-manger-dao/server-config-manger-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server-config-manager/server-config-manger-service/server-config-manger-service.iml" filepath="$PROJECT_DIR$/server-config-manager/server-config-manger-service/server-config-manger-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/server-entity/server-entity.iml" filepath="$PROJECT_DIR$/server-entity/server-entity.iml" />
       <module fileurl="file://$PROJECT_DIR$/server-redis/server-redis.iml" filepath="$PROJECT_DIR$/server-redis/server-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server-sys-manager/server-sys-manager.iml" filepath="$PROJECT_DIR$/server-sys-manager/server-sys-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server-sys-manager/server-sys-manager-api/server-sys-manager-api.iml" filepath="$PROJECT_DIR$/server-sys-manager/server-sys-manager-api/server-sys-manager-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server-sys-manager/server-sys-manager-dao/server-sys-manager-dao.iml" filepath="$PROJECT_DIR$/server-sys-manager/server-sys-manager-dao/server-sys-manager-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server-sys-manager/server-sys-manager-service/server-sys-manager-service.iml" filepath="$PROJECT_DIR$/server-sys-manager/server-sys-manager-service/server-sys-manager-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/server-user/server-user.iml" filepath="$PROJECT_DIR$/server-user/server-user.iml" />
       <module fileurl="file://$PROJECT_DIR$/server-user/server-user-api/server-user-api.iml" filepath="$PROJECT_DIR$/server-user/server-user-api/server-user-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/server-user/server-user-dao/server-user-dao.iml" filepath="$PROJECT_DIR$/server-user/server-user-dao/server-user-dao.iml" />
