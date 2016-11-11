@@ -40,7 +40,7 @@
     <dubbo:annotation package="com.myserver.user.service" />
     <context:component-scan base-package="com.myserver.user.service"/>
 
-    <dubbo:protocol name="dubbo" serialization="kryo" optimizer="com.server.entity.user.api.common.SerializationOptimizerImpl"/>
+    <dubbo:protocol name="dubbo" serialization="kryo" optimizer="com.server.entity.user.api.common.SerializationOptimizerImpl" port="20881"/>
     <!--<dubbo:protocol name="dubbo" serialization="fst" optimizer="com.alibaba.dubbo.demo.SerializationOptimizerImpl"/>-->
 
     <!--<dubbo:protocol name="dubbo" serialization="nativejava"/>-->
