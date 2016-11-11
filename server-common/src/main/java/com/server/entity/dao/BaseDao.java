@@ -1,5 +1,6 @@
 package com.server.entity.dao;
 
+import com.server.entity.utils.BeanUtil;
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -136,12 +137,37 @@ public class BaseDao<T,PK extends Serializable> {
      * @return
      */
     @Transactional(readOnly = true)
-    public List<T> findByHql(final String hql, final Object... params) {
+    public List<T> findByHql(String hql, final Object... params) {
+        return createHqlQuery(hql,params).list();
+    }
+
+    /**
+     * createHqlQuery
+     * @param hql
+     * @param params
+     * @return
+     */
+    public Query createHqlQuery(final String hql, final Object... params){
         Query query = getSession().createQuery(hql);
         for (int i = 0; i < params.length; i++) {
             query.setParameter(i, params[i]);
         }
-        return query.list();
+        return query;
+    }
+
+
+    /**
+     * 分页查询
+     * @param hql
+     * @param params
+     * @return
+     */
+    public Page<T> findByHqlPage(int pageNo,int pageSize,final String hql, final Object... params){
+        Query query = getSession().createQuery(hql);
+        for (int i = 0; i < params.length; i++) {
+            query.setParameter(i, params[i]);
+        }
+        return new Page<T>(pageNo,pageSize,query);
     }
 
     /**
@@ -277,7 +303,26 @@ public class BaseDao<T,PK extends Serializable> {
      * 获得数据库时间
      * @return
      */
+
+    @Transactional(readOnly = true)
     public Date getSystemTime() {
         return (Date)getSession().createSQLQuery("select current_timestamp() from dual").uniqueResult();
+    }
+
+
+    /**
+     * 把orig中非空属性赋值到dest
+     * @param clazz
+     * @param orig newObject
+     * @param objId
+     * @return T
+     */
+    public T copyProperties(@SuppressWarnings("rawtypes") Class clazz, T orig, Serializable objId){
+        T dest =  (T)this.getSession().get(clazz, objId);
+        if (dest == null) {
+            return null;
+        }
+        BeanUtil.copyNotNullProperties(dest, orig);
+        return dest;
     }
 }

@@ -12,7 +12,7 @@ import java.util.List;
  */
 @Repository
 @Transactional
-public class ResourceDao extends BaseDao<Resources,Long> {
+public class ResourceDao extends BaseDao<Resources,Integer> {
 
     /**
      * 根据code获取资源
