@@ -4,10 +4,14 @@
        xmlns:tx="http://www.springframework.org/schema/tx"
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:c="http://www.springframework.org/schema/c"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+        http://www.springframework.org/schema/beans/spring-beans.xsd
 	    http://www.springframework.org/schema/tx
 	    http://www.springframework.org/schema/tx/spring-tx.xsd
+	    http://www.springframework.org/schema/util
+	    http://www.springframework.org/schema/util/spring-util.xsd
 		http://www.springframework.org/schema/context
 		http://www.springframework.org/schema/context/spring-context.xsd">
 
@@ -17,8 +21,33 @@
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Repository" />
     </context:component-scan>
 
-    <!-- 配置文件 -->
-    <context:property-placeholder location="classpath:config/*.properties" ignore-unresolvable="true" order="1"/>
+    <!--configToolkitConfigs-->
+    <util:properties id="configToolkitConfigs" location="classpath:config/zk-client.properties" />
+
+    <!--配置文件-->
+    <bean id="config_manager_dao_configProfile" class="com.dangdang.config.service.zookeeper.ZookeeperConfigProfile">
+        <constructor-arg name="connectStr" value="#{configToolkitConfigs['zk.address']}" />
+        <constructor-arg name="rootNode" value="#{configToolkitConfigs['zk.root.note']}" />
+        <constructor-arg name="version" value="#{configToolkitConfigs['zk.configs.version']}" />
+    </bean>
+
+    <!--zookeeperSources-->
+    <bean id="config_manager_dao_zookeeperSources" class="com.dangdang.config.service.support.spring.ConfigGroupSourceFactory" factory-method="create">
+        <constructor-arg name="configGroups">
+            <list>
+                <bean class="com.dangdang.config.service.zookeeper.ZookeeperConfigGroup"
+                      c:configProfile-ref="config_manager_dao_configProfile"
+                      c:node="#{configToolkitConfigs['zk.root.group']}" />
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <!--placeHolder-->
+    <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
+        <property name="order" value="1" />
+        <property name="ignoreUnresolvablePlaceholders" value="true" />
+        <property name="propertySources" ref="config_manager_dao_zookeeperSources" />
+    </bean>
 
     <!-- druid dataSource -->
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"

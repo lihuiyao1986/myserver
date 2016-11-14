@@ -109,5 +109,7 @@
     <orderEntry type="library" name="Maven: antlr:antlr:2.7.7" level="project" />
     <orderEntry type="library" name="Maven: org.jboss:jandex:1.1.0.Final" level="project" />
     <orderEntry type="library" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final" level="project" />
+    <orderEntry type="library" name="Maven: com.dangdang:config-toolkit:3.1.7-RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: com.dangdang:config-common:3.0.0-RELEASE" level="project" />
   </component>
 </module>
