@@ -234,5 +234,11 @@
             <artifactId>hibernate-jpa-2.1-api</artifactId>
         </dependency>
 
+        <!--zk配置-->
+        <dependency>
+            <groupId>com.dangdang</groupId>
+            <artifactId>config-toolkit</artifactId>
+        </dependency>
+
     </dependencies>
 </project>

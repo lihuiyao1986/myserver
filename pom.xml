@@ -589,6 +589,19 @@
                 <artifactId>activemq-core</artifactId>
                 <version>5.7.0</version>
             </dependency>
+
+            <!--mongodb-->
+            <dependency>
+                <groupId>org.springframework.data</groupId>
+                <artifactId>spring-data-mongodb</artifactId>
+                <version>1.9.4.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mongodb</groupId>
+                <artifactId>mongo-java-driver</artifactId>
+                <version>3.3.0</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
     <build>
@@ -709,5 +722,6 @@
       <module>server-config-manager</module>
       <module>server-sys-manager</module>
       <module>server-channel-manager</module>
+      <module>server-mongo</module>
   </modules>
 </project>

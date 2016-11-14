@@ -34,6 +34,7 @@
         <module name="server-config-manger-service" />
         <module name="server-entity" />
         <module name="server-model" />
+        <module name="server-mongo" />
         <module name="server-redis" />
         <module name="server-sys-manager-api" />
         <module name="server-sys-manager-dao" />
@@ -58,6 +59,7 @@
       <module name="server-config-manger-service" target="1.6" />
       <module name="server-entity" target="1.6" />
       <module name="server-model" target="1.6" />
+      <module name="server-mongo" target="1.6" />
       <module name="server-redis" target="1.6" />
       <module name="server-sys-manager" target="1.6" />
       <module name="server-sys-manager-api" target="1.6" />

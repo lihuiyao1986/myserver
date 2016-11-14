@@ -13,6 +13,7 @@
       <module fileurl="file://$PROJECT_DIR$/server-config-manager/server-config-manger-dao/server-config-manger-dao.iml" filepath="$PROJECT_DIR$/server-config-manager/server-config-manger-dao/server-config-manger-dao.iml" />
       <module fileurl="file://$PROJECT_DIR$/server-config-manager/server-config-manger-service/server-config-manger-service.iml" filepath="$PROJECT_DIR$/server-config-manager/server-config-manger-service/server-config-manger-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/server-entity/server-entity.iml" filepath="$PROJECT_DIR$/server-entity/server-entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server-mongo/server-mongo.iml" filepath="$PROJECT_DIR$/server-mongo/server-mongo.iml" />
       <module fileurl="file://$PROJECT_DIR$/server-redis/server-redis.iml" filepath="$PROJECT_DIR$/server-redis/server-redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/server-sys-manager/server-sys-manager.iml" filepath="$PROJECT_DIR$/server-sys-manager/server-sys-manager.iml" />
       <module fileurl="file://$PROJECT_DIR$/server-sys-manager/server-sys-manager-api/server-sys-manager-api.iml" filepath="$PROJECT_DIR$/server-sys-manager/server-sys-manager-api/server-sys-manager-api.iml" />

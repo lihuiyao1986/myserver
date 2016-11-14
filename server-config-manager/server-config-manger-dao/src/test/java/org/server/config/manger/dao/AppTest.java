@@ -8,6 +8,7 @@ import com.server.entity.configmanager.dao.Service;
 import com.server.entity.configmanager.dao.ServiceType;
 import com.server.entity.dao.Page;
 import com.server.entity.utils.ObjectUtils;
+import com.server.entity.utils.ZKConfigUtils;
 import junit.framework.TestCase;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -39,6 +40,8 @@ public class AppTest extends TestCase {
 
     @Test
     public void testGetResourcesByCode(){
+        String value = ZKConfigUtils.getValue("localhost:2181","/projectx/modulex","1.0.0","group","db.driverClassName","");
+        logger.debug("value = " + value);
         List<Resources> list = resourceDao.getResourcesByCode("%", 4);
         logger.debug(list.toString());
     }
